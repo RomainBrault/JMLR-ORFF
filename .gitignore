@@ -1,0 +1,8 @@
+# Generated files
+bin/
+gfx/bck/
+
+# Dropbox settings and caches
+.dropbox
+.dropbox.attr
+.dropbox.cache

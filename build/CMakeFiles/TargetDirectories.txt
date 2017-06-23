@@ -1,0 +1,10 @@
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/jmlr-orff_pdf.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/safepdf.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/_jmlr-orff.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/jmlr-orff.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/ps.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/dvi.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/pdf.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/auxclean.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/html.dir
+/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/jmlr-orff_auxclean.dir

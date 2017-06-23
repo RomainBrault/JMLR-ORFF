@@ -1,0 +1,3 @@
+[submodule "jmlr-style-file"]
+	path = jmlr-style-file
+	url = https://github.com/JournalMLR/jmlr-style-file
