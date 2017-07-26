@@ -1,0 +1,121 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\usepackage{pythontex}
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+% personal data
+\name{Romain}{Brault}
+\title{Resum\'e title}                               % optional, remove / comment the line if not wanted
+\address{46 Rue Barrault}{75015 Paris}{France}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\email{romain.brault@telecom-paristech.fr}                               % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{Journal of Machine Learning Research}{Company, Inc.\\123 somestreet\\some city}
+\date{23 July, 2017}
+\opening{Dear Drs. Murphy and Sch\"olkopf,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{Random Fourier Features for Operator-Valued Kernels}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+My co-authors and I (Romain Brault \& Florence d'Alch\'e-Buc) are pleased to
+submit our manuscript "Random Fourier Features for Operator-Valued Kernels" for
+publication in the Journal of Machine Learning Research.
+
+\medskip
+
+Each co-author is aware of this submission and consent to its review.
+
+\medskip
+
+Our suggestions for actions editors are those who have published
+paper related to operator-valued kernel or random Fourier features. These
+include Francis Bach (\href{mailto:francis.bach@ens.fr}{francis.bach@enst.fr}),
+Claudio Carmeli (\href{mailto:carmeli@dime.unige.it}{carmeli@dime.unige.it}),
+Zolt\'an Szab\'o
+(\href{mailto:zoltan.szabo@polytechnique.edu}{zoltan.szabo@polytechnique.edu}),
+Bharath Sriperumbudur (\href{mailto:bks18@psu.edu}{bks18@psu.edu}).
+
+\medskip
+
+If there is anything we have neglected to do in the submission process, please
+let us know and we will rectify the issue immediately.
+
+\medskip
+
+Thank you for your consideration,
+
+\makeletterclosing
+
+\end{document}
+
+%My co-authors (William March, Parikshit Ram, and Dongryeol Lee) would like to
+%submit our manuscript "Plug-and-play dual-tree algorithm runtime analysis" for
+%publication in the Journal of Machine Learning Research.  This paper establishes
+%a generalized technique for proving runtime bounds on the class of algorithms
+%known as dual-tree algorithms.  These algorithms are commonly used for
+%computations such as nearest neighbor search, range search, kernel density
+%estimation, and other applications.  For each of the three problems just listed,
+%we have shown linear runtime bounds using our generalized bounds (though it must
+%be noted that these bounds depend on the intrinsic dimensionality of the
+%dataset). \\
+
+%\medskip
+
+%Each co-author is aware of this submission and consent to its review, and the
+%paper has not been submitted to any other venues.  There are no conflicts of
+%interest, since no co-author has recently collaborated with any action editor.
+%\\
+%\medskip
+
+%Our suggestions for action editors are those who have published papers relating
+%to dual-tree algorithms in the past or are familiar with the approach and
+%existing theory.  These include Sanjoy Dasgupta, Nando de Freitas, and possibly
+%Guy Lebanon. \\
+%\medskip
+
+%If there is anything we have neglected to do in the submission process, please
+%let us know and we will rectify the issue immediately. \\
+
+%\medskip
+
+%\noindent Thank you for your consideration, \\
+
+
+%% end of file `template.tex'.

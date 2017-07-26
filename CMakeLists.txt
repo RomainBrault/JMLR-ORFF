@@ -1,4 +1,4 @@
-project(CAP_2017_ORFF_OVK)
+project(JMLR_2017_ORFF_OVK)
 cmake_minimum_required(VERSION 2.8)
 
 message(STATUS "LATEX_OUTPUT_PATH: " ${LATEX_OUTPUT_PATH})
@@ -38,4 +38,8 @@ add_latex_document(jmlr-orff.tex
                    INPUTS ${contents_files}
                    IMAGE_DIRS gfx
                    BIBFILES jmlr-orff.bib
+                   FORCE_PDF)
+add_latex_document(coverletter.tex
+                   INPUTS ${contents_files}
+                   IMAGE_DIRS CoverLetter
                    FORCE_PDF)

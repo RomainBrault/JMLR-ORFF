@@ -161,6 +161,7 @@ if [[ ${GENERATE} = false ]]; then
 else
     pip install -r ../requirements.txt
 fi
+time make coverletter
 time make jmlr-orff
 
 cd ..
@@ -171,12 +172,12 @@ mkdir -p bck
 cp ../${OUTPUT}/*.pgf bck || true
 cp ../${OUTPUT}/*.png bck || true
 cp ../${OUTPUT}/*.pytxcode bck || true
-cp -r ../${OUTPUT}/pythontex-files-cap2017 bck || true
+cp -r ../${OUTPUT}/pythontex-files-jmlr-orff bck || true
 cd ..
 
 # Sign document with pgp
 if [[ ${SIGN} = true ]]; then
-    gpg2 --armor --detach-sig ${OUTPUT}/jmlr-orff.pdf
+    gpg2 --armor --detach-sig ${OUTPUT}/acml17.pdf
 fi
 if [[ ${VERIFY} = true ]]; then
     gpg --keyserver pgp.mit.edu \
