@@ -1,6 +1,7 @@
 # Generated files
 bin/
 gfx/bck/
+build/
 
 # Dropbox settings and caches
 .dropbox
