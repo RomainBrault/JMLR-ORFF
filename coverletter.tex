@@ -52,15 +52,28 @@
 \opening{Dear Drs. Murphy and Sch\"olkopf,}
 \closing{Yours faithfully,}
 \enclosure[Attached]{Random Fourier Features for Operator-Valued Kernels}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
+\makelettertitle%
 
 My co-authors and I (Romain Brault \& Florence d'Alch\'e-Buc) are pleased to
-submit our manuscript "Random Fourier Features for Operator-Valued Kernels" for
-publication in the Journal of Machine Learning Research.
+submit our manuscript ``Random Fourier Features for Operator-Valued Kernels''
+for publication in the Journal of Machine Learning Research. This paper propose
+a generalization of the celebrated ``Random Fourier Features'' to
+Operator-Valued kernel and give a formal mathematical framework for their
+construction. We study the quality of the stochastic approximation through a
+uniform error bound holding with high probability. Eventually we propose an
+implementation for three Operator-Valued kernels and show that there is no time
+penalty to use the Random Fourier Features for Operator-Valued Kernels compare
+to independent Scalar-Valued kernel regression.
 
 \medskip
 
-Each co-author is aware of this submission and consent to its review.
+Each co-author is aware of this submission and consent to its review. A short
+version of this paper have been published at ACML 2016. Compare to our ACML
+submission, we generalized the application cases of our Random Fourier features
+(LCA groups, infinite dimensional target space). We also added new theoretical
+results, proposed some new experiments, and gave more details on how to
+implement these new features (a fully working one is available in
+\href{https://github.com/operalib/operalib}).
 
 \medskip
 
@@ -81,7 +94,7 @@ let us know and we will rectify the issue immediately.
 
 Thank you for your consideration,
 
-\makeletterclosing
+\makeletterclosing%
 
 \end{document}
 

@@ -102,7 +102,7 @@ GENERATE=false
 OUTPUT=bin
 BUILD=build
 SYNCTEX=OFF
-COMPILER=xelatex
+COMPILER=pdflatex
 
 while getopts ":hvufo:b:sSVg" opt; do
     case "$opt" in

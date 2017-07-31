@@ -80,6 +80,7 @@ CMakeFiles/jmlr-orff_pdf: ../bin/jmlr-orff.pdf
 ../bin/jmlr-orff.pdf: ../bin/gfx/bck/representer.pgf
 ../bin/jmlr-orff.pdf: ../bin/gfx/bck/representer2.pgf
 ../bin/jmlr-orff.pdf: ../bin/CMakeLists.txt
+../bin/jmlr-orff.pdf: ../bin/log.txt
 ../bin/jmlr-orff.pdf: ../bin/requirements.txt
 ../bin/jmlr-orff.pdf: ../bin/acro.cfg
 ../bin/jmlr-orff.pdf: ../bin/gfx/feature_relationship.tikz
@@ -99,10 +100,10 @@ CMakeFiles/jmlr-orff_pdf: ../bin/jmlr-orff.pdf
 ../bin/jmlr-orff.pdf: ../bin/src/representer2.py
 ../bin/jmlr-orff.pdf: ../bin/jmlr-orff.bib
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../bin/jmlr-orff.pdf"
-	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=execute_latex -D LATEX_TARGET=jmlr-orff -D LATEX_WORKING_DIRECTORY="/Users/Romain/Dropbox/JMLR-ORFF/bin" -D LATEX_FULL_COMMAND="xelatex -shell-escape -file-line-error -interaction=nonstopmode -synctex=1 jmlr-orff.tex" -D PYTHONTEX_FULL_COMMAND="pythontex --jobs 1 --verbose jmlr-orff.tex" -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
+	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=execute_latex -D LATEX_TARGET=jmlr-orff -D LATEX_WORKING_DIRECTORY="/Users/Romain/Dropbox/JMLR-ORFF/bin" -D LATEX_FULL_COMMAND="pdflatex -shell-escape -file-line-error -interaction=nonstopmode -synctex=1 jmlr-orff.tex" -D PYTHONTEX_FULL_COMMAND="pythontex --jobs 1 --verbose jmlr-orff.tex" -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
 	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Library/TeX/texbin/bibtex jmlr-orff
-	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=execute_latex -D LATEX_TARGET=jmlr-orff -D LATEX_WORKING_DIRECTORY="/Users/Romain/Dropbox/JMLR-ORFF/bin" -D LATEX_FULL_COMMAND="xelatex -shell-escape -file-line-error -interaction=nonstopmode -synctex=1 jmlr-orff.tex" -D PYTHONTEX_FULL_COMMAND="pythontex --jobs 1 --verbose jmlr-orff.tex" -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
-	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=execute_latex -D LATEX_TARGET=jmlr-orff -D LATEX_WORKING_DIRECTORY="/Users/Romain/Dropbox/JMLR-ORFF/bin" -D LATEX_FULL_COMMAND="xelatex -shell-escape -file-line-error -interaction=nonstopmode -synctex=1 jmlr-orff.tex" -D PYTHONTEX_FULL_COMMAND="pythontex --jobs 1 --verbose jmlr-orff.tex" -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
+	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=execute_latex -D LATEX_TARGET=jmlr-orff -D LATEX_WORKING_DIRECTORY="/Users/Romain/Dropbox/JMLR-ORFF/bin" -D LATEX_FULL_COMMAND="pdflatex -shell-escape -file-line-error -interaction=nonstopmode -synctex=1 jmlr-orff.tex" -D PYTHONTEX_FULL_COMMAND="pythontex --jobs 1 --verbose jmlr-orff.tex" -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
+	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=execute_latex -D LATEX_TARGET=jmlr-orff -D LATEX_WORKING_DIRECTORY="/Users/Romain/Dropbox/JMLR-ORFF/bin" -D LATEX_FULL_COMMAND="pdflatex -shell-escape -file-line-error -interaction=nonstopmode -synctex=1 jmlr-orff.tex" -D PYTHONTEX_FULL_COMMAND="pythontex --jobs 1 --verbose jmlr-orff.tex" -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
 	/Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=correct_synctex -D LATEX_TARGET=jmlr-orff -D GZIP=/usr/bin/gzip -D LATEX_SOURCE_DIRECTORY=/Users/Romain/Dropbox/JMLR-ORFF -D LATEX_BINARY_DIRECTORY=/Users/Romain/Dropbox/JMLR-ORFF/bin -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
 	/Applications/CMake.app/Contents/bin/cmake -E chdir /Users/Romain/Dropbox/JMLR-ORFF/bin /Applications/CMake.app/Contents/bin/cmake -D LATEX_BUILD_COMMAND=check_important_warnings -D LATEX_TARGET=jmlr-orff -P /Users/Romain/Dropbox/JMLR-ORFF/CMakeLatex/UseLatex.cmake
 
@@ -198,56 +199,60 @@ CMakeFiles/jmlr-orff_pdf: ../bin/jmlr-orff.pdf
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating ../bin/CMakeLists.txt"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/CMakeLists.txt /Users/Romain/Dropbox/JMLR-ORFF/bin/CMakeLists.txt
 
+../bin/log.txt: ../log.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating ../bin/log.txt"
+	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/log.txt /Users/Romain/Dropbox/JMLR-ORFF/bin/log.txt
+
 ../bin/requirements.txt: ../requirements.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating ../bin/requirements.txt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating ../bin/requirements.txt"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/requirements.txt /Users/Romain/Dropbox/JMLR-ORFF/bin/requirements.txt
 
 ../bin/acro.cfg: ../acro.cfg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating ../bin/acro.cfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating ../bin/acro.cfg"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/acro.cfg /Users/Romain/Dropbox/JMLR-ORFF/bin/acro.cfg
 
 ../bin/gfx/curl_field.eps: ../gfx/curl_field.eps
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating ../bin/gfx/curl_field.eps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating ../bin/gfx/curl_field.eps"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/gfx/curl_field.eps /Users/Romain/Dropbox/JMLR-ORFF/bin/gfx/curl_field.eps
 
 ../bin/gfx/div_field.eps: ../gfx/div_field.eps
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating ../bin/gfx/div_field.eps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating ../bin/gfx/div_field.eps"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/gfx/div_field.eps /Users/Romain/Dropbox/JMLR-ORFF/bin/gfx/div_field.eps
 
 ../bin/gfx/feature.eps: ../gfx/feature.eps
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating ../bin/gfx/feature.eps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating ../bin/gfx/feature.eps"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/gfx/feature.eps /Users/Romain/Dropbox/JMLR-ORFF/bin/gfx/feature.eps
 
 ../bin/gfx/input.eps: ../gfx/input.eps
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating ../bin/gfx/input.eps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating ../bin/gfx/input.eps"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/gfx/input.eps /Users/Romain/Dropbox/JMLR-ORFF/bin/gfx/input.eps
 
 ../bin/src/efficient_curlfree_gaussian.py: ../src/efficient_curlfree_gaussian.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating ../bin/src/efficient_curlfree_gaussian.py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating ../bin/src/efficient_curlfree_gaussian.py"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/src/efficient_curlfree_gaussian.py /Users/Romain/Dropbox/JMLR-ORFF/bin/src/efficient_curlfree_gaussian.py
 
 ../bin/src/efficient_decomposable_gaussian.py: ../src/efficient_decomposable_gaussian.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Generating ../bin/src/efficient_decomposable_gaussian.py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating ../bin/src/efficient_decomposable_gaussian.py"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/src/efficient_decomposable_gaussian.py /Users/Romain/Dropbox/JMLR-ORFF/bin/src/efficient_decomposable_gaussian.py
 
 ../bin/src/efficient_divfree_gaussian.py: ../src/efficient_divfree_gaussian.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Generating ../bin/src/efficient_divfree_gaussian.py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating ../bin/src/efficient_divfree_gaussian.py"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/src/efficient_divfree_gaussian.py /Users/Romain/Dropbox/JMLR-ORFF/bin/src/efficient_divfree_gaussian.py
 
 ../bin/src/not_mercer.py: ../src/not_mercer.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Generating ../bin/src/not_mercer.py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating ../bin/src/not_mercer.py"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/src/not_mercer.py /Users/Romain/Dropbox/JMLR-ORFF/bin/src/not_mercer.py
 
 ../bin/src/representer.py: ../src/representer.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Generating ../bin/src/representer.py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating ../bin/src/representer.py"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/src/representer.py /Users/Romain/Dropbox/JMLR-ORFF/bin/src/representer.py
 
 ../bin/src/representer2.py: ../src/representer2.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Generating ../bin/src/representer2.py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Generating ../bin/src/representer2.py"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/src/representer2.py /Users/Romain/Dropbox/JMLR-ORFF/bin/src/representer2.py
 
 ../bin/jmlr-orff.bib: ../jmlr-orff.bib
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Generating ../bin/jmlr-orff.bib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating ../bin/jmlr-orff.bib"
 	/Applications/CMake.app/Contents/bin/cmake -E copy /Users/Romain/Dropbox/JMLR-ORFF/jmlr-orff.bib /Users/Romain/Dropbox/JMLR-ORFF/bin/jmlr-orff.bib
 
 jmlr-orff_pdf: CMakeFiles/jmlr-orff_pdf
@@ -275,6 +280,7 @@ jmlr-orff_pdf: ../bin/gfx/bck/not_Mercer.pgf
 jmlr-orff_pdf: ../bin/gfx/bck/representer.pgf
 jmlr-orff_pdf: ../bin/gfx/bck/representer2.pgf
 jmlr-orff_pdf: ../bin/CMakeLists.txt
+jmlr-orff_pdf: ../bin/log.txt
 jmlr-orff_pdf: ../bin/requirements.txt
 jmlr-orff_pdf: ../bin/acro.cfg
 jmlr-orff_pdf: ../bin/gfx/curl_field.eps

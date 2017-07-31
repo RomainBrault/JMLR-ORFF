@@ -16,11 +16,11 @@ def main():
     d = 1  # dimensionality of the inputs
     D = 50  # number of random features
 
-    N = 50
+    N = 30
     Nt = 200
 
     # N training points in (0,1)
-    np.random.seed(0)
+    np.random.seed(42)
     x = 2 * np.random.rand(N, d) - 1
     y = np.sin(10 * x)
     y += .5 * np.random.randn(y.shape[0], y.shape[1]) + 2. * x ** 2
@@ -30,7 +30,7 @@ def main():
     yt = np.sin(10 * xt) + 2. * xt ** 2
     yt += .5 * np.random.randn(yt.shape[0], yt.shape[1])
 
-    sigma = .3
+    sigma = .125
     w = np.random.randn(d, D) / sigma  # Realization of (\omega_j)_{j=1}^D
 
     phiX = phi(x, w, D)  # Train RFF

@@ -2,7 +2,7 @@
 6164d74760fff52c3ebae203697d0326 ../bin/CMakeLists.txt
 1b238f79cbb4caa841dafc2a0f7f744a ../bin/acro.cfg
 19193b3f35da1e9e82c346f7c2d1b9cb ../bin/appendix.tex
-215198db3769c67a02d28031d2312957 ../bin/coverletter.pdf
+bc4abbacd7952050d355bf4a757fae32 ../bin/coverletter.pdf
 0b85c139bfe9427fef15a4e437b85083 ../bin/coverletter.tex
 53c47f8ece0a4c76f684fae44cd1ecbb ../bin/gfx/Curl_ORFFvsOVK.pgf
 c4f87d1a99b841b874b360381e959d83 ../bin/gfx/ORFFvsOVK.pgf
@@ -28,8 +28,9 @@ bb4704150006e84cb7c8c56415ab8e38 ../bin/gfx/learning_time_MNIST.tikz
 4e378b3b390f4a6b81fc9876df32407e ../bin/gfx/variance_curl.tikz
 ff1231d406db18721c8107e77672771d ../bin/gfx/variance_dec.tikz
 507a6a90fa51a21950209a9fcd97ef5f ../bin/jmlr-orff.bib
-aa2b668d0421de93cdc1b32b4dee3a5d ../bin/jmlr-orff.pdf
+e32e3eb1138436c09a85d225153ac248 ../bin/jmlr-orff.pdf
 98c4ee5eb60a356944d414f09f48ad88 ../bin/jmlr-orff.tex
+f4e2eb6b1b868f14ea060c52365ddc6c ../bin/log.txt
 81d66f9888682ab4c9585ef5dba5edb1 ../bin/requirements.txt
 f20334c56dad150de9c1e8d4df92bed4 ../bin/src/efficient_curlfree_gaussian.py
 0024ac1f1b5e815caa55c02e997d5f01 ../bin/src/efficient_decomposable_gaussian.py

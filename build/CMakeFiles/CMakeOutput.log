@@ -32,13 +32,13 @@ The CXX compiler identification is AppleClang, found in "/Users/Romain/Dropbox/J
 Determining if the C compiler works passed with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_af5eb/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_af5eb.dir/build.make CMakeFiles/cmTC_af5eb.dir/build
-Building C object CMakeFiles/cmTC_af5eb.dir/testCCompiler.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_af5eb.dir/testCCompiler.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_af5eb
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af5eb.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_af5eb.dir/testCCompiler.c.o  -o cmTC_af5eb 
+Run Build Command:"/usr/bin/make" "cmTC_593e2/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_593e2.dir/build.make CMakeFiles/cmTC_593e2.dir/build
+Building C object CMakeFiles/cmTC_593e2.dir/testCCompiler.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_593e2.dir/testCCompiler.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_593e2
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_593e2.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_593e2.dir/testCCompiler.c.o  -o cmTC_593e2 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -46,18 +46,18 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1928a/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1928a.dir/build.make CMakeFiles/cmTC_1928a.dir/build
-Building C object CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o   -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_1928a
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1928a.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o  -o cmTC_1928a 
+Run Build Command:"/usr/bin/make" "cmTC_17af4/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_17af4.dir/build.make CMakeFiles/cmTC_17af4.dir/build
+Building C object CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o   -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_17af4
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17af4.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o  -o cmTC_17af4 
 Apple LLVM version 8.1.0 (clang-802.0.42)
 Target: x86_64-apple-darwin16.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_1928a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_17af4 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-278.4
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
@@ -78,18 +78,18 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1928a/fast"]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1928a.dir/build.make CMakeFiles/cmTC_1928a.dir/build]
-  ignore line: [Building C object CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o   -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_1928a]
-  ignore line: [/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1928a.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o  -o cmTC_1928a ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_17af4/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_17af4.dir/build.make CMakeFiles/cmTC_17af4.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc    -o CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o   -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_17af4]
+  ignore line: [/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17af4.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o  -o cmTC_17af4 ]
   ignore line: [Apple LLVM version 8.1.0 (clang-802.0.42)]
   ignore line: [Target: x86_64-apple-darwin16.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_1928a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_17af4 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -100,11 +100,11 @@ Parsed C implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.12.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1928a] ==> ignore
+    arg [cmTC_17af4] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_1928a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_17af4.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib] ==> dir [/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib]
     arg [-L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib] ==> dir [/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib]
     arg [-L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib] ==> dir [/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib]
@@ -141,13 +141,13 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_89166/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_89166.dir/build.make CMakeFiles/cmTC_89166.dir/build
-Building C object CMakeFiles/cmTC_89166.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_89166.dir/feature_tests.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_89166
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89166.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_89166.dir/feature_tests.c.o  -o cmTC_89166 
+Run Build Command:"/usr/bin/make" "cmTC_96db5/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_96db5.dir/build.make CMakeFiles/cmTC_96db5.dir/build
+Building C object CMakeFiles/cmTC_96db5.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_96db5.dir/feature_tests.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_96db5
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96db5.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_96db5.dir/feature_tests.c.o  -o cmTC_96db5 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -161,13 +161,13 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_510ab/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_510ab.dir/build.make CMakeFiles/cmTC_510ab.dir/build
-Building C object CMakeFiles/cmTC_510ab.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_510ab.dir/feature_tests.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_510ab
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_510ab.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_510ab.dir/feature_tests.c.o  -o cmTC_510ab 
+Run Build Command:"/usr/bin/make" "cmTC_be3d3/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_be3d3.dir/build.make CMakeFiles/cmTC_be3d3.dir/build
+Building C object CMakeFiles/cmTC_be3d3.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_be3d3.dir/feature_tests.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_be3d3
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be3d3.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_be3d3.dir/feature_tests.c.o  -o cmTC_be3d3 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -181,13 +181,13 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f182d/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_f182d.dir/build.make CMakeFiles/cmTC_f182d.dir/build
-Building C object CMakeFiles/cmTC_f182d.dir/feature_tests.c.o
-/Library/Developer/CommandLineTools/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_f182d.dir/feature_tests.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f182d
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f182d.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f182d.dir/feature_tests.c.o  -o cmTC_f182d 
+Run Build Command:"/usr/bin/make" "cmTC_cd962/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_cd962.dir/build.make CMakeFiles/cmTC_cd962.dir/build
+Building C object CMakeFiles/cmTC_cd962.dir/feature_tests.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_cd962.dir/feature_tests.c.o   -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_cd962
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd962.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_cd962.dir/feature_tests.c.o  -o cmTC_cd962 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -199,13 +199,13 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6a4a7/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_6a4a7.dir/build.make CMakeFiles/cmTC_6a4a7.dir/build
-Building CXX object CMakeFiles/cmTC_6a4a7.dir/testCXXCompiler.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -o CMakeFiles/cmTC_6a4a7.dir/testCXXCompiler.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_6a4a7
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a4a7.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6a4a7.dir/testCXXCompiler.cxx.o  -o cmTC_6a4a7 
+Run Build Command:"/usr/bin/make" "cmTC_fbe60/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_fbe60.dir/build.make CMakeFiles/cmTC_fbe60.dir/build
+Building CXX object CMakeFiles/cmTC_fbe60.dir/testCXXCompiler.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -o CMakeFiles/cmTC_fbe60.dir/testCXXCompiler.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_fbe60
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbe60.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fbe60.dir/testCXXCompiler.cxx.o  -o cmTC_fbe60 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -213,18 +213,18 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c5ea8/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_c5ea8.dir/build.make CMakeFiles/cmTC_c5ea8.dir/build
-Building CXX object CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/c++     -o CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c5ea8
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5ea8.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c5ea8 
+Run Build Command:"/usr/bin/make" "cmTC_4bb33/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4bb33.dir/build.make CMakeFiles/cmTC_4bb33.dir/build
+Building CXX object CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/c++     -o CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_4bb33
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bb33.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_4bb33 
 Apple LLVM version 8.1.0 (clang-802.0.42)
 Target: x86_64-apple-darwin16.7.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
- "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_c5ea8 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_4bb33 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-278.4
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
@@ -245,18 +245,18 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c5ea8/fast"]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_c5ea8.dir/build.make CMakeFiles/cmTC_c5ea8.dir/build]
-  ignore line: [Building CXX object CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++     -o CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c5ea8]
-  ignore line: [/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5ea8.dir/link.txt --verbose=1]
-  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c5ea8 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_4bb33/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_4bb33.dir/build.make CMakeFiles/cmTC_4bb33.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++     -o CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o -c /Applications/CMake.app/Contents/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_4bb33]
+  ignore line: [/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bb33.dir/link.txt --verbose=1]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_4bb33 ]
   ignore line: [Apple LLVM version 8.1.0 (clang-802.0.42)]
   ignore line: [Target: x86_64-apple-darwin16.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_c5ea8 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_4bb33 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib -L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib -lc++ -lSystem /Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/lib/darwin/libclang_rt.osx.a]
     arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -267,11 +267,11 @@ Parsed CXX implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.12.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c5ea8] ==> ignore
+    arg [cmTC_4bb33] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_c5ea8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_4bb33.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib] ==> dir [/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib]
     arg [-L/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib] ==> dir [/opt/intel//compilers_and_libraries_2016.2.146/mac/compiler/lib]
     arg [-L/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib] ==> dir [/opt/intel//compilers_and_libraries_2016.2.146/mac/mkl/lib]
@@ -309,13 +309,13 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_29122/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_29122.dir/build.make CMakeFiles/cmTC_29122.dir/build
-Building CXX object CMakeFiles/cmTC_29122.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_29122.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_29122
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29122.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_29122.dir/feature_tests.cxx.o  -o cmTC_29122 
+Run Build Command:"/usr/bin/make" "cmTC_65836/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_65836.dir/build.make CMakeFiles/cmTC_65836.dir/build
+Building CXX object CMakeFiles/cmTC_65836.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_65836.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_65836
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65836.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_65836.dir/feature_tests.cxx.o  -o cmTC_65836 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -382,13 +382,13 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_85e93/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_85e93.dir/build.make CMakeFiles/cmTC_85e93.dir/build
-Building CXX object CMakeFiles/cmTC_85e93.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_85e93.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_85e93
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85e93.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_85e93.dir/feature_tests.cxx.o  -o cmTC_85e93 
+Run Build Command:"/usr/bin/make" "cmTC_1e58c/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_1e58c.dir/build.make CMakeFiles/cmTC_1e58c.dir/build
+Building CXX object CMakeFiles/cmTC_1e58c.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_1e58c.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1e58c
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e58c.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1e58c.dir/feature_tests.cxx.o  -o cmTC_1e58c 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -455,13 +455,13 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_58c6f/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_58c6f.dir/build.make CMakeFiles/cmTC_58c6f.dir/build
-Building CXX object CMakeFiles/cmTC_58c6f.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_58c6f.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_58c6f
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58c6f.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_58c6f.dir/feature_tests.cxx.o  -o cmTC_58c6f 
+Run Build Command:"/usr/bin/make" "cmTC_d2739/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_d2739.dir/build.make CMakeFiles/cmTC_d2739.dir/build
+Building CXX object CMakeFiles/cmTC_d2739.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_d2739.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d2739
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2739.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d2739.dir/feature_tests.cxx.o  -o cmTC_d2739 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 
@@ -528,13 +528,13 @@ ld: warning: directory not found for option '-L/opt/intel//compilers_and_librari
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_569c9/fast"
-/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_569c9.dir/build.make CMakeFiles/cmTC_569c9.dir/build
-Building CXX object CMakeFiles/cmTC_569c9.dir/feature_tests.cxx.o
-/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_569c9.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_569c9
-/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_569c9.dir/link.txt --verbose=1
-/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_569c9.dir/feature_tests.cxx.o  -o cmTC_569c9 
+Run Build Command:"/usr/bin/make" "cmTC_2c23f/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_2c23f.dir/build.make CMakeFiles/cmTC_2c23f.dir/build
+Building CXX object CMakeFiles/cmTC_2c23f.dir/feature_tests.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_2c23f.dir/feature_tests.cxx.o -c /Users/Romain/Dropbox/JMLR-ORFF/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2c23f
+/Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c23f.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2c23f.dir/feature_tests.cxx.o  -o cmTC_2c23f 
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 ld: warning: directory not found for option '-L/opt/intel//compilers_and_libraries_2016.2.146/mac/tbb/lib'
 

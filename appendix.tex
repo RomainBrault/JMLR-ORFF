@@ -1,217 +1,183 @@
-%\section{Reminder on Abstract Harmonic Analysis}\label{app:theorem}
-%\subsection{Locally compact Abelian groups}
-%\begin{definition}[\acf{LCA} group.]
-    %A group $\mathcal{X}$ endowed with a binary operation $\groupop$ is said to
-    %be a Locally Compact Abelian group if $\mathcal{X}$ is a topological
-    %\emph{commutative} group \acs{wrt}~$\groupop$ for which every point has a
-    %compact neighborhood and is Hausdorff (T2).
-%\end{definition}
-%Moreover given a element $z$ of a \ac{LCA} group $\mathcal{X}$, we define the
-%set $z\groupop\mathcal{X}=\mathcal{X}\groupop z=\Set{z\groupop x|\forall
-%x\in\mathcal{X}}$ and the set $\mathcal{X}^{-1}=\Set{x^{-1}|\forall
-%x\in\mathcal{X}}$.  We also note $e$ the neutral element of $\mathcal{X}$ such
-%that $x\groupop e=e \groupop x= e$ for all $x\in\mathcal{X}$.  Throughout this
-%paper we focus on positive definite function. Let $\mathcal{Y}$ be a complex
-%separable Hilbert space. A function $f:\mathcal{X}\to\mathcal{Y}$ is positive
-%definite if for all $N\in\mathbb{N}$ and all $y\in\mathcal{Y}$,
-%\begin{dmath}
-    %\label{eq:positive_definite} \sum_{i,j=1}^N\inner*{y_i,
-    %f\left(x_j^{-1}\groupop x_i\right)y_j}_{\mathcal{Y}}\ge 0
-%\end{dmath}
-%for all sequences $(y_i)_{i\in\mathbb{N}_N^*}\in\mathcal{Y}^N$ and all sequences
-%$(x_i)_{i\in\mathbb{N}_N^*}\in\mathcal{X}^N$. If $\mathcal{Y}$ is real we add
-%the assumption that $f(x^{-1})=f(x)^*$ for all $x\in\mathcal{X}$
+\section{Reminder on Abstract Harmonic Analysis}\label{app:theorem}
+\label{sec:abstract_harmonic}
+\subsection{Locally compact Abelian groups}
+\begin{definition}[\acf{LCA} group.]
+    A group $\mathcal{X}$ endowed with a binary operation $\groupop$ is said to
+    be a Locally Compact Abelian group if $\mathcal{X}$ is a topological
+    \emph{commutative} group \acs{wrt}~$\groupop$ for which every point has a
+    compact neighborhood and is Hausdorff (T2).
+\end{definition}
+Moreover given a element $z$ of a \ac{LCA} group $\mathcal{X}$, we define the
+set $z\groupop\mathcal{X}=\mathcal{X}\groupop z=\Set{z\groupop x|\forall
+x\in\mathcal{X}}$ and the set $\mathcal{X}^{-1}=\Set{x^{-1}|\forall
+x\in\mathcal{X}}$.  We also note $e$ the neutral element of $\mathcal{X}$ such
+that $x\groupop e=e \groupop x= e$ for all $x\in\mathcal{X}$.  Throughout this
+paper we focus on positive definite function. Let $\mathcal{Y}$ be a complex
+separable Hilbert space. A function $f:\mathcal{X}\to\mathcal{Y}$ is positive
+definite if for all $N\in\mathbb{N}$ and all $y\in\mathcal{Y}$,
+\begin{dmath}
+    \label{eq:positive_definite} \sum_{i,j=1}^N\inner*{y_i,
+    f\left(x_j^{-1}\groupop x_i\right)y_j}_{\mathcal{Y}}\ge 0
+\end{dmath}
+for all sequences $(y_i)_{i\in\mathbb{N}_N^*}\in\mathcal{Y}^N$ and all sequences
+$(x_i)_{i\in\mathbb{N}_N^*}\in\mathcal{X}^N$. If $\mathcal{Y}$ is real we add
+the assumption that $f(x^{-1})=f(x)^*$ for all $x\in\mathcal{X}$
 
-%\subsection{Even and odd functions}
-%Let $\mathcal{X}$ be a \ac{LCA} group and $\mathbb{K}$ be a field viewed as an
-%additive group. We say that a function $f:\mathcal{X}\to\mathbb{K}$ is even if
-%for all $x\in\mathcal{X}$, $f(x)=f\left(\inv{x}\right)$ and odd if
-%$f(x)=-f\left(\inv{x}\right)$. The definition can be extended to
-%operator-valued functions.
-%\begin{definition}[Even and odd operator-valued function on a \ac{LCA} group]
-    %Let $\mathcal{X}$ be a measured \ac{LCA} group and $\mathcal{Y}$ be a
-    %Hilbert space, and $\mathcal{L}(\mathcal{Y})$ the space of bounded linear
-    %operators from $\mathcal{Y}$ to itself viewed as an additive group. A
-    %function $f:\mathcal{X}\to\mathcal{L}(\mathcal{Y})$ is (weakly) even if for
-    %all $x\in\mathcal{X}$ and all $y$, $y'\in\mathcal{Y}$,
-    %\begin{dmath}
-        %\inner{y,f\left(\inv{x}\right)y'}_{\mathcal{Y}} =
-        %\inner{y,f(x)y'}_{\mathcal{Y}}
-    %\end{dmath}
-    %and (weakly) odd if
-    %\begin{dmath}
-        %\inner{y,f\left(\inv{x}\right)y'}_{\mathcal{Y}} =
-        %-\inner{y,f(x)y'}_{\mathcal{Y}}
-    %\end{dmath}
-%\end{definition}
-%It is easy to check that if $f$ is odd then
-%$\int_{\mathcal{X}}\inner{y,f(x)y'}_{\mathcal{Y}}d\Haar(x)=0$.  Besides the
-%product of an even and an odd function is odd. Indeed for all $f$,
-%$g\in\mathcal{F}(\mathcal{X};\mathcal{L}(\mathcal{Y}))$, where $f$ is even and
-%$g$ odd. Define $h(x)=\inner{y,f(x)g(x)y'}$. Then we have
-%\begin{dmath}
-    %h\left(\inv{x}\right) = \inner{y, f\left(\inv{x}\right)
-    %g\left(\inv{x}\right)y'}_{\mathcal{Y}}
-    %\hiderel{=}\inner{y,f(x)\left(-g(x)\right)y'}_{\mathcal{Y}}
-    %=-h(x).
-%\end{dmath}
-%\subsection{Characters}
-%\label{subsec:character} \acf{LCA} groups are central to the general definition
-%of Fourier Transform which is related to the concept of Pontryagin
-%duality~\citep{folland1994course}.  Let $(\mathcal{X}, \groupop)$ be a \ac{LCA}
-%group with $e$ its neutral element and the notation, $\inv{x}$, for the inverse
-%of $x \in \mathcal{X}$. A \emph{character} is a complex continuous homomorphism
-%$\omega:\mathcal{X}\to\mathbb{U}$ from $\mathcal{X}$ to the set of complex
-%numbers of unit module $\mathbb{U}$. The set of all characters of $\mathcal{X}$
-%forms the Pontryagin \emph{dual  group} $\dual{\mathcal{X}}$. The dual group of
-%an \ac{LCA} group is an \ac{LCA} group so that we can endow
-%$\dual{\mathcal{X}}$ with a \say{dual} Haar measure noted $\dual{\Haar}$. Then
-%the dual group operation is defined by
-%\begin{dmath*}
-    %(\omega_1 \groupop' \omega_2)(x)=\omega_1(x)\omega_2(x) \hiderel{\in}
-    %\mathbb{U}.
-%\end{dmath*}
-%\paragraph{}
-%The Pontryagin duality theorem states that $\dual{\dual{\mathcal{X}}}\cong
-%\mathcal{X}$. \acs{ie}~there is a canonical isomorphism between any \ac{LCA}
-%group and its double dual. To emphasize this duality the following notation is
-%usually adopted
-%\begin{dmath}
-    %\label{eq:paringdef} \omega(x) = \pairing{x, \omega} \hiderel{=}
-    %\pairing{\omega, x} \hiderel{=} x(\omega),
-%\end{dmath}
-%where $x\in\mathcal{X}\cong\dual{\dual{\mathcal{X}}}$ and
-%$\omega\in\dual{\mathcal{X}}$. The form $\pairing{\cdot,\cdot}$ defined in
-%\cref{eq:paringdef} is called (duality) pairing. Another important property
-%involves the complex conjugate of the pairing which is defined as
-%\begin{dmath}
-    %\conj{\pairing{x, \omega}} = \pairing*{\inv{x}, \omega} \hiderel{=}
-    %\pairing*{x, \inv{\omega}}.
-%\end{dmath}
-%\begin{table}[htb]
-    %\caption{Classification of \acl{FT}s in terms of their domain and transform
-    %domain.}
-    %\label{tab:dual_and_pairing}
-    %\centering
-    %\begin{tabularx}{\textwidth}{cccX}
-        %\toprule
-            %\multicolumn{1}{c}{$\mathcal{X}=$} &
-            %\multicolumn{1}{c}{$\dual{\mathcal{X}}\cong$} &
-            %\multicolumn{1}{c}{Operation} & \multicolumn{1}{l}{Pairing} \\
-        %\cmidrule{1-4}
-            %$\mathbb{R}^d$ & $\mathbb{R}^d$ & $+$ & $\pairing{x,\omega} =
-            %\exp\left(\iu \inner{x, \omega}_2\right)$ \\ $\mathbb{R}^d_{*,+}$ &
-            %$\mathbb{R}^d$ & $\cdot$ & $\pairing{x,\omega} =\exp\left( \iu
-            %\inner{\log(x), \omega}_2 \right)$ \\ $(-c;+\infty)^d$ &
-            %$\mathbb{R}^d$ & $\odot$ & $\pairing{x,\omega} =\exp\left( \iu
-            %\inner{\log(x+c), \omega}_2 \right)$ \\
-        %\bottomrule
-    %\end{tabularx}
-%\end{table}
-%\paragraph{}
-%We notice that for any pairing depending of $\omega$, there exists a function
-%$h_{\omega}: \mathcal{X} \to \mathbb{R}$ such that $(x,\omega)= \exp(\iu
-%h_{\omega}(x))$ since any pairing maps into $\mathbb{U}$. Moreover,
-%\begin{dmath*}
-    %\pairing*{x \groupop \inv{z},\omega} = \omega(x)\omega\left(\inv{z}\right)
-    %=\exp\left(+\iu h_{\omega}\left(x\right)\right)\exp\left(+\iu
-    %h_{\omega}\left(\inv{z}\right)\right) =\exp\left(+\iu
-    %h_{\omega}\left(x\right)\right)\exp\left(-\iu
-    %h_{\omega}\left(z\right)\right).
-%\end{dmath*}
-%\Cref{tab:dual_and_pairing}
-%provides an explicit list of pairings for various groups based on
-%$\mathbb{R}^d$ or its subsets. The interested reader can refer
-%to~\citet{folland1994course} for a more detailed construction of \ac{LCA},
-%Pontryagin duality and \acl{FT}s on \ac{LCA}.
+\subsection{Even and odd functions}
+Let $\mathcal{X}$ be a \ac{LCA} group and $\mathbb{K}$ be a field viewed as an
+additive group. We say that a function $f:\mathcal{X}\to\mathbb{K}$ is even if
+for all $x\in\mathcal{X}$, $f(x)=f\left(\inv{x}\right)$ and odd if
+$f(x)=-f\left(\inv{x}\right)$. The definition can be extended to
+operator-valued functions.
+\begin{definition}[Even and odd operator-valued function on a \ac{LCA} group]
+    Let $\mathcal{X}$ be a measured \ac{LCA} group and $\mathcal{Y}$ be a
+    Hilbert space, and $\mathcal{L}(\mathcal{Y})$ the space of bounded linear
+    operators from $\mathcal{Y}$ to itself viewed as an additive group. A
+    function $f:\mathcal{X}\to\mathcal{L}(\mathcal{Y})$ is (weakly) even if for
+    all $x\in\mathcal{X}$ and all $y$, $y'\in\mathcal{Y}$,
+    $\inner{y,f\left(\inv{x}\right)y'}_{\mathcal{Y}} =
+    \inner{y,f(x)y'}_{\mathcal{Y}}$ and (weakly) odd if
+    $\inner{y,f\left(\inv{x}\right)y'}_{\mathcal{Y}} =
+    -\inner{y,f(x)y'}_{\mathcal{Y}}$.
+\end{definition}
+It is easy to check that if $f$ is odd then
+$\int_{\mathcal{X}}\inner{y,f(x)y'}_{\mathcal{Y}}d\Haar(x)=0$.  Besides the
+product of an even and an odd function is odd. Indeed for all $f$,
+$g\in\mathcal{F}(\mathcal{X};\mathcal{L}(\mathcal{Y}))$, where $f$ is even and
+$g$ odd. Define $h(x)=\inner{y,f(x)g(x)y'}$. Then we have
+$h\left(\inv{x}\right) = \inner{y, f\left(\inv{x}\right)
+g\left(\inv{x}\right)y'}_{\mathcal{Y}}
+\hiderel{=}\inner{y,f(x)\left(-g(x)\right)y'}_{\mathcal{Y}} =-h(x)$.
+\subsection{Characters}
+\label{subsec:character} \acs{LCA} groups are central to the general definition
+of Fourier Transform which is related to the concept of Pontryagin
+duality~\citep{folland1994course}.  Let $(\mathcal{X}, \groupop)$ be a \ac{LCA}
+group with $e$ its neutral element and the notation, $\inv{x}$, for the inverse
+of $x \in \mathcal{X}$. A \emph{character} is a complex continuous homomorphism
+$\omega:\mathcal{X}\to\mathbb{U}$ from $\mathcal{X}$ to the set of complex
+numbers of unit module $\mathbb{U}$. The set of all characters of $\mathcal{X}$
+forms the Pontryagin \emph{dual  group} $\dual{\mathcal{X}}$. The dual group of
+an \ac{LCA} group is an \ac{LCA} group so that we can endow
+$\dual{\mathcal{X}}$ with a \say{dual} Haar measure noted $\dual{\Haar}$. Then
+the dual group operation is defined by $(\omega_1 \groupop'
+\omega_2)(x)=\omega_1(x)\omega_2(x) \hiderel{\in} \mathbb{U}$.  The Pontryagin
+duality theorem states that $\dual{\dual{\mathcal{X}}}\cong \mathcal{X}$.
+\acs{ie}~there is a canonical isomorphism between any \ac{LCA} group and its
+double dual. To emphasize this duality the following notation is usually
+adopted: $\label{eq:paringdef} \omega(x) = \pairing{x, \omega} \hiderel{=}
+\pairing{\omega, x} \hiderel{=} x(\omega)$, where
+$x\in\mathcal{X}\cong\dual{\dual{\mathcal{X}}}$ and
+$\omega\in\dual{\mathcal{X}}$. The form $\pairing{\cdot,\cdot}$ defined in
+\cref{eq:paringdef} is called (duality) pairing. Another important property
+involves the complex conjugate of the pairing which is defined as
+$\conj{\pairing{x, \omega}} = \pairing*{\inv{x}, \omega} \hiderel{=}
+\pairing*{x, \inv{\omega}}$.
+\begin{table}[t!]
+    \caption{Classification of \acl{FT}s in terms of their domain and transform
+    domain.}
+    \label{tab:dual_and_pairing}
+    \centering
+    \begin{tabularx}{\textwidth}{cccX}
+        \toprule
+            \multicolumn{1}{c}{$\mathcal{X}=$} &
+            \multicolumn{1}{c}{$\dual{\mathcal{X}}\cong$} &
+            \multicolumn{1}{c}{Operation} & \multicolumn{1}{l}{Pairing} \\
+        \cmidrule{1-4}
+            $\mathbb{R}^d$ & $\mathbb{R}^d$ & $+$ & $\pairing{x,\omega} =
+            \exp\left(\iu \inner{x, \omega}_2\right)$ \\ $\mathbb{R}^d_{*,+}$ &
+            $\mathbb{R}^d$ & $\cdot$ & $\pairing{x,\omega} =\exp\left( \iu
+            \inner{\log(x), \omega}_2 \right)$ \\ $(-c;+\infty)^d$ &
+            $\mathbb{R}^d$ & $\odot$ & $\pairing{x,\omega} =\exp\left( \iu
+            \inner{\log(x+c), \omega}_2 \right)$ \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+We notice that for any pairing depending of $\omega$, there exists a function
+$h_{\omega}: \mathcal{X} \to \mathbb{R}$ such that $(x,\omega)= \exp(\iu
+h_{\omega}(x))$ since any pairing maps into $\mathbb{U}$. Moreover,
+$\pairing*{x \groupop \inv{z},\omega} = \omega(x)\omega\left(\inv{z}\right)
+\hiderel{=}\exp\left(+\iu h_{\omega}\left(x\right)\right)\exp\left(+\iu
+h_{\omega}\left(\inv{z}\right)\right) =\exp\left(+\iu
+h_{\omega}\left(x\right)\right)\exp\left(-\iu h_{\omega}\left(z\right)\right)$.
+\Cref{tab:dual_and_pairing} provides an explicit list of pairings for various
+groups based on $\mathbb{R}^d$ or its subsets. The interested reader can refer
+to~\citet{folland1994course} for a more detailed construction of \ac{LCA},
+Pontryagin duality and \acl{FT}s on \ac{LCA}.
 
-%\subsection[The Fourier Transform]{The \acl{FT}}
-%For a function with values in a separable Hilbert space, $f\in
-%L^1(\mathcal{X},\Haar;\mathcal{Y})$, we denote $\FT{f}$ its \acf{FT} which is
-%defined by
-%\begin{dmath*}
-        %\forall \omega \in \dual{\mathcal{X}},\enskip \FT{f}(\omega)
-        %\hiderel{=}\int_{\mathcal{X}} \conj{\pairing{x,\omega}}f(x)d\Haar(x).
-%\end{dmath*}
-%The \acf{IFT} of a function $g\in L^1(\dual{\mathcal{X}},\dual{\Haar};
-%\mathcal{Y})$ is noted $\IFT{g}$ defined by
-%\begin{dmath*}
-    %\forall x \in \mathcal{X},\enskip \IFT{g}(x)
-    %\hiderel{=}\int_{\dual{\mathcal{X}}} \pairing{x,\omega}g(\omega)
-    %d\dual{\Haar}(\omega),
-%\end{dmath*}
-%We also define the flip operator $\mathcal{R}$ by $(\mathcal{R}f)(x)
-%\colonequals f\left(\inv{x}\right)$.
-%\begin{theorem}[Fourier inversion]
-    %\label{th:fourier_inversion} Given a measure $\Haar$ defined on
-    %$\mathcal{X}$, there exists a unique suitably normalized dual measure
-    %$\dual{\Haar}$ on $\dual{\mathcal{X}}$ such that for all $f \in
-    %L^1(\mathcal{X}, \Haar;\mathcal{Y})$ and if $\FT{f} \in
-    %L^1(\dual{\mathcal{X}}, \dual{\Haar}; \mathcal{Y})$ we have
-    %\begin{dmath}
-        %\label{fourier-l1} f(x) \hiderel{=} \int_{\dual{\mathcal{X}}}
-        %\pairing{x, \omega} \FT{f}(\omega) d\dual{\Haar}(\omega) \condition{for
-        %$\Haar$-almost all $x\in \mathcal{X}$.}
-    %\end{dmath}
-    %\acs{ie}~such that
-    %$(\mathcal{R}\mathcal{F}\FT{f})(x)=\mathcal{F}^{-1}\FT{f}(x)=f(x)$ for
-    %$\Haar$-almost all $x\in\mathcal{X}$. If $f$ is continuous this relation
-    %holds for all $x\in\mathcal{X}$.
-%\end{theorem}
-%Thus when a Haar measure $\Haar$ on $\mathcal{X}$ is given, the measure on
-%$\dual{\mathcal{X}}$ that makes \cref{th:fourier_inversion} true is called the
-%dual measure of $\Haar$, noted $\dual{\Haar}$. Let $c\in\mathbb{R}_*$ If
-%$c\Haar$ is the measure on $\mathcal{X}$, then $c^{-1}\dual{\Haar}$ is the dual
-%measure on $\dual{\mathcal{X}}$. Hence one must replace $\dual{\Haar}$ by
-%$c^{-1}\dual{\Haar}$ in the inversion formula to compensate. Therefore,
-%\emph{we always take the Haar measure $\dual{\Haar}$ on $\dual{\mathcal{X}}$ to
-%be the dual of the given Haar measure $\Haar$ on $\mathcal{X}$}. Whenever
-%$\dual{\Haar}=\Haar$ we say that the Haar measure is self-dual. For the
-%familiar case of a scalar-valued function $f$ on the \ac{LCA} group
-%$(\mathbb{R}^d, +)$, we have for all $\omega\in
-%\dual{\mathcal{X}}=\mathbb{R}^d$
-%\begin{dmath}
-    %\label{fourier-R-plus}
-    %\FT{f}(\omega)
-    %=\int_{\mathcal{X}} \conj{\pairing{x,\omega}}f(x)d\Haar(x)
-    %=\int_{\mathbb{R}^d} \exp(-\iu \inner{x,\omega}_2)f(x) d\Leb(x),
-%\end{dmath}
-%the Haar measure being here the Lebesgue measure. Notice that the normalization
-%factor of $\dual{\Haar}$ on $\dual{\mathcal{X}}$ depends on the measure $\Haar$
-%on $\mathcal{X}$ \emph{and} the duality pairing. For instance let
-%$\mathcal{X}=(\mathbb{R}^d, +)$. If one endow $\mathcal{X}$ with the
-%Lebesgue measure as the Haar measure, the Haar measure on the dual is defined
-%for all $\mathcal{Z}\in\mathcal{B}(\mathbb{R}^d)$ by
-%\begin{dmath*}
-    %\Haar(\mathcal{Z})\hiderel{=}\Leb(\mathcal{Z}),
-    %\quad\text{and}\quad
-    %\dual{\Haar}(\mathcal{Z})\hiderel{=}\frac{1}{(2\pi)^d}\Leb(\mathcal{Z}),
-%\end{dmath*}
-%in order to have $\mathcal{F}^{-1}\FT{f}=f$. If one use the cleaner equivalent
-%pairing $\pairing{x,\omega}=\exp(2\iu\pi \inner{x, \omega}_2)$ rather than
-%$\pairing{x,\omega}=\exp(\iu \inner{x,\omega}_2)$, then
-%\begin{dmath*}
-    %\dual{\Haar}(\mathcal{Z})=\Leb(\mathcal{Z}).
-%\end{dmath*}
-%The pairing $\pairing{x,\omega}=\exp(2\iu\pi \inner{x,\omega}_2)$ looks more
-%attractive in theory since it limits the messy factor outside the integral sign
-%and make the Haar measure self-dual. However it is of lesser use in practice
-%since it yields additional unnecessary computation when evaluating the pairing.
-%Hence for symmetry reason on $(\mathbb{R}^d, +)$ and reduce computations we
-%settle with the Haar measure on $\mathbb{R}^d$ groups (additive and
-%multiplicative) defined as
-%\begin{dmath*}
-    %\dual{\Haar}(\mathcal{Z})
-    %= \Haar(\mathcal{Z})
-    %\hiderel{=} \frac{1}{\sqrt{2\pi}^d} \Leb(\mathcal{Z}).
-%\end{dmath*}
-%We conclude this subsection by recalling the injectevity property of the
-%\acl{FT}.
-%\begin{corollary}[\acl{FT} injectivity]
-    %Given $\mu$ and $\nu$ two measures, if $\FT{\mu}=\FT{\nu}$ then $\mu=\nu$.
-    %Moreover given two functions $f$ and $g\in
-    %L^1(\mathcal{X},\Haar;\mathcal{Y})$ if $\FT{f}=\FT{g}$ then $f=g$
-%\end{corollary}
+\subsection[The Fourier Transform]{The \acl{FT}}
+For a function with values in a separable Hilbert space, $f\in
+L^1(\mathcal{X},\Haar;\mathcal{Y})$, we denote $\FT{f}$ its \acf{FT} which is
+defined by
+\begin{dmath*}
+        \forall \omega \in \dual{\mathcal{X}},\enskip \FT{f}(\omega)
+        \hiderel{=}\int_{\mathcal{X}} \conj{\pairing{x,\omega}}f(x)d\Haar(x).
+\end{dmath*}
+The \acf{IFT} of a function $g\in L^1(\dual{\mathcal{X}},\dual{\Haar};
+\mathcal{Y})$ is noted $\IFT{g}$ defined by $\forall x \in \mathcal{X},\enskip
+\IFT{g}(x) \hiderel{=}\int_{\dual{\mathcal{X}}} \pairing{x,\omega}g(\omega)
+d\dual{\Haar}(\omega)$, We also define the flip operator $\mathcal{R}$ by
+$(\mathcal{R}f)(x) \colonequals f\left(\inv{x}\right)$.
+\begin{theorem}[Fourier inversion]
+    \label{th:fourier_inversion} Given a measure $\Haar$ defined on
+    $\mathcal{X}$, there exists a unique suitably normalized dual measure
+    $\dual{\Haar}$ on $\dual{\mathcal{X}}$ such that for all $f \in
+    L^1(\mathcal{X}, \Haar;\mathcal{Y})$ and if $\FT{f} \in
+    L^1(\dual{\mathcal{X}}, \dual{\Haar}; \mathcal{Y})$ we have
+    \begin{dmath}
+        \label{fourier-l1} f(x) \hiderel{=} \int_{\dual{\mathcal{X}}}
+        \pairing{x, \omega} \FT{f}(\omega) d\dual{\Haar}(\omega) \condition{for
+        $\Haar$-almost all $x\in \mathcal{X}$.}
+    \end{dmath}
+    \acs{ie}~such that
+    $(\mathcal{R}\mathcal{F}\FT{f})(x)=\mathcal{F}^{-1}\FT{f}(x)=f(x)$ for
+    $\Haar$-almost all $x\in\mathcal{X}$. If $f$ is continuous this relation
+    holds for all $x\in\mathcal{X}$.
+\end{theorem}
+Thus when a Haar measure $\Haar$ on $\mathcal{X}$ is given, the measure on
+$\dual{\mathcal{X}}$ that makes \cref{th:fourier_inversion} true is called the
+dual measure of $\Haar$, noted $\dual{\Haar}$. Let $c\in\mathbb{R}_*$ If
+$c\Haar$ is the measure on $\mathcal{X}$, then $c^{-1}\dual{\Haar}$ is the dual
+measure on $\dual{\mathcal{X}}$. Hence one must replace $\dual{\Haar}$ by
+$c^{-1}\dual{\Haar}$ in the inversion formula to compensate. Whenever
+$\dual{\Haar}=\Haar$ we say that the Haar measure is self-dual. For the
+familiar case of a scalar-valued function $f$ on the \ac{LCA} group
+$(\mathbb{R}^d, +)$, we have for all $\omega\in
+\dual{\mathcal{X}}=\mathbb{R}^d$
+\begin{dmath}
+    \label{fourier-R-plus}
+    \FT{f}(\omega)
+    =\int_{\mathcal{X}} \conj{\pairing{x,\omega}}f(x)d\Haar(x)
+    \hiderel{=}\int_{\mathbb{R}^d} \exp(-\iu \inner{x,\omega}_2)f(x) d\Leb(x),
+\end{dmath}
+the Haar measure being here the Lebesgue measure. Notice that the normalization
+factor of $\dual{\Haar}$ on $\dual{\mathcal{X}}$ depends on the measure $\Haar$
+on $\mathcal{X}$ \emph{and} the duality pairing. For instance let
+$\mathcal{X}=(\mathbb{R}^d, +)$. If one endow $\mathcal{X}$ with the
+Lebesgue measure as the Haar measure, the Haar measure on the dual is defined
+for all $\mathcal{Z}\in\mathcal{B}(\mathbb{R}^d)$ by
+\begin{dmath*}
+    \Haar(\mathcal{Z})\hiderel{=}\Leb(\mathcal{Z}),
+    \quad\text{and}\quad
+    \dual{\Haar}(\mathcal{Z})\hiderel{=}\frac{1}{(2\pi)^d}\Leb(\mathcal{Z}),
+\end{dmath*}
+in order to have $\mathcal{F}^{-1}\FT{f}=f$. If one use the cleaner equivalent
+pairing $\pairing{x,\omega}=\exp(2\iu\pi \inner{x, \omega}_2)$ rather than
+$\pairing{x,\omega}=\exp(\iu \inner{x,\omega}_2)$, then
+$\dual{\Haar}(\mathcal{Z})=\Leb(\mathcal{Z})$.  The pairing
+$\pairing{x,\omega}=\exp(2\iu\pi \inner{x,\omega}_2)$ looks more attractive in
+theory since it limits the messy factor outside the integral sign and make the
+Haar measure self-dual. However it is of lesser use in practice since it yields
+additional unnecessary computation when evaluating the pairing.  Hence for
+symmetry reason on $(\mathbb{R}^d, +)$ and reduce computations we settle with
+the Haar measure on $\mathbb{R}^d$ groups (additive and multiplicative) defined
+as $\dual{\Haar}(\mathcal{Z}) = \Haar(\mathcal{Z}) \hiderel{=}
+{\sqrt{2\pi}}^{-d} \Leb(\mathcal{Z})$.  We conclude this subsection by recalling
+the injectevity property of the \acl{FT}.
+\begin{corollary}[\acl{FT} injectivity]
+    Given $\mu$ and $\nu$ two measures, if $\FT{\mu}=\FT{\nu}$ then $\mu=\nu$.
+    Moreover given two functions $f$ and $g\in
+    L^1(\mathcal{X},\Haar;\mathcal{Y})$ if $\FT{f}=\FT{g}$ then $f=g$
+\end{corollary}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -234,25 +200,21 @@ of the paper.
     \hiderel{=}K_e\left(\delta\right)^\adjoint$.
     \paragraph{}
     Item 1: taking the \acl{FT} yields,
-    \begin{dmath*}
-        \inner{y',C(\omega)y}_{\mathcal{Y}}=\IFT{\inner{y',
-        K_e(\cdot)y}_{\mathcal{Y}}}(\omega)
+    $\inner{y',C(\omega)y}_{\mathcal{Y}}=\IFT{\inner{y',
+    K_e(\cdot)y}_{\mathcal{Y}}}(\omega)
         %=\IFT{\inner{y', (\mathcal{R}K_e(\cdot))^\adjoint
         %y}_{\mathcal{Y}}}(\omega)
         %=\IFT{\inner{\mathcal{R}K_e(\cdot)y', y}_{\mathcal{Y}}}(\omega)
         %=\IFT{\mathcal{R}\inner{K_e(\cdot)y', y}_{\mathcal{Y}}}(\omega)
-        \hiderel{=}\mathcal{R}\IFT{\inner{K_e(\cdot)y',
-        y}_{\mathcal{Y}}}(\omega)
-        \hiderel{=}\mathcal{R}\inner{C(\cdot)y',y}_{\mathcal{Y}}(\omega)
-        =\inner*{y',C\left(\inv{\omega}\right)^\adjoint y}_{\mathcal{Y}}.
-    \end{dmath*}
-    Hence $C(\omega)=C\left(\inv{\omega}\right)^\adjoint$. Suppose that
-    $\mathcal{Y}$ is a complex Hilbert space. Since for all
-    $\omega\in\mathcal{\dual{X}}$, $C(\omega)$ is bounded and non-negative so
-    $C(\omega)$ is self-adjoint. Besides we have
-    $C(\omega)=C\left(\inv{\omega}\right)^\adjoint $ so $C$ must be even.
-    Suppose that $\mathcal{Y}$ is a real Hilbert space. The \acl{FT} of a real
-    valued function obeys
+    \hiderel{=}\mathcal{R}\IFT{\inner{K_e(\cdot)y', y}_{\mathcal{Y}}}(\omega)
+    \hiderel{=}\mathcal{R}\inner{C(\cdot)y',y}_{\mathcal{Y}}(\omega)
+    =\inner*{y',C\left(\inv{\omega}\right)^\adjoint y}_{\mathcal{Y}}$.  Hence
+    $C(\omega)=C\left(\inv{\omega}\right)^\adjoint$. Suppose that $\mathcal{Y}$
+    is a complex Hilbert space. Since for all $\omega\in\mathcal{\dual{X}}$,
+    $C(\omega)$ is bounded and non-negative so $C(\omega)$ is self-adjoint.
+    Besides we have $C(\omega)=C\left(\inv{\omega}\right)^\adjoint $ so $C$
+    must be even.  Suppose that $\mathcal{Y}$ is a real Hilbert space. The
+    \acl{FT} of a real valued function obeys
     $\FT{f}(\omega)=\conj{\FT{f}\left(\inv{\omega}\right)}$. Therefore since
     $C(\omega)$ is non-negative for all $\omega\in\dual{\mathcal{X}}$,
     $\inner{y', C(\omega)y} = \conj{\inner{y', C\left(\inv{\omega}\right)y}}
@@ -260,15 +222,13 @@ of the paper.
     C\left(\omega\right) y'}$.  Hence $C(\omega)$ is self-adjoint and thus $C$
     is even.
     \paragraph{}
-    Item 2: simply, for all $y$, $y'\in\mathcal{Y}$,
-    $\inner{y, C(\inv{\omega})y'}$ $=$ $\inner{y', C(\omega)y}$ thus
-    \begin{dmath*}
-        \IFT{\inner{y', K_e(\cdot)y}_{\mathcal{Y}}}(\omega)=\inner{y',
-        C(\omega)y}\hiderel{=}\mathcal{R}\inner{y',
-        C(\cdot)y}(\omega)=\mathcal{R}\IFT{\inner{y',
-        K_e(\cdot)y}_{\mathcal{Y}}}(\omega) \hiderel{=} \FT{\inner{y',
-        K_e(\cdot)y}_{\mathcal{Y}}}(\omega).
-    \end{dmath*}
+    Item 2: simply, for all $y$, $y'\in\mathcal{Y}$, $\inner{y,
+    C(\inv{\omega})y'}$ $=$ $\inner{y', C(\omega)y}$ thus $\IFT{\inner{y',
+    K_e(\cdot)y}_{\mathcal{Y}}}(\omega)=\inner{y',
+    C(\omega)y}\hiderel{=}\mathcal{R}\inner{y',
+    C(\cdot)y}(\omega)=\mathcal{R}\IFT{\inner{y',
+    K_e(\cdot)y}_{\mathcal{Y}}}(\omega) \hiderel{=} \FT{\inner{y',
+    K_e(\cdot)y}_{\mathcal{Y}}}(\omega)$.
     \paragraph{}
     Item 3: from Item 2 we have
     $\IFT{\inner{y', K_e(\cdot)y}}$ $=$ $\mathcal{F}^{-1}\mathcal{R}{\inner{y',
@@ -283,17 +243,16 @@ of the paper.
     and \cref{lm:C_characterization}. By taking $\inner{y',C(\omega)y} =
     \IFT{\inner{y', K_e(\cdot)y}}(\omega)=\FT{\inner{y', K_e(\cdot)y}}(\omega)$
     we can write the following equality concerning the \acs{OVK} signature
-    $K_e$.
+    $K_e$:
     % Suppose that $\mu$ is absolutely continuous \acs{wrt}~$d\omega$. Then for
     % all $\delta \in \mathcal{X}$ and for all $y,$ $y'$ in $\mathcal{Y}$
-    \begin{dmath*}
-        \inner{y', K_e(\delta)y}(\omega)=
-        \int_{\dual{\mathcal{X}}}\conj{\pairing{\delta, \omega}}\inner{y',
-        C(\omega)y}d\dual{\Haar}(\omega)
-        =\int_{\dual{\mathcal{X}}}\conj{\pairing{\delta, \omega}}\inner*{y',
-        \frac{1}{\rho(\omega)}C(\omega)y}\rho(\omega)d\dual{\Haar}(\omega).
-    \end{dmath*}
-    It is always possible to choose $\rho(\omega)$ such that
+    $\inner{y', K_e(\delta)y}(\omega)=
+    \int_{\dual{\mathcal{X}}}\conj{\pairing{\delta, \omega}}\inner{y',
+    C(\omega)y}d\dual{\Haar}(\omega)
+    \hiderel{=}\int_{\dual{\mathcal{X}}}\conj{\pairing{\delta,
+    \omega}}\inner*{y',
+    \frac{1}{\rho(\omega)}C(\omega)y}\rho(\omega)d\dual{\Haar}(\omega)$.  It is
+    always possible to choose $\rho(\omega)$ such that
     $\int_{\dual{\mathcal{X}}}\rho(\omega)d\dual{\Haar}(\omega)=1$. For
     instance choose
     \begin{dmath*}
@@ -318,16 +277,17 @@ of the paper.
 \begin{proof}
     %Let us first notice that for a given $D$, $\tilde{K}$ satisfies the
     %properties of a shift-invariant $\mathcal{Y}$-Mercer kernel.  Second, F
-    From the strong law of large numbers
-    \begin{dmath*}
-        \frac{1}{D} \sum_{j=1}^D \conj{\pairing{x\groupop\inv{z},\omega_j}}
-        A(\omega_j) \converges{\acs{asurely}}{D \to \infty}
-        \expectation_{\dual{\Haar}, \rho}[\conj{\pairing{x \groupop z^{-1},
-        \omega_j} }A(\omega)]
-    \end{dmath*}
-    where the integral converges in the weak operator topology. Then by
-    \cref{pr:spectral}, $\expectation_{\dual{\Haar}, \rho}[\conj{\pairing{x
-    \groupop z^{-1}, \omega_j}}A(\omega)] = K_e(x\groupop\inv{z})$.
+    Suppose that for all $y$, $y'\in\mathcal{Y}$, $\inner{y',
+    A(\omega)y}\rho(\omega)=\IFT{\inner{y', K_e(\cdot)y}}(\omega)$ where $\rho$
+    is a probability distribution (see \cref{pr:spectral}). From the strong law
+    of large numbers $\frac{1}{D} \sum_{j=1}^D
+    \conj{\pairing{x\groupop\inv{z},\omega_j}} A(\omega_j)
+    \converges{\acs{asurely}}{D \to \infty} \expectation_{\dual{\Haar},
+    \rho}[\conj{\pairing{x \groupop z^{-1}, \omega_j} }A(\omega)]$ where the
+    integral converges in the weak operator topology. Then by
+    \cref{pr:spectral} we recover $K_e$ when $D\to\infty$ since,
+    $\expectation_{\dual{\Haar}, \rho}[\conj{\pairing{x \groupop z^{-1},
+    \omega_j}}A(\omega)] = K_e(x\groupop\inv{z})$.
 \end{proof}
 \subsubsection{Proof of \texorpdfstring{\cref{cr:ORFF-map-kernel}}{%
 Proposition~\ref{cr:ORFF-map-kernel}}}
@@ -385,16 +345,14 @@ Proposition~\ref{cr:ORFF-map-kernel}}}
 \begin{proof}
     %Let us first notice that for a given $D$, $\tilde{K}$ satisfies the
     %properties of a shift-invariant $\mathcal{Y}$-Mercer kernel.  Second, F
-    From the strong law of large numbers
-    \begin{dmath*}
-        \frac{1}{D} \sum_{j=1}^D \conj{\pairing{x\groupop\inv{z},\omega_j}}
-        A(\omega_j) \converges{\acs{asurely}}{D \to \infty}
-        \expectation_{\dual{\Haar}, \rho}[\conj{\pairing{x \groupop z^{-1},
-        \omega_j} }A(\omega)]
-    \end{dmath*}
-    where the integral converges in the weak operator topology. Then by
-    \cref{pr:spectral}, $\expectation_{\dual{\Haar}, \rho}[\conj{\pairing{x
-    \groupop z^{-1}, \omega_j}}A(\omega)] =K_e(x\groupop\inv{z})$.
+    From the strong law of large numbers $\frac{1}{D} \sum_{j=1}^D
+    \conj{\pairing{x\groupop\inv{z},\omega_j}} A(\omega_j)
+    \converges{\acs{asurely}}{D \to \infty} \expectation_{\dual{\Haar},
+    \rho}[\conj{\pairing{x \groupop z^{-1}, \omega_j} }A(\omega)]$ where the
+    integral converges in the weak operator topology. Then by
+    \cref{pr:mercer_kernel_bochner}, $\expectation_{\dual{\Haar},
+    \rho}[\conj{\pairing{x \groupop z^{-1}, \omega_j}}A(\omega)]
+    =K_e(x\groupop\inv{z})$.
 \end{proof}
 \subsubsection{Proof of~%
 \texorpdfstring{\cref{pr:orff_defines_kernel}}{Proposition~%
@@ -415,7 +373,6 @@ Proposition~\ref{pr:phitilde_phi_rel}}}
     \mathcal{Y}$ and for all $y'\in\mathcal{Y}'$, $\inner{y, B(\cdot)y'}\in
     L^2(\dual{\mathcal{X}},\probability_{\dual{\Haar},\rho})$ and $g\in
     L^2(\dual{\mathcal{X}},\probability_{\dual{\Haar},\rho};\mathcal{Y}')$,
-    from the strong law of large numbers
     \begin{dmath*}
         (\tildeW{\omega} \theta)(x)=\tildePhi{\omega}(x)^\adjoint
         \theta\hiderel{=}\frac{1}{D}\sum_{j=1}^D
@@ -428,12 +385,12 @@ Proposition~\ref{pr:phitilde_phi_rel}}}
         \hiderel{=} (Wg)(x)
         \hiderel{\colonequals} \Phi_x^\adjoint g.
     \end{dmath*}
+    from the strong law of large numbers.
 \end{proof}
 
 \begin{proof}[of \cref{pr:cv_feature_map_2}]
     Again, since $(\omega_j)_{j-1}^D$ are \ac{iid}~random vectors and $g\in
     L^2(\dual{\mathcal{X}},\probability_{\dual{\Haar},\rho};\mathcal{Y}')$,
-    from the strong law of large numbers
     \begin{dmath*}
         \norm{\theta}^2_{\tildeH{\omega}}
         = \frac{1}{D}\sum_{j=1}^D\norm{g(\omega_j)}^2_{\mathcal{Y}'},
@@ -446,6 +403,7 @@ Proposition~\ref{pr:phitilde_phi_rel}}}
         \probability_{\dual{\Haar},\rho};
         \mathcal{Y}'\right)}^2.
     \end{dmath*}
+    from the strong law of large numbers.
 \end{proof}
 \subsubsection{Proof of \texorpdfstring{\cref{pr:fourier_reg_ovk}}{%
 Proposition~\ref{pr:fourier_reg_ovk}}}
@@ -485,14 +443,11 @@ Proposition~\ref{pr:fourier_reg_ovk}}}
     $\IFT{f}(\omega)=\rho(\omega)B(\omega)g(\omega)$ \acs{wrt}~$g(\omega)$ with
     minimal norm\footnote{Note that since $B(\omega)$ is bounded the pseudo
     inverse of $B(\omega)$ is well defined for $\dual{\Haar}$-almost all
-    $\omega$.}. Eventually,
-    \begin{dmath*}
-        \norm{f}^2_K = \int_{\dual{\mathcal{X}}}
-        \frac{\norm{B(\omega)^\dagger
-        \IFT{f}(\omega)}_{\mathcal{Y}}^2}{\rho(\omega)^2}
-        d\probability_{\dual{\Haar}, \rho}(\omega)
-    \end{dmath*}
-    Using the fact that $\IFT{\cdot}=\mathcal{F}\mathcal{R}[\cdot]$ and
+    $\omega$.}. Eventually, $\norm{f}^2_K = \int_{\dual{\mathcal{X}}}
+    \frac{\norm{B(\omega)^\dagger
+    \IFT{f}(\omega)}_{\mathcal{Y}}^2}{\rho(\omega)^2}
+    d\probability_{\dual{\Haar}, \rho}(\omega)$ Using the fact that
+    $\IFT{\cdot}=\mathcal{F}\mathcal{R}[\cdot]$ and
     $\mathcal{F}^2[\cdot]=\mathcal{R}[\cdot]$,
     \begin{dmath*}
         \norm{f}^2_K= \displaystyle\int_{\dual{\mathcal{X}}}
@@ -520,30 +475,23 @@ $\tilde{K} (x,z) = {\tildePhi{\omega} (x)}^\adjoint \tildePhi{\omega} (z)$,
 $\tilde{K}^j (x,z) = {\Phi_x (\omega_j)}^\adjoint \Phi_z (\omega_j)$, where
 $\omega_j\sim\probability_{\dual{\Haar,\rho}}$ and $K_e (\delta)=K(x,z)$ and
 $\tilde{K}_e(\delta)=\tilde{K}(x,z)$. For the sake of readabilty, we use
-throughout the proof the quantities
-\begin{dgroup*}
-    \begin{dmath*}
-        F (\delta)\colonequals\tilde{K} (x,z) - K (x,z)
-    \end{dmath*}
-    \begin{dmath*}
-        F^j (\delta)\colonequals\frac{1}{D} \left(\tilde{K}^j (x,z) - K
-        (x,z)\right)
-    \end{dmath*}
-\end{dgroup*}
-We also view $\mathcal{X}$ as a metric space endowed with the distance
-$d_{\mathcal{X}}:\mathcal{X}\times\mathcal{X}\to\mathbb{R}_+$. Compared to the
-scalar case, the proof follows the same scheme as the one described in
-\citep{Rahimi2007, sutherland2015}, but we consider an operator norm as measure
-of the error and therefore concentration inequality dealing with these operator
-norm.  The main feature of \cref{pr:bound_approx_unbounded} is that it covers
-the case of bounded \acs{ORFF} as well as unbounded \acs{ORFF}. In the case of
-bounded \acs{ORFF}, a Bernstein inequality for matrix concentration such that
-the one proved in \citet[Corollary 5.2]{Mackey2014} or the formulation of
-\citet{Tropp} recalled in \citet{koltchinskii2013remark}~is suitable. However
-some kernels like the curl and the divergence-free kernels do not have obvious
-bounded $\norm{F^j}_{\mathcal{Y},\mathcal{Y}}$ but exhibit $F^j$ with
-subexponential tails. Therefore, we use an operator Bernstein concentration
-inequality adapted for random matrices with subexponential norms.
+throughout the proof the quantities: $F (\delta)\colonequals\tilde{K} (x,z) - K
+(x,z)$ and $F^j (\delta)\colonequals\frac{1}{D} \left(\tilde{K}^j (x,z) - K
+(x,z)\right)$.  We also view $\mathcal{X}$ as a metric space endowed with the
+distance $d_{\mathcal{X}}:\mathcal{X}\times\mathcal{X}\to\mathbb{R}_+$.
+Compared to the scalar case, the proof follows the same scheme as the one
+described in \citep{Rahimi2007, sutherland2015}, but we consider an operator
+norm as measure of the error and therefore concentration inequality dealing
+with these operator norm.  The main feature of \cref{pr:bound_approx_unbounded}
+is that it covers the case of bounded \acs{ORFF} as well as unbounded
+\acs{ORFF}. In the case of bounded \acs{ORFF}, a Bernstein inequality for
+matrix concentration such that the one proved in \citet[Corollary
+5.2]{Mackey2014} or the formulation of \citet{Tropp} recalled in
+\citet{koltchinskii2013remark}~is suitable. However some kernels like the curl
+and the divergence-free kernels do not have obvious bounded
+$\norm{F^j}_{\mathcal{Y},\mathcal{Y}}$ but exhibit $F^j$ with subexponential
+tails. Therefore, we use an operator Bernstein concentration inequality adapted
+for random matrices with subexponential norms.
 \subsubsection{Epsilon-net}
 \label{subsec:epsilon-net}
 Let $\mathcal{C}\subseteq\mathcal{X}$ be a compact subset of $\mathcal{X}$. Let
@@ -559,10 +507,9 @@ $\mathcal{D}_{\mathcal{C}}$. For instance if $\mathcal{D}_{\mathcal{C}}$ is a
 subspace finite dimensional Banach space with diameter at most
 $2\abs{\mathcal{C}}$ it is possible to cover the space with at most
 $T={(4\abs{\mathcal{C}}/r)}^d$ balls of radius $r$
-(see \citet[proposition 5]{cucker2001mathematical}).
-\paragraph{}
-Let us call $\delta_i,i=1,\ldots,T$ the center of the $i$-th ball, also called
-anchor of the $\epsilon$-net. Denote $L_{F}$ the Lipschitz constant of $F$. Let
+(see \citet[proposition 5]{cucker2001mathematical}).  Let us call
+$\delta_i,i=1,\ldots,T$ the center of the $i$-th ball, also called anchor of
+the $\epsilon$-net. Denote $L_{F}$ the Lipschitz constant of $F$. Let
 $\norm{\cdot}_{\mathcal{Y},\mathcal{Y}}$ be the operator norm on
 $\mathcal{L}(\mathcal{Y})$ (largest eigenvalue). We introduce the following
 technical lemma.
@@ -580,15 +527,13 @@ technical lemma.
     then $\norm{F(\delta)}_{\mathcal{Y},\mathcal{Y}} \leq \epsilon$.
 \end{lemma}
 \begin{proof}
-    \begin{dmath*}
-        \norm{F (\delta)}_{\mathcal{Y},\mathcal{Y}} = \norm{F (\delta) -
-        F(\delta_i) + F(\delta_i)}_{\mathcal{Y},\mathcal{Y} }\le
-        \norm{F(\delta) - F(\delta_i)}_{\mathcal{Y},\mathcal{Y}} +
-        \norm{F(\delta_i)}_{\mathcal{Y},\mathcal{Y}}
-    \end{dmath*}
-    for all $0<i<T$. Using the Lipschitz continuity of $F$ we have
-    $\norm{F(\delta) - F(\delta_i)}_{\mathcal{Y},\mathcal{Y}} \le
-    d_{\mathcal{X}}(\delta,\delta_i) L_{F} \hiderel{\le} rL_{F}$ hence
+    $\norm{F (\delta)}_{\mathcal{Y},\mathcal{Y}} = \norm{F (\delta) -
+    F(\delta_i) + F(\delta_i)}_{\mathcal{Y},\mathcal{Y} }\le \norm{F(\delta) -
+    F(\delta_i)}_{\mathcal{Y},\mathcal{Y}} +
+    \norm{F(\delta_i)}_{\mathcal{Y},\mathcal{Y}}$ for all $0<i<T$. Using the
+    Lipschitz continuity of $F$ we have $\norm{F(\delta) -
+    F(\delta_i)}_{\mathcal{Y},\mathcal{Y}} \le d_{\mathcal{X}}(\delta,\delta_i)
+    L_{F} \hiderel{\le} rL_{F}$ hence
     $\norm{F(\delta)}_{\mathcal{Y},\mathcal{Y}} \le rL_{F} +
     \norm{F(\delta_i)}_{\mathcal{Y},\mathcal{Y}} \hiderel{=} \frac{r\epsilon}{2
     r} + \frac{\epsilon}{2} \hiderel{=} \epsilon$.
@@ -606,13 +551,9 @@ condition on the considered kernel.
 \begin{lemma}
     \label{lm:LipschitzK}
     Let $H_\omega \in \mathbb{R}_+$ be the Lipschitz constant of
-    $h_\omega(\cdot)$ and assume that
-    \begin{dmath*}
-        \int_{\dual{\mathcal{X}}} H_\omega
-        \norm{A(\omega)}_{\mathcal{Y},\mathcal{Y}}d\probability_{\dual{\Haar},
-        \rho}(\omega) < \infty.
-    \end{dmath*}
-    Then the operator-valued function
+    $h_\omega(\cdot)$ and assume that $\int_{\dual{\mathcal{X}}} H_\omega
+    \norm{A(\omega)}_{\mathcal{Y},\mathcal{Y}}d\probability_{\dual{\Haar},
+    \rho}(\omega) < \infty$.  Then the operator-valued function
     $K_e:\mathcal{X}\to\mathcal{L}(\mathcal{Y})$ is Lipschitz with
     \begin{dmath}
         \norm{K_e(x) - K_e(z)}_{\mathcal{Y},\mathcal{Y}}\le
@@ -711,22 +652,12 @@ the dimension $p$ of the output space $\mathcal{Y}$. However if the evaluation
 of the operator-valued kernel at two points yields a low-rank matrix, this
 bound could be improved since only a few principal dimensions are relevant.
 Moreover this bound cannot be used when dealing with operator-valued kernel
-acting on infinite dimensional Hilbert spaces. Yet when the evaluation of the
-kernel at two points is a compact operator, we could expect the concentration
-inequality to be valid since it has finite trace. Recent results of
+acting on infinite dimensional Hilbert spaces. Recent results of
 \citet{minsker2011some} consider the notion of intrinsic dimension to avoid
-this \say{curse of dimensionality}.
-\begin{definition}
-    Let $A$ be a trace class operator acting on a Hilbert space
-    $\mathcal{Y}$. We call intrinsic dimension the quantity
-    \begin{dmath*}
-        \intdim(A) = \frac{\Tr\left[A\right]}{\norm{A}_{\mathcal{Y},
-        \mathcal{Y}}}.
-    \end{dmath*}
-\end{definition}
+this \say{curse of dimensionality} (see \cref{def:intdim} for the definition).
 When $A$ is approximately low-rank (\acs{ie} many eigenvalues are small), or go
 quickly to zero, the intrinsic dimension can be much lower than the
-dimensionality. Indeed, $1 \le\intdim(A) \hiderel{\le} \rank(A) \hiderel{\le}
+dimensionality.  Indeed, $1 \le\intdim(A) \hiderel{\le} \rank(A) \hiderel{\le}
 \dim(A)$.
 \begin{theorem}[Bounded non-commutative Bernstein with intrinsic dimension
 \citep{minsker2011some, tropp2015introduction}]\label{th:Bernstein2}
@@ -746,34 +677,24 @@ dimensionality. Indeed, $1 \le\intdim(A) \hiderel{\le} \rank(A) \hiderel{\le}
     where $\psi_{V, U}(\epsilon)=\frac{\epsilon^2}{2\norm{V}_{\mathcal{Y},
     \mathcal{Y}} + 2 U \epsilon / 3}$
 \end{theorem}
-Essentially, compared to \cref{th:Bernstein1}, \cref{th:Bernstein2} replace the
-dimension of $\mathcal{Y}$ by four times the intrinsic dimension of the
-variance of the matrix valued random variable. The concentration inequality is
-restricted to the case where $\epsilon \ge \sqrt{\norm{V}_{\mathcal{Y},
-\mathcal{Y}}} + U/3$ since the probability is vacuous on the contrary. The
-assumption that $X_j$'s are Hilbert-Schmidt operators comes from the fact that
-the product of two such operator yields a trace-class operator, for which the
-intrinsic dimension is well defined.
+he concentration inequality is restricted to the case where $\epsilon \ge
+\sqrt{\norm{V}_{\mathcal{Y}, \mathcal{Y}}} + U/3$ since the probability is
+vacuous on the contrary. The assumption that $X_j$'s are Hilbert-Schmidt
+operators comes from the fact that the product of two such operator yields a
+trace-class operator, for which the intrinsic dimension is well defined.
 \paragraph{}
 However, to cover the general case including unbounded \acp{ORFF} like curl and
 divergence-free \acp{ORFF}, we choose a version of Bernstein matrix
 concentration inequality proposed in~\cite{koltchinskii2013remark} that allows
 to consider matrices that are not uniformly bounded but have subexponential
 tails.  In the following we use the notion of Orlicz norm to bound random
-variable by their tail behavior rather than their value.
-\begin{definition}[Orlicz norm]
-    We follow the definition given by \citet{koltchinskii2013remark}.  Let
-    $\psi:\mathbb{R}_+\to\mathbb{R}_+$ be a non-decreasing convex function with
-    $\psi(0)=0$. For a random variable $X$ on a measured space
-    $(\Omega,\mathcal{T}(\Omega),\mu)$ $\norm{X}_{\psi} \hiderel{\colonequals}
-    \inf \Set{C \hiderel{>} 0 \,\, | \,\, \expectation[\psi\left( \abs{X}/C
-    \right)] \hiderel{\le} 1}$.
-\end{definition}
-For the sake of simplicity, we now fix $\psi(t)=\psi_1(t)=\exp(t)-1$. Although
-the Orlicz norm should be adapted to the tail of the distribution of the random
-operator we want to quantify to obtain the sharpest bounds.  We also introduce
-two technical lemmas related to Orlicz norm. The first one relates the
-$\psi_1$-Orlicz norm to the moment generating function ($\MGF$).
+variable by their tail behavior rather than their value (see
+\cref{def:orlicz}).  For the sake of simplicity, we now fix
+$\psi(t)=\psi_1(t)=\exp(t)-1$. Although the Orlicz norm should be adapted to
+the tail of the distribution of the random operator we want to quantify to
+obtain the sharpest bounds.  We also introduce two technical lemmas related to
+Orlicz norm. The first one relates the $\psi_1$-Orlicz norm to the moment
+generating function ($\MGF$).
 \begin{lemma}\label{lm:orlicz_mgf}
     Let $X$ be a random variable with a strictly monotonic moment-generating
     function. We have $\norm{X}_{\psi_1}^{-1}=\MGF_{\abs{X}}^{-1}(2)$.
@@ -784,7 +705,7 @@ $\psi_1$-Orlicz norm to the moment generating function ($\MGF$).
         \norm{X}_{\psi_1}=\inf \Set{C \hiderel{>} 0 \,\, | \,\,
         \expectation[\exp\left( \abs{X}/C \right)] \hiderel{\le} 2 }
         \hiderel{=} \frac{1}{\sup \Set{C \hiderel{>} 0 \,\, | \,\,
-        \MGF_{\abs{X}}(C)\le 2 }}
+        \MGF_{\abs{X}}(C)\le 2 }}.
     \end{dmath*}
     $X$ has strictly monotonic moment-generating thus
     $C^{-1}=\MGF^{-1}_{\abs{X}}(2)$. Hence
@@ -852,12 +773,9 @@ $\norm{\cdot}_{\mathcal{Y},\mathcal{Y}}$ and $\norm{\cdot}_{\psi_1}$ norm,
     \hiderel{=}4\left(\norm{\norm{A(\omega)}_{\mathcal{Y},\mathcal{Y}}}_{\psi_1}
     + \norm{K_e(\delta_i)}_{\mathcal{Y},\mathcal{Y}}\right)
 \end{dmath*}
-In the same way we defined the constants $v_i=DV$,
-\begin{dmath*}
-    v_i=
-    D\sum_{j=1}^D\expectation_{\dual{\Haar,\rho}} F^j(\delta_i)^2
-    \hiderel{=}D\variance_{\dual{\Haar},\rho}\left[ \tilde{K}(\delta_i) \right]
-\end{dmath*}
+In the same way we defined the constants $v_i=DV$, $v_i=
+D\sum_{j=1}^D\expectation_{\dual{\Haar,\rho}} F^j(\delta_i)^2
+\hiderel{=}D\variance_{\dual{\Haar},\rho}\left[ \tilde{K}(\delta_i) \right]$
 Then applying \cref{th:Bernstein3}, we get for all
 $i\in\mathbb{N}^*_{\mathcal{N}(\mathcal{D}_{\mathcal{C}},r)}$ ($i$ is the index
 of each anchor)
@@ -987,7 +905,7 @@ and summing up the hypothesis yields the following proposition
     \norm{A(\omega)}_{\mathcal{Y},\mathcal{Y}} d\probability_{\dual{\Haar},
     \rho}$. From \cref{lm:LipschitzK},
     $\probability_{\dual{\Haar},\rho}\Set{(\omega_j)_{j=1}^D | L_F \ge
-    \frac{\epsilon}{2r}} \le \frac{4 r m}{\epsilon}.$ Thus from
+    \frac{\epsilon}{2r}} \le \frac{4 r m}{\epsilon}$. Thus from
     \cref{lm:error_decomposition}, for all $r\in\mathbb{R}_+^*$,
     \begin{dmath*}
         \probability_{\dual{\Haar,\rho}}\Set{(\omega_j)_{j=1}^D |
@@ -1136,13 +1054,10 @@ dimensional Banach space.
         \hiderel{\le} C / 2, \norm{z}_{\mathcal{X}} \hiderel{\le} C / 2, (x,
         z)\in\mathcal{X}^2} \hiderel{\subset} \mathcal{X}
     \end{dmath*}
-    is closed and bounded, so compact and has diameter
-    $\abs{C}=2C$. It is possible to cover it with
-    \begin{dmath*}
-        \mathcal{N} (\mathcal{D}_{\mathcal{C}}, r) = \left(\frac{2\abs{C}}{r}
-        \right)^d
-    \end{dmath*}
-    closed balls of radius $r$. Pluging back into \cref{eq:bound1} yields
+    is closed and bounded, so compact and has diameter $\abs{C}=2C$. It is
+    possible to cover it with $\log(\mathcal{N} (\mathcal{D}_{\mathcal{C}}, r))
+    = d\log\left(\frac{2\abs{C}}{r} \right)$ closed balls of radius $r$.
+    Pluging back into \cref{eq:bound1} yields
     \begin{dmath*}
         \probability_{\dual{\Haar,\rho}}\Set{(\omega_j)_{j=1}^D |
         \norm{\tilde{K}-K}_{\mathcal{C}\times\mathcal{C}} \ge \epsilon}
@@ -1338,8 +1253,7 @@ We use the notations $\delta = x \groupop z^{-1}$ for all $x, z
 \subsubsection{Proof of \texorpdfstring{\cref{th:representer}}{Theorem~%
 \ref{th:representer}}}
 \begin{proof}
-    Since $f(x)=K_x^*f$ (see \cref{eq:reproducing_prop}), the optimization
-    problem reads
+    Since $f(x)=K_x^*f$, the optimization problem reads
     \begin{dmath*}
         f_{\seq{s}} = \argmin_{f\in\mathcal{H}_K}
         \frac{1}{N}\displaystyle\sum_{i=1}^N c(K_{x_i}^\adjoint f, y_i) +
@@ -1349,41 +1263,24 @@ We use the notations $\delta = x \groupop z^{-1}$ for all $x, z
     restriction\footnote{$W_{\seq{s}}$ is sometimes called the sampling or
     evaluation operator as in \citet{minh2016unifying}. However we prefer
     calling it \say{restriction operator} as in \citet{rosasco2010learning}
-    since $W_{\seq{s}}f$ is the restriction of $f$ to the points in
-    $\seq{s}$.} linear operator defined as
-    \begin{dmath*}
-        W_{\seq{s}}f = \Vect_{i=1}^N K_{x_i}^\adjoint f,
-    \end{dmath*}
-    with $K_{x_i}^\adjoint:\mathcal{H}_K\to\mathcal{Y}$ and
+    since $W_{\seq{s}}f$ is the restriction of $f$ to the points in $\seq{s}$.}
+    linear operator defined as $W_{\seq{s}}f = \Vect_{i=1}^N K_{x_i}^\adjoint
+    f$, with $K_{x_i}^\adjoint:\mathcal{H}_K\to\mathcal{Y}$ and
     $K_{x_i}:\mathcal{Y}\to\mathcal{H}_K$. Let
     $Y=\vect_{i=1}^Ny_i\in\mathcal{Y}^N$. We have
-    \begin{dmath*}
-        \inner{Y,W_{\seq{s}}f}_{\Vect_{i=1}^N\mathcal{Y}} =
-        \sum_{i=1}^N\inner{y_i, K_{x_i}^\adjoint f}_{\mathcal{Y}}
-        \hiderel{=}\sum_{i=1}^N\inner{K_{x_i} y_i,
-        f}_{\mathcal{H}_K}.
-    \end{dmath*}
-    Thus the adjoint operator $W_{\seq{s}}^\adjoint :
-    \Vect_{i=1}^N\mathcal{Y}\to\mathcal{H}_K$ is
-    \begin{dmath*}
-        W_{\seq{s}}^\adjoint Y=\sum_{i=1}^NK_{x_i} y_i,
-    \end{dmath*}
-    and the operator $W_{\seq{s}}^* W_{\seq{s}} : \mathcal{H}_K \to
-    \mathcal{H}_K$ is
-    \begin{dmath*}
-        W_{\seq{s}}^\adjoint W_{\seq{s}}f = \sum_{i=1}^NK_{x_i}
-        K_{x_i}^\adjoint f.
-    \end{dmath*}
-    Let
-    \begin{dmath*}
-        \mathfrak{R}_{\lambda}(f, \seq{s}) =
-        \underbrace{\frac{1}{N}\displaystyle\sum_{i=1}^N c(f(x_i),
-        y_i)}_{=\mathfrak{R}_c} + \frac{\lambda}{2}\norm{f}^2_{K}
-    \end{dmath*}
-    To ensure that $\mathfrak{R}_{\lambda}$ has a global minimizer we need the
-    following technical lemma (which is a consequence of the Hahn-Banach
-    theorem for lower-semicontimuous functional,
-    see~\citet{kurdila2006convex}).
+    $\inner{Y,W_{\seq{s}}f}_{\Vect_{i=1}^N\mathcal{Y}} =
+    \sum_{i=1}^N\inner{y_i, K_{x_i}^\adjoint f}_{\mathcal{Y}}
+    \hiderel{=}\sum_{i=1}^N\inner{K_{x_i} y_i, f}_{\mathcal{H}_K}$.  Thus the
+    adjoint operator $W_{\seq{s}}^\adjoint :
+    \Vect_{i=1}^N\mathcal{Y}\to\mathcal{H}_K$ is $W_{\seq{s}}^\adjoint
+    Y=\sum_{i=1}^NK_{x_i} y_i$, and the operator $W_{\seq{s}}^* W_{\seq{s}} :
+    \mathcal{H}_K \to \mathcal{H}_K$ is $W_{\seq{s}}^\adjoint W_{\seq{s}}f =
+    \sum_{i=1}^NK_{x_i} K_{x_i}^\adjoint f$.  Let $\mathfrak{R}_{\lambda}(f,
+    \seq{s}) = \underbrace{\frac{1}{N}\displaystyle\sum_{i=1}^N c(f(x_i),
+    y_i)}_{=\mathfrak{R}_c} + \frac{\lambda}{2}\norm{f}^2_{K}$. To ensure that
+    $\mathfrak{R}_{\lambda}$ has a global minimizer we need the following
+    technical lemma (which is a consequence of the Hahn-Banach theorem for
+    lower-semicontimuous functional, see~\citet{kurdila2006convex}).
     \begin{lemma}
         \label{lm:strongly_convex_is_coercive} Let $\mathfrak{R}$ be a proper,
         convex, lower semi-continuous functional, defined on a Hilbert space
@@ -1419,36 +1316,30 @@ We use the notations $\delta = x \groupop z^{-1}$ for all $x, z
     %\end{proof}
     Since $c$ is proper, lower semi-continuous and convex by assumption, thus
     the term $\mathfrak{R}_c$ is also proper, lower semi-continuous and convex.
-    Moreover the term $\frac{\lambda}{2}\norm{f}^2_{K}$ is strongly
-    convex. Thus $\mathfrak{R}_{\lambda}$ is strongly convex. Apply
+    Moreover the term $\frac{\lambda}{2}\norm{f}^2_{K}$ is strongly convex.
+    Thus $\mathfrak{R}_{\lambda}$ is strongly convex. Apply
     \cref{lm:strongly_convex_is_coercive} to obtain the coercivity of
-    $\mathfrak{R}_{\lambda}$, and then \cref{cor:unique_minimizer} to show that
+    $\mathfrak{R}_{\lambda}$, and then Mazur-Schauder's theorem (see
+    \citet{gorniewicz1999topological, kurdila2006convex}) to show that
     $\mathfrak{R}_{\lambda}$ has a unique minimizer and is attained. Then let
-    \begin{dmath*}
-        \mathcal{H}_{K, \seq{s}}=\Set{\sum_{j=1}^{N}K_{x_j}u_j| \forall
-        (u_i)_{i=1}^{N} \in\mathcal{Y}^{N}}.
-    \end{dmath*}
-    For $f\in\mathcal{H}_{K, \seq{s}}^\perp$\footnote{$\mathcal{H}_{K,
+    $\mathcal{H}_{K, \seq{s}}=\Set{\sum_{j=1}^{N}K_{x_j}u_j| \forall
+    (u_i)_{i=1}^{N} \in\mathcal{Y}^{N}}$.  For $f\in\mathcal{H}_{K,
+    \seq{s}}^\perp$\footnote{$\mathcal{H}_{K,
     \seq{s}}^\perp\oplus\mathcal{H}_{K, \seq{s}}=\mathcal{H}_K$ because
-    $W_{\seq{s}}$ is bounded.}, the operator $W_{\seq{s}}$ satisfies
-    \begin{dmath*}
-        \inner{Y, W_{\seq{s}}f}_{\Vect_{i=1}^N\mathcal{Y}} =
-        \inner{\underbrace{f}_{\in\mathcal{H}_{K, \seq{s}}^\perp},
-        \underbrace{\sum_{i=1}^{N}K_{x_i}V^\adjoint y_i}_{\in\mathcal{H}_{K,
-        \seq{s}}}}_{\mathcal{H}_K} \hiderel{=} 0
-    \end{dmath*}
-    for all sequences $(y_i)_{i=1}^N$, since $y_i\in\mathcal{Y}$.  Hence,
+    $W_{\seq{s}}$ is bounded.}, the operator $W_{\seq{s}}$ satisfies $\inner{Y,
+    W_{\seq{s}}f}_{\Vect_{i=1}^N\mathcal{Y}} =
+    \inner{\underbrace{f}_{\in\mathcal{H}_{K, \seq{s}}^\perp},
+    \underbrace{\sum_{i=1}^{N}K_{x_i}V^\adjoint y_i}_{\in\mathcal{H}_{K,
+    \seq{s}}}}_{\mathcal{H}_K} \hiderel{=} 0$ for all sequences
+    $(y_i)_{i=1}^N$, since $y_i\in\mathcal{Y}$.  Hence,
     \begin{dmath}
         \label{eq:null1} (f(x_i))_{i=1}^{N}=0
     \end{dmath}
-    In the same way,
-    \begin{dmath*}
-        \sum_{i=1}^{N}\inner{K_{x_i}^* f, u_i}_{\mathcal{Y}} \hiderel{=}
-        \inner{\underbrace{f}_{\in\mathcal{H}_{K, \seq{s}}^\perp},
-        \underbrace{\sum_{j=1}^{N}K_{x_j}u_j}_{\in\mathcal{H}_{K,
-        \seq{s}}}}_{\mathcal{H}_K} \hiderel{=} 0.
-    \end{dmath*}
-    for all sequences $(u_i)_{i=1}^{N}\in\mathcal{Y}^{N}$. As a result,
+    In the same way, $\sum_{i=1}^{N}\inner{K_{x_i}^* f, u_i}_{\mathcal{Y}}
+    \hiderel{=} \inner{\underbrace{f}_{\in\mathcal{H}_{K, \seq{s}}^\perp},
+    \underbrace{\sum_{j=1}^{N}K_{x_j}u_j}_{\in\mathcal{H}_{K,
+    \seq{s}}}}_{\mathcal{H}_K} \hiderel{=} 0$.  for all sequences
+    $(u_i)_{i=1}^{N}\in\mathcal{Y}^{N}$. As a result,
     \begin{dmath}
         \label{eq:null2} (f(x_i))_{i=1}^{N}=0.
     \end{dmath}
@@ -1459,13 +1350,11 @@ We use the notations $\delta = x \groupop z^{-1}$ for all $x, z
     =\norm{f^{\perp}}_{\mathcal{H}_K}^2 +
     \norm{f^{\parallel}}_{\mathcal{H}_K}^2$, \cref{eq:null1} and
     \cref{eq:null2} shows that if $\lambda > 0$, clearly then
-    \begin{dmath*}
-        \mathfrak{R}_{\lambda}(f, \seq{s}) =
-        \mathfrak{R}_{\lambda}\left(f^{\perp} + f^{\parallel}, \seq{s}\right)
-        \hiderel{\ge} \mathfrak{R}_{\lambda}\left(f^{\parallel}, \seq{s}\right)
-    \end{dmath*}
-    The last inequality holds only when $\norm{f^{\perp}}_{\mathcal{H}_K}=0$,
-    that is when $f^{\perp}=0$. As a result since the minimizer of
+    $\mathfrak{R}_{\lambda}(f, \seq{s}) = \mathfrak{R}_{\lambda}\left(f^{\perp}
+    + f^{\parallel}, \seq{s}\right) \hiderel{\ge}
+    \mathfrak{R}_{\lambda}\left(f^{\parallel}, \seq{s}\right)$ The last
+    inequality holds only when $\norm{f^{\perp}}_{\mathcal{H}_K}=0$, that is
+    when $f^{\perp}=0$. As a result since the minimizer of
     $\mathfrak{R}_{\lambda}$is unique and attained, it must lies in
     $\mathcal{H}_{K, \seq{s}}$.
 \end{proof}
@@ -1478,32 +1367,27 @@ We use the notations $\delta = x \groupop z^{-1}$ for all $x, z
     form
     \begin{dmath*}
         \widetilde{f}_{\seq{s}} = \sum_{i=1}^{N} \tildeK{\omega}(\cdot,
-        x_i)u_i \condition{$u_i \hiderel{\in} \mathcal{Y}$, $x_i
-        \hiderel{\in}\mathcal{X}$} = \sum_{i=1}^N
+        x_i)u_i \hiderel{=} \sum_{i=1}^N
         \tildePhi{\omega}(\cdot)^\adjoint \tildePhi{\omega}(x_i)u_i \hiderel{=}
         \tildePhi{\omega}(\cdot)^\adjoint \underbrace{\left(\sum_{i=1}^{N}
         \tildePhi{\omega}(x_i) u_i \right)}_{= \theta \in \left( \Ker
-        \tildeW{\omega}\right)^\perp \subset \tildeH{\omega}}.
+        \tildeW{\omega}\right)^\perp \subset \tildeH{\omega}},
     \end{dmath*}
-    Let
-    \begin{dmath}
-        \label{eq:argmin_theta} \theta_{\seq{s}}=\argmin_{\theta\in\left(\Ker
-        \tildeW{\omega}\right)^\perp}
-        \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
-        y_i\right) + \frac{\lambda}{2}
-        \norm{\tildePhi{\omega}(\cdot)^\adjoint \theta}^2_{\tildeK{\omega}}.
-    \end{dmath}
-    Since $\theta\in(\Ker \tildeW{\omega})^\perp$ and $W$ is an isometry from
-    $(\Ker \tildeW{\omega})^\perp\subset \tildeH{\omega}$ onto
+    where $u_i \hiderel{\in} \mathcal{Y}$ and $x_i\in\mathcal{X}$. Let
+    $\theta_{\seq{s}}=\argmin_{\theta\in\left(\Ker
+    \tildeW{\omega}\right)^\perp}
+    \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
+    y_i\right) + \frac{\lambda}{2} \norm{\tildePhi{\omega}(\cdot)^\adjoint
+    \theta}^2_{\tildeK{\omega}}$.  Since $\theta\in(\Ker
+    \tildeW{\omega})^\perp$ and $W$ is an isometry from $(\Ker
+    \tildeW{\omega})^\perp\subset \tildeH{\omega}$ onto
     $\mathcal{H}_{\tildeK{\omega}}$, we have
     $\norm{\tildePhi{\omega}(\cdot)^\adjoint\theta}^2_{\tildeK{\omega}} =
     \norm{\theta}^2_{\tildeH{\omega}}$. Hence
-    \begin{dmath*}
-        \theta_{\seq{s}}=\argmin_{\theta\in\left(\Ker
+        $\theta_{\seq{s}}=\argmin_{\theta\in\left(\Ker
         \tildeW{\omega}\right)^\perp}
         \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
-        y_i\right) + \frac{\lambda}{2}\norm{\theta}^2_{\tildeH{\omega}}
-    \end{dmath*}
+        y_i\right) + \frac{\lambda}{2}\norm{\theta}^2_{\tildeH{\omega}}$
     Finding a minimizer $\theta_{\seq{s}}$ over $\left(\Ker
     \tildeW{\omega}\right)^\perp$ is not the same as finding a minimizer over
     $\tildeH{\omega}$. Although in both cases Mazur-Schauder's theorem
@@ -1514,41 +1398,28 @@ We use the notations $\delta = x \groupop z^{-1}$ for all $x, z
     clearly by linearity of $W$ and the fact that for all
     $\theta^{\parallel}\in\Ker \tildeW{\omega}$,
     $\tildeW{\omega}\theta^{\parallel}=0$, if $\lambda > 0$ we have
-    \begin{dmath*}
-        \theta_{\seq{s}}=\argmin_{\theta\in\tildeH{\omega}}
-        \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
-        y_i\right) + \frac{\lambda}{2}\norm{\theta}^2_{\tildeH{\omega}}
-    \end{dmath*}
-    Thus
-    \begin{dmath*}
-        \theta_{\seq{s}}
-        =\argmin_{\substack{\theta^{\perp}\in\left(\Ker
-        \tildeW{\omega}\right)^\perp, \\ \theta^{\parallel}\in\Ker
-        \tildeW{\omega}}} \frac{1}{N} \sum_{i=1}^N c\left(\left(
-        \tildeW{\omega} \theta^{\perp} \right)(x) + \underbrace{\left(
-        \tildeW{\omega} \theta^{\parallel} \right)(x)}_{=0 \enskip \text{for
-        all}\enskip \theta^{\parallel} }, y_i\right) \\ +
-        \frac{\lambda}{2}\norm{\theta^\perp}^2_{\tildeH{\omega}} +
-        \underbrace{\frac{\lambda}{2} \norm{\theta^{\parallel} }^2_{%
-        \tildeH{\omega}} }_{=0 \enskip\text{only if}\enskip
-        \theta^{\parallel}=0} \\
-    \end{dmath*}
-    Thus
-    \begin{dmath*}
-        \theta_{\seq{s}}=\argmin_{\theta^{\perp}\in\left(\Ker
-        \tildeW{\omega}\right)^\perp}
-        \frac{1}{N}\sum_{i=1}^Nc\left( \left( \tildeW{\omega} \theta^{\perp}
-        \right)(x), y_i \right) + \frac{\lambda}{2}
-        \norm{\theta^\perp}^2_{\tildeH{\omega}}
-    \end{dmath*}
-    Hence minimizing over $\left(\Ker \tildeW{\omega}\right)^\perp$ or
-    $\tildeH{\omega}$ is the same when $\lambda > 0$. Eventually,
+    $\theta_{\seq{s}}=\argmin_{\theta\in\tildeH{\omega}}
+    \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
+    y_i\right) + \frac{\lambda}{2}\norm{\theta}^2_{\tildeH{\omega}}$
+    Thus $\theta_{\seq{s}} =\argmin_{\substack{\theta^{\perp}\in\left(\Ker
+    \tildeW{\omega}\right)^\perp, \\ \theta^{\parallel}\in\Ker
+    \tildeW{\omega}}} \frac{1}{N} \sum_{i=1}^N c\left(\left( \tildeW{\omega}
+    \theta^{\perp} \right)(x) + \underbrace{\left( \tildeW{\omega}
+    \theta^{\parallel} \right)(x)}_{=0 \enskip \text{for all}\enskip
+    \theta^{\parallel} }, y_i\right) +
+    \frac{\lambda}{2}\norm{\theta^\perp}^2_{\tildeH{\omega}} +
+    \underbrace{\frac{\lambda}{2} \norm{\theta^{\parallel} }^2_{%
+    \tildeH{\omega}} }_{=0 \enskip\text{only if}\enskip \theta^{\parallel}=0}$
+    Thus $\theta_{\seq{s}}=\argmin_{\theta^{\perp}\in\left(\Ker
+    \tildeW{\omega}\right)^\perp} \frac{1}{N}\sum_{i=1}^Nc\left( \left(
+    \tildeW{\omega} \theta^{\perp} \right)(x), y_i \right) + \frac{\lambda}{2}
+    \norm{\theta^\perp}^2_{\tildeH{\omega}}$ Hence minimizing over $\left(\Ker
+    \tildeW{\omega}\right)^\perp$ or $\widetilde{\mathcal{H}}{\omega}$ is the
+    same when $\lambda > 0$.  Eventually,
     % Eventually for any outcome of $\omega_j \sim
     % \probability_{\dual{\Haar},\rho}$ \ac{iid},
-    \begin{dmath*}
-        \theta_{\seq{s}}=\argmin_{\theta\in\tildeH{\omega}}
-        \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
-        y_i\right) + \frac{\lambda}{2}\norm{\theta}^2_{\tildeH{\omega}}.
-    \end{dmath*}
+    $\theta_{\seq{s}}=\argmin_{\theta\in\tildeH{\omega}}
+    \frac{1}{N}\sum_{i=1}^Nc\left(\tildePhi{\omega}(x_i)^\adjoint \theta,
+    y_i\right) + \frac{\lambda}{2}\norm{\theta}^2_{\tildeH{\omega}}$.
 \end{proof}
 

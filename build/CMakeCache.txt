@@ -285,7 +285,7 @@ MAKENOMENCLATURE_COMPILER_FLAGS:STRING=
 MV:FILEPATH=/bin/mv
 
 //Latex compiler
-PDFLATEX_COMPILER:STRING=xelatex
+PDFLATEX_COMPILER:STRING=pdflatex
 
 //Flags passed to pdflatex.
 PDFLATEX_COMPILER_FLAGS:STRING=-shell-escape;-file-line-error;-interaction=nonstopmode

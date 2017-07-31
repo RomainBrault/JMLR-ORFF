@@ -49,6 +49,7 @@ file(REMOVE_RECURSE
   "../bin/gfx/bck/representer.pgf"
   "../bin/gfx/bck/representer2.pgf"
   "../bin/CMakeLists.txt"
+  "../bin/log.txt"
   "../bin/requirements.txt"
   "../bin/acro.cfg"
   "../bin/gfx/curl_field.eps"
