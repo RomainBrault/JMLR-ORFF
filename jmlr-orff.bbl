@@ -1,0 +1,607 @@
+\begin{thebibliography}{96}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahlswede and Winter(2002)]{Ahls2002}
+R.~Ahlswede and A.~Winter.
+\newblock Strong converse for identification via quantum channels.
+\newblock \emph{IEEE Trans. Inform. Theory 48(3)}, pages 569--679, 2002.
+
+\bibitem[{\'A}lvarez et~al.(2012){\'A}lvarez, Rosasco, and
+  Lawrence]{Alvarez2012}
+M.~A. {\'A}lvarez, L.~Rosasco, and N.~D. Lawrence.
+\newblock Kernels for vector-valued functions: a review.
+\newblock \emph{Foundations and Trends in Machine Learning}, 4\penalty0
+  (3):\penalty0 195--266, 2012.
+
+\bibitem[Amblard and Kadri(2015)]{amblard2015operator}
+P.-O. Amblard and H.~Kadri.
+\newblock Operator-valued kernel recursive least squares algorithm.
+\newblock In \emph{Signal Processing Conference (EUSIPCO), 2015 23rd European},
+  pages 2376--2380. IEEE, 2015.
+
+\bibitem[Argyriou et~al.(2009)Argyriou, Micchelli, and Pontil]{Argyriou_jmlr09}
+A.~Argyriou, C.~A. Micchelli, and M.~Pontil.
+\newblock When is there a representer theorem? {V}ector vs matrix regularizers.
+\newblock \emph{Journal of Machine Learning Research}, 10:\penalty0 2507--2529,
+  2009.
+
+\bibitem[Aronszajn(1950)]{Aronszajn1950}
+N.~Aronszajn.
+\newblock Theory of reproducing kernels.
+\newblock \emph{Transactions of the American mathematical society}, pages
+  337--404, 1950.
+
+\bibitem[Audiffren and Kadri(2015)]{audiffren2013online}
+J.~Audiffren and H.~Kadri.
+\newblock Online learning with operator-valued kernels.
+\newblock In \emph{European symposium on artificial neural networks (ESANN)},
+  2015.
+
+\bibitem[Bach(2015)]{Bach2015}
+F.~Bach.
+\newblock On the equivalence between quadrature rules and random features.
+\newblock HAl-report-/hal-01118276, 2015.
+
+\bibitem[Baldassarre et~al.(2010)Baldassarre, Rosasco, Barla, and
+  Verri]{Baldassare2010}
+L.~Baldassarre, L.~Rosasco, A.~Barla, and A.~Verri.
+\newblock Vector field learning via spectral filtering.
+\newblock In J.~Balcazar, F.~Bonchi, A.~Gionis, and M.~Sebag, editors,
+  \emph{ECML/PKDD}, volume 6321 of \emph{LNCS}, pages 56--71. Springer Berlin /
+  Heidelberg, 2010.
+
+\bibitem[Baldassarre et~al.(2012)Baldassarre, Rosasco, Barla, and
+  Verri]{Baldassare2012}
+L.~Baldassarre, L.~Rosasco, A.~Barla, and A.~Verri.
+\newblock Multi-output learning via spectral filtering.
+\newblock \emph{Machine Learning}, 87\penalty0 (3):\penalty0 259--301, 2012.
+
+\bibitem[Boucheron et~al.(2013)Boucheron, Lugosi, and Massart]{Boucheron}
+S.~Boucheron, G.~Lugosi, and P.~Massart.
+\newblock \emph{Concentration Inequalities}.
+\newblock Oxford Press, 2013.
+
+\bibitem[Brault et~al.(2016)Brault, Heinonen, and d'Alch{\'e}
+  Buc]{brault2016random}
+R.~Brault, M.~Heinonen, and F.~d'Alch{\'e} Buc.
+\newblock Random fourier features for operator-valued kernels.
+\newblock In \emph{Proceedings of The 8th Asian Conference on Machine
+  Learning}, pages 110--125, 2016.
+
+\bibitem[Brouard et~al.(2011)Brouard, {d}'Alch\'e-Buc, and
+  Szafranski]{Brouard2011}
+C.~Brouard, F.~{d}'Alch\'e-Buc, and M.~Szafranski.
+\newblock Semi-supervised penalized output kernel regression for link
+  prediction.
+\newblock In \emph{Proc. of the 28th Int. Conf. on Machine Learning}, 2011.
+
+\bibitem[Brouard et~al.(2016{\natexlab{a}})Brouard, {d}'Alch\'e-Buc, and
+  Szafranski]{Brouard2016_jmlr}
+C.~Brouard, F.~{d}'Alch\'e-Buc, and M.~Szafranski.
+\newblock Input output kernel regression.
+\newblock \emph{to appear in JMLR}, 2016{\natexlab{a}}.
+
+\bibitem[Brouard et~al.(2016{\natexlab{b}})Brouard, Shen, D{\"u}hrkop,
+  d'Alch{\'e} Buc, B{\"o}cker, and Rousu]{brouard2016fast}
+C.~Brouard, H.~Shen, K.~D{\"u}hrkop, F.~d'Alch{\'e} Buc, S.~B{\"o}cker, and
+  J.~Rousu.
+\newblock Fast metabolite identification with input output kernel regression.
+\newblock \emph{Bioinformatics}, 32\penalty0 (12):\penalty0 i28--i36,
+  2016{\natexlab{b}}.
+
+\bibitem[Byrd et~al.(1995)Byrd, Lu, Nocedal, and Zhu]{byrd1995limited}
+R.~H. Byrd, P.~Lu, J.~Nocedal, and C.~Zhu.
+\newblock A limited memory algorithm for bound constrained optimization.
+\newblock \emph{SIAM Journal on Scientific Computing}, 16\penalty0
+  (5):\penalty0 1190--1208, 1995.
+
+\bibitem[Caponnetto et~al.(2008)Caponnetto, Micchelli, ~, and
+  Ying]{caponnetto2008}
+A.~Caponnetto, C.~A. Micchelli, M.~, and Y.~Ying.
+\newblock Universal multitask kernels.
+\newblock \emph{Journal of Machine Learning Research}, 9:\penalty0 1615--1646,
+  2008.
+
+\bibitem[Carmeli et~al.(2006)Carmeli, De~Vito, and Toigo]{carmeli2006vector}
+C.~Carmeli, E.~De~Vito, and A.~Toigo.
+\newblock Vector valued reproducing kernel hilbert spaces of integrable
+  functions and mercer theorem.
+\newblock \emph{Analysis and Applications}, 4\penalty0 (04):\penalty0 377--408,
+  2006.
+
+\bibitem[Carmeli et~al.(2010)Carmeli, De~Vito, Toigo, and
+  Umanit\`a]{Carmeli2010}
+C.~Carmeli, E.~De~Vito, A.~Toigo, and V.~Umanit\`a.
+\newblock Vector valued reproducing kernel hilbert spaces and universality.
+\newblock \emph{Analysis and Applications}, 8:\penalty0 19--61, 2010.
+
+\bibitem[Ciliberto et~al.(2015)Ciliberto, Mroueh, Poggio, and
+  Rosasco]{ciliberto2015}
+C.~Ciliberto, Y.~Mroueh, T.~Poggio, and L.~Rosasco.
+\newblock Convex {Learning} of {Multiple} {Tasks} and their {Structure}.
+\newblock In \emph{Proc. of the 32nd {International} {Conference} on {Machine}
+  {Learning}}, 2015.
+
+\bibitem[Conway(2013)]{conway2013course}
+J.~B. Conway.
+\newblock \emph{A course in functional analysis}, volume~96.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Cucker and Smale(2001)]{cucker2001mathematical}
+F.~Cucker and S.~Smale.
+\newblock On the mathematical foundation of learning.
+\newblock \emph{AMERICAN MATHEMATICAL SOCIETY}, 39\penalty0 (1):\penalty0
+  1--49, 2001.
+
+\bibitem[Dai et~al.(2014)Dai, Xie, He, Liang, Raj, Balcan, and
+  Song]{dai2014scalable}
+B.~Dai, B.~Xie, N.~He, Y.~Liang, A.~Raj, M.-F.~F. Balcan, and L.~Song.
+\newblock Scalable kernel methods via doubly stochastic gradients.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  3041--3049, 2014.
+
+\bibitem[Dinuzzo et~al.(2011)Dinuzzo, Ong, Gehler, and Pillonetto]{Dinuzzo2011}
+F.~Dinuzzo, C.~Ong, P.~Gehler, and G.~Pillonetto.
+\newblock Learning output kernels with block coordinate descent.
+\newblock In \emph{Proc. of the 28th Int. Conf. on Machine Learning}, 2011.
+
+\bibitem[Drineas and Mahoney(2005)]{drineas2005nystrom}
+P.~Drineas and M.~W. Mahoney.
+\newblock On the nystr{\"o}m method for approximating a gram matrix for
+  improved kernel-based learning.
+\newblock \emph{journal of machine learning research}, 6\penalty0
+  (Dec):\penalty0 2153--2175, 2005.
+
+\bibitem[Dudley(1967)]{dudley1967sizes}
+R.~M. Dudley.
+\newblock The sizes of compact subsets of hilbert space and continuity of
+  gaussian processes.
+\newblock \emph{Journal of Functional Analysis}, 1\penalty0 (3):\penalty0
+  290--330, 1967.
+
+\bibitem[Evgeniou et~al.(2005)Evgeniou, Micchelli, and Pontil]{Evgeniou2005}
+T.~Evgeniou, C.~A. Micchelli, and M.~Pontil.
+\newblock Learning multiple tasks with kernel methods.
+\newblock \emph{JMLR}, 6:\penalty0 615--637, 2005.
+
+\bibitem[Felix et~al.(2016)Felix, Suresh, Choromanski, Holtmann-Rice, and
+  Kumar]{felix2016orthogonal}
+X.~Y. Felix, A.~T. Suresh, K.~M. Choromanski, D.~N. Holtmann-Rice, and
+  S.~Kumar.
+\newblock Orthogonal random features.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  1975--1983, 2016.
+
+\bibitem[Folland(1994)]{folland1994course}
+G.~B. Folland.
+\newblock \emph{A course in abstract harmonic analysis}.
+\newblock CRC press, 1994.
+
+\bibitem[Fuselier(2006)]{Fuselier2006}
+E.~Fuselier.
+\newblock \emph{Refined Error Estimates for Matrix-Valued Radial Basis
+  Functions}.
+\newblock PhD thesis, Texas A\&M University, 2006.
+
+\bibitem[G{\'o}rniewicz(1999)]{gorniewicz1999topological}
+L.~G{\'o}rniewicz.
+\newblock \emph{Topological fixed point theory of multivalued mappings}, volume
+  495.
+\newblock Springer, 1999.
+
+\bibitem[Guennebaud et~al.(2010)Guennebaud, Jacob, et~al.]{eigenweb}
+G.~Guennebaud, B.~Jacob, et~al.
+\newblock Eigen v3, 2010.
+\newblock URL \url{http://eigen.tuxfamily.org}.
+
+\bibitem[Ha~Quang et~al.(2010)Ha~Quang, Kang, and Le]{ha2010image}
+M.~Ha~Quang, S.~H. Kang, and T.~M. Le.
+\newblock Image and video colorization using vector-valued reproducing kernel
+  hilbert spaces.
+\newblock \emph{Journal of Mathematical Imaging and Vision}, 37\penalty0
+  (1):\penalty0 49--65, 2010.
+
+\bibitem[Hamid et~al.(2014)Hamid, Xiao, Gittens, and DeCoste]{hamid2014compact}
+R.~Hamid, Y.~Xiao, A.~Gittens, and D.~DeCoste.
+\newblock Compact random feature maps.
+\newblock In \emph{ICML}, pages 19--27, 2014.
+
+\bibitem[Jones et~al.(2014)Jones, Oliphant, and Peterson]{jones2014scipy}
+E.~Jones, T.~Oliphant, and P.~Peterson.
+\newblock $\{$SciPy$\}$: open source scientific tools for $\{$Python$\}$.
+\newblock 2014.
+
+\bibitem[Kadri et~al.(2010)Kadri, Duflos, Preux, Canu, and
+  Davy]{Kadri_aistat10}
+H.~Kadri, E.~Duflos, P.~Preux, S.~Canu, and M.~Davy.
+\newblock Nonlinear functional regression: a functional rkhs approach.
+\newblock In \emph{JMLR Proc. of International Conference on Artificial
+  Intelligence and Statistics}, volume~9, 2010.
+
+\bibitem[Kadri et~al.(2012)Kadri, Rakotomamonjy, Preux, and
+  Bach]{Kadri_nips2012}
+H.~Kadri, A.~Rakotomamonjy, P.~Preux, and F.~R. Bach.
+\newblock Multiple operator-valued kernel learning.
+\newblock In \emph{Advances in NIPS}, pages 2429--2437, 2012.
+
+\bibitem[Kadri et~al.(2013)Kadri, Ghavamzadeh, and Preux]{Kadri_icml2013}
+H.~Kadri, M.~Ghavamzadeh, and P.~Preux.
+\newblock A generalized kernel approach to structured output learning.
+\newblock In \emph{Proc. of the 30th International Conference on Machine
+  Learning}, 2013.
+
+\bibitem[Kadri et~al.(2015)Kadri, Duflos, Preux, Canu, Rakotomamonjy, and
+  Audiffren]{kadri2015operator}
+H.~Kadri, E.~Duflos, P.~Preux, S.~Canu, A.~Rakotomamonjy, and J.~Audiffren.
+\newblock Operator-valued kernels for learning from functional response data.
+\newblock \emph{Journal of Machine Learning Research}, 16:\penalty0 1--54,
+  2015.
+
+\bibitem[Kar and Karnick(2012)]{kar2012random}
+P.~Kar and H.~Karnick.
+\newblock Random feature maps for dot product kernels.
+\newblock In \emph{AISTATS}, volume~22, pages 583--591, 2012.
+
+\bibitem[Koltchinskii et~al.(2013)]{koltchinskii2013remark}
+V.~Koltchinskii et~al.
+\newblock A remark on low rank matrix recovery and noncommutative bernstein
+  type inequalities.
+\newblock In \emph{From Probability to Statistics and Back: High-Dimensional
+  Models and Processes--A Festschrift in Honor of Jon A. Wellner}, pages
+  213--226. Institute of Mathematical Statistics, 2013.
+
+\bibitem[Kurdila and Zabarankin(2006)]{kurdila2006convex}
+A.~J. Kurdila and M.~Zabarankin.
+\newblock Convex functional analysis, 2006.
+
+\bibitem[Le et~al.(2013)Le, Sarl{\'{o}}s, and Smola]{Le2013}
+Q.~V. Le, T.~Sarl{\'{o}}s, and A.~J. Smola.
+\newblock Fastfood - computing hilbert space expansions in loglinear time.
+\newblock In \emph{Proc. of {ICML} 2013, Atlanta, USA, 16-21 June 2013}, pages
+  244--252, 2013.
+
+\bibitem[LeCun et~al.(1995)LeCun, Bengio, et~al.]{lecun1995convolutional}
+Y.~LeCun, Y.~Bengio, et~al.
+\newblock Convolutional networks for images, speech, and time series.
+\newblock \emph{The handbook of brain theory and neural networks},
+  3361\penalty0 (10):\penalty0 1995, 1995.
+
+\bibitem[Ledoux and Talagrand(2013)]{ledoux2013probability}
+M.~Ledoux and M.~Talagrand.
+\newblock \emph{Probability in Banach Spaces: isoperimetry and processes}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Li et~al.(2010)Li, Ionescu, and Sminchisescu]{li2010random}
+F.~Li, C.~Ionescu, and C.~Sminchisescu.
+\newblock \emph{Pattern Recognition: 32nd DAGM Symposium, Darmstadt, Germany,
+  September 22-24, 2010. Proc.}, chapter Random Fourier Approximations for
+  Skewed Multiplicative Histogram Kernels, pages 262--271.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2010.
+
+\bibitem[Lim et~al.(2013)Lim, {\c{S}}enbabao{\u{g}}lu, Michailidis, and
+  d'Alch{\'e} Buc]{lim2013okvar}
+N.~Lim, Y.~{\c{S}}enbabao{\u{g}}lu, G.~Michailidis, and F.~d'Alch{\'e} Buc.
+\newblock Okvar-boost: a novel boosting algorithm to infer nonlinear dynamics
+  and interactions in gene regulatory networks.
+\newblock \emph{Bioinformatics}, 29\penalty0 (11):\penalty0 1416--1423, 2013.
+
+\bibitem[Lim et~al.(2015{\natexlab{a}})Lim, d'Alch{\'{e}}{-}Buc, Auliac, and
+  Michailidis]{Lim2015}
+N.~Lim, F.~d'Alch{\'{e}}{-}Buc, C.~Auliac, and G.~Michailidis.
+\newblock Operator-valued kernel-based vector autoregressive models for network
+  inference.
+\newblock \emph{Machine Learning}, 99\penalty0 (3):\penalty0 489--513,
+  2015{\natexlab{a}}.
+
+\bibitem[Lim et~al.(2015{\natexlab{b}})Lim, d'Alch{\'e} Buc, Auliac, and
+  Michailidis]{lim2015operator}
+N.~Lim, F.~d'Alch{\'e} Buc, C.~Auliac, and G.~Michailidis.
+\newblock Operator-valued kernel-based vector autoregressive models for network
+  inference.
+\newblock \emph{Machine learning}, 99\penalty0 (3):\penalty0 489--513,
+  2015{\natexlab{b}}.
+
+\bibitem[Lu et~al.(2014)Lu, May, Liu, Garakani, Guo, Bellet, Fan, Collins,
+  Kingsbury, Picheny, et~al.]{lu2014scale}
+Z.~Lu, A.~May, K.~Liu, A.~B. Garakani, D.~Guo, A.~Bellet, L.~Fan, M.~Collins,
+  B.~Kingsbury, M.~Picheny, et~al.
+\newblock How to scale up kernel methods to be as good as deep neural nets.
+\newblock \emph{arXiv preprint arXiv:1411.4000}, 2014.
+
+\bibitem[Macedo and Castro(2008)]{Macedo2008}
+Y.~Macedo and R.~Castro.
+\newblock Learning div-free and curl-free vector fields by matrix-valued
+  kernels.
+\newblock Technical report, Preprint A 679/2010 IMPA, 2008.
+
+\bibitem[Mackey et~al.(2014)Mackey, Jordan, Chen, Farrel, and
+  Tropp]{Mackey2014}
+L.~Mackey, M.~I. Jordan, R.~Chen, B.~Farrel, and J.~Tropp.
+\newblock Matrix concentration inequalities via the method of exchangeable
+  pairs.
+\newblock \emph{The Annals of Probability}, 42:3:\penalty0 906--945, 2014.
+
+\bibitem[Maurer(2016)]{maurer2016vector}
+A.~Maurer.
+\newblock A vector-contraction inequality for rademacher complexities.
+\newblock In \emph{International Conference on Algorithmic Learning Theory},
+  pages 3--17. Springer, 2016.
+
+\bibitem[Micchelli and Pontil(2004)]{micchelli2004kernels}
+C.~A. Micchelli and M.~Pontil.
+\newblock Kernels for multi--task learning.
+\newblock In \emph{NIPS}, volume~86, page~89, 2004.
+
+\bibitem[Micchelli and Pontil(2005)]{Micchelli2005}
+C.~A. Micchelli and M.~A. Pontil.
+\newblock On learning vector-valued functions.
+\newblock \emph{Neural Computation}, 17:\penalty0 177--204, 2005.
+
+\bibitem[Micheli and Glaunes(2013)]{Micheli2013}
+M.~Micheli and J.~Glaunes.
+\newblock Matrix-valued kernels for shape deformation analysis.
+\newblock Technical report, Arxiv report, 2013.
+
+\bibitem[Minh(2016)]{minh2016operator}
+H.~Q. Minh.
+\newblock Operator-valued bochner theorem, fourier feature maps for
+  operator-valued kernels, and vector-valued learning.
+\newblock \emph{arXiv preprint arXiv:1608.05639}, 2016.
+
+\bibitem[Minh et~al.(2013{\natexlab{a}})Minh, Bazzani, and Murino]{Minh_icml13}
+H.~Q. Minh, L.~Bazzani, and V.~Murino.
+\newblock A unifying framework for vector-valued manifold regularization and
+  multi-view learning.
+\newblock In \emph{Proc. of the 30th International Conference on Machine
+  Learning}, 2013{\natexlab{a}}.
+
+\bibitem[Minh et~al.(2013{\natexlab{b}})Minh, Bazzani, and
+  Murino]{minh2013unifying}
+H.~Q. Minh, L.~Bazzani, and V.~Murino.
+\newblock A unifying framework for vector-valued manifold regularization and
+  multi-view learning.
+\newblock In \emph{ICML (2)}, pages 100--108, 2013{\natexlab{b}}.
+
+\bibitem[Minh et~al.(2016)Minh, Bazzani, and Murino]{minh2016unifying}
+H.~Q. Minh, L.~Bazzani, and V.~Murino.
+\newblock A unifying framework in vector-valued reproducing kernel hilbert
+  spaces for manifold regularization and co-regularized multi-view learning.
+\newblock \emph{Journal of Machine Learning Research}, 17\penalty0
+  (25):\penalty0 1--72, 2016.
+
+\bibitem[Minsker(2011)]{minsker2011some}
+S.~Minsker.
+\newblock On some extensions of bernstein's inequality for self-adjoint
+  operators.
+\newblock \emph{arXiv preprint arXiv:1112.5448}, 2011.
+
+\bibitem[Mroueh et~al.(2012)Mroueh, Poggio, Rosasco, and
+  Slotine]{mroueh2012multiclass}
+Y.~Mroueh, T.~Poggio, L.~Rosasco, and J.-j. Slotine.
+\newblock Multiclass learning with simplex coding.
+\newblock In \emph{Advances in NIPS}, pages 2789--2797, 2012.
+
+\bibitem[Mukuta and Harada(2016)]{mukuta2016kernel}
+Y.~Mukuta and T.~Harada.
+\newblock Kernel approximation via empirical orthogonal decomposition for
+  unsupervised feature learning.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 5222--5230, 2016.
+
+\bibitem[Naor(2012)]{naor2012banach}
+A.~Naor.
+\newblock On the banach-space-valued azuma inequality and small-set
+  isoperimetry of alon--roichman graphs.
+\newblock \emph{Combinatorics, Probability and Computing}, 21\penalty0
+  (04):\penalty0 623--634, 2012.
+
+\bibitem[Neeb(1998)]{neeb1998operator}
+K.-H. Neeb.
+\newblock Operator-valued positive definite kernels on tubes.
+\newblock \emph{Monatshefte f{\"u}r Mathematik}, 126\penalty0 (2):\penalty0
+  125--160, 1998.
+
+\bibitem[Oliphant(2006)]{oliphant2006guide}
+T.~E. Oliphant.
+\newblock \emph{A guide to NumPy}, volume~1.
+\newblock Trelgol Publishing USA, 2006.
+
+\bibitem[Oliveira(2009)]{oliveira2009concentration}
+R.~I. Oliveira.
+\newblock Concentration of the adjacency matrix and of the laplacian in random
+  graphs with independent edges.
+\newblock \emph{arXiv preprint arXiv:0911.0600}, 2009.
+
+\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
+  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, et~al.]{pedregosa2011scikit}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, et~al.
+\newblock Scikit-learn: Machine learning in python.
+\newblock \emph{Journal of Machine Learning Research}, 12\penalty0
+  (Oct):\penalty0 2825--2830, 2011.
+
+\bibitem[Pedrick(1957)]{Pedrick57}
+G.~Pedrick.
+\newblock Theory of reproducing kernels for hilbert spaces of vector-valued
+  functions.
+\newblock Technical report, University of Kansas, Department of Mathematics,
+  1957.
+
+\bibitem[Penzl(1998)]{penzl1998numerical}
+T.~Penzl.
+\newblock Numerical solution of generalized lyapunov equations.
+\newblock \emph{Advances in Computational Mathematics}, 8\penalty0
+  (1):\penalty0 33--48, 1998.
+
+\bibitem[Pham and Pagh(2013)]{pham2013fast}
+N.~Pham and R.~Pagh.
+\newblock Fast and scalable polynomial kernels via explicit feature maps.
+\newblock In \emph{Proceedings of the 19th ACM SIGKDD}, pages 239--247. ACM,
+  2013.
+
+\bibitem[Pinelis(1994)]{pinelis1994optimum}
+I.~Pinelis.
+\newblock Optimum bounds for the distributions of martingales in banach spaces.
+\newblock \emph{The Annals of Probability}, pages 1679--1706, 1994.
+
+\bibitem[Rahimi and Recht(2007)]{Rahimi2007}
+A.~Rahimi and B.~Recht.
+\newblock Random features for large-scale kernel machines.
+\newblock In \emph{NIPS 2007}, pages 1177--1184, 2007.
+
+\bibitem[Rosasco et~al.(2010)Rosasco, Belkin, and Vito]{rosasco2010learning}
+L.~Rosasco, M.~Belkin, and E.~D. Vito.
+\newblock On learning with integral operators.
+\newblock \emph{Journal of Machine Learning Research}, 11\penalty0
+  (Feb):\penalty0 905--934, 2010.
+
+\bibitem[Rudi et~al.(2016)Rudi, Camoriano, and Rosasco]{rudi2016generalization}
+A.~Rudi, R.~Camoriano, and L.~Rosasco.
+\newblock Generalization properties of learning with random features.
+\newblock \emph{arXiv preprint arXiv:1602.04474}, 2016.
+
+\bibitem[Sangnier et~al.(2016)Sangnier, Fercoq, and d'Alch{\'e}
+  Buc]{sangnier2016joint}
+M.~Sangnier, O.~Fercoq, and F.~d'Alch{\'e} Buc.
+\newblock Joint quantile regression in vector-valued rkhss.
+\newblock \emph{Neural Information Processing Systems}, 2016.
+
+\bibitem[Senkene and {Tempel'man}(1973)]{Senkene73}
+E.~Senkene and A.~{Tempel'man}.
+\newblock Hilbert spaces of operator-valued functions.
+\newblock \emph{Lithuanian Mathematical Journal}, 13\penalty0 (4):\penalty0
+  665--670, 1973.
+
+\bibitem[Sindhwani et~al.(2013)Sindhwani, Minh, and Lozano]{Sindhwani2013}
+V.~Sindhwani, H.~Q. Minh, and A.~Lozano.
+\newblock Scalable matrix-valued kernel learning for high-dimensional nonlinear
+  multivariate regression and granger causality.
+\newblock In \emph{Proc. of UAI'13, Bellevue, WA, USA, August 11-15, 2013}.
+  {AUAI} Press, Corvallis, Oregon, 2013.
+
+\bibitem[Sleijpen et~al.(2010)Sleijpen, Sonneveld, and
+  Van~Gijzen]{sleijpen2010bi}
+G.~L. Sleijpen, P.~Sonneveld, and M.~B. Van~Gijzen.
+\newblock Bi-cgstab as an induced dimension reduction method.
+\newblock \emph{Applied Numerical Mathematics}, 60\penalty0 (11):\penalty0
+  1100--1114, 2010.
+
+\bibitem[Smale and Zhou(2007)]{smale2007learning}
+S.~Smale and D.-X. Zhou.
+\newblock Learning theory estimates via integral operators and their
+  approximations.
+\newblock \emph{Constructive approximation}, 26\penalty0 (2):\penalty0
+  153--172, 2007.
+
+\bibitem[Smola et~al.(1998)Smola, Sch{\"o}lkopf, and
+  M{\"u}ller]{smola1998connection}
+A.~J. Smola, B.~Sch{\"o}lkopf, and K.-R. M{\"u}ller.
+\newblock The connection between regularization operators and support vector
+  kernels.
+\newblock \emph{Neural networks}, 11\penalty0 (4):\penalty0 637--649, 1998.
+
+\bibitem[Sriperumbudur and Szabo(2015)]{sriper2015}
+B.~Sriperumbudur and Z.~Szabo.
+\newblock Optimal rates for random fourier features.
+\newblock In C.~Cortes, N.~Lawrence, D.~Lee, M.~Sugiyama, and R.~Garnett,
+  editors, \emph{Advances in NIPS 28}, pages 1144--1152, 2015.
+
+\bibitem[Sutherland and Schneider(2015)]{sutherland2015}
+D.~J. Sutherland and J.~G. Schneider.
+\newblock On the error of random fourier features.
+\newblock In \emph{Proc. of {UAI} 2015, July 12-16, 2015, Amsterdam, The
+  Netherlands}, pages 862--871, 2015.
+
+\bibitem[Tropp(2012)]{Tropp}
+J.~A. Tropp.
+\newblock User-friendly tail bounds for sums of random matrices.
+\newblock \emph{Foundations of computational mathematics}, 12\penalty0
+  (4):\penalty0 389--434, 2012.
+
+\bibitem[Tropp et~al.(2015)]{tropp2015introduction}
+J.~A. Tropp et~al.
+\newblock An introduction to matrix concentration inequalities.
+\newblock \emph{Foundations and Trends in Machine Learning}, 8\penalty0
+  (1-2):\penalty0 1--230, 2015.
+
+\bibitem[Van Der~Vaart and Wellner(1996)]{van1996weak}
+A.~W. Van Der~Vaart and J.~A. Wellner.
+\newblock Weak convergence.
+\newblock In \emph{Weak Convergence and Empirical Processes}, pages 16--28.
+  Springer, 1996.
+
+\bibitem[Vert()]{vertregularization}
+J.-P. Vert.
+\newblock Regularization of kernel methods by decreasing the bandwidth of the
+  gaussian kernel.
+
+\bibitem[Wahba(1990)]{Wahba90}
+G.~Wahba.
+\newblock \emph{Spline model for observational data}.
+\newblock Philadelphia, Society for Industrial and Applied Mathematics, 1990.
+
+\bibitem[Wahlstr\"{o}m et~al.(2013)Wahlstr\"{o}m, Kok, Sch\"{o}n, and
+  Gustafsson]{Wahlstrom2013}
+N.~Wahlstr\"{o}m, M.~Kok, T.~Sch\"{o}n, and F.~Gustafsson.
+\newblock Modeling magnetic fields using gaussian processes.
+\newblock In \emph{in Proc. of the 38th ICASSP}, 2013.
+
+\bibitem[Walt et~al.(2011)Walt, Colbert, and Varoquaux]{walt2011numpy}
+S.~v.~d. Walt, S.~C. Colbert, and G.~Varoquaux.
+\newblock The numpy array: a structure for efficient numerical computation.
+\newblock \emph{Computing in Science \& Engineering}, 13\penalty0 (2):\penalty0
+  22--30, 2011.
+
+\bibitem[Xie et~al.(2015)Xie, Liang, and Song]{xie2015scale}
+B.~Xie, Y.~Liang, and L.~Song.
+\newblock Scale up nonlinear component analysis with doubly stochastic
+  gradients.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  2341--2349, 2015.
+
+\bibitem[Yang et~al.(2014{\natexlab{a}})Yang, Sindhwani, Avron, and
+  Mahoney]{yang2014quasi}
+J.~Yang, V.~Sindhwani, H.~Avron, and M.~Mahoney.
+\newblock Quasi-monte carlo feature maps for shift-invariant kernels.
+\newblock In \emph{Proceedings of The 31st International Conference on Machine
+  Learning (ICML-14)}, pages 485--493, 2014{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2014{\natexlab{b}})Yang, Sindhwani, Fan, Avron, and
+  Mahoney]{yang2014random}
+J.~Yang, V.~Sindhwani, Q.~Fan, H.~Avron, and M.~W. Mahoney.
+\newblock Random laplace feature maps for semigroup kernels on histograms.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 971--978, 2014{\natexlab{b}}.
+
+\bibitem[Yang et~al.(2012)Yang, Li, Mahdavi, Jin, and Zhou]{Yang2012}
+T.~Yang, Y.-F. Li, M.~Mahdavi, R.~Jin, and Z.~Zhou.
+\newblock Nystr\"{o}m method vs random fourier features: A theoretical and
+  empirical comparison.
+\newblock In F.~Pereira, C.~Burges, L.~Bottou, and K.~Weinberger, editors,
+  \emph{NIPS 25}, pages 476--484, 2012.
+
+\bibitem[Yang et~al.(2015{\natexlab{a}})Yang, Moczulski, Denil, de~Freitas,
+  Smola, Song, and Wang]{yang2015deep}
+Z.~Yang, M.~Moczulski, M.~Denil, N.~de~Freitas, A.~Smola, L.~Song, and Z.~Wang.
+\newblock Deep fried convnets.
+\newblock In \emph{Proceedings of the IEEE International Conference on Computer
+  Vision}, pages 1476--1483, 2015{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2015{\natexlab{b}})Yang, Wilson, Smola, and
+  Song]{Yang2015}
+Z.~Yang, A.~G. Wilson, A.~J. Smola, and L.~Song.
+\newblock A la carte - learning fast kernels.
+\newblock In \emph{Proc. of {AISTATS} 2015, San Diego, California, USA, 2015},
+  2015{\natexlab{b}}.
+
+\bibitem[Zhang et~al.(2012)Zhang, Xu, and Zhang]{Zhang2012}
+H.~Zhang, Y.~Xu, and Q.~Zhang.
+\newblock Refinement of operator-valued reproducing kernels.
+\newblock \emph{Journal of Machine Learning Research}, 13:\penalty0 91--136,
+  2012.
+
+\end{thebibliography}

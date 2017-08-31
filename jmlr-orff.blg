@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: jmlr-orff.aux
+The style file: abbrvnat.bst
+Database file #1: jmlr-orff.bib
+Warning--empty journal in jones2014scipy
+Warning--can't use both author and editor fields in li2010random
+Warning--empty journal in vertregularization
+Warning--empty year in vertregularization
+Warning--empty year in vertregularization
+You've used 96 entries,
+            2773 wiz_defined-function locations,
+            1127 strings with 20475 characters,
+and the built_in function-call counts, 48654 in all, are:
+= -- 4320
+> -- 2825
+< -- 79
++ -- 960
+- -- 859
+* -- 3851
+:= -- 7245
+add.period$ -- 293
+call.type$ -- 96
+change.case$ -- 558
+chr.to.int$ -- 91
+cite$ -- 197
+duplicate$ -- 2311
+empty$ -- 4002
+format.name$ -- 997
+if$ -- 10399
+int.to.chr$ -- 6
+int.to.str$ -- 1
+missing$ -- 97
+newline$ -- 486
+num.names$ -- 390
+pop$ -- 1221
+preamble$ -- 1
+purify$ -- 468
+quote$ -- 0
+skip$ -- 1821
+stack$ -- 0
+substring$ -- 1938
+swap$ -- 412
+text.length$ -- 37
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1016
+warning$ -- 5
+while$ -- 437
+width$ -- 0
+write$ -- 1235
+(There were 5 warnings)

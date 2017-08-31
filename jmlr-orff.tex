@@ -146,9 +146,7 @@
     memory capacity. In this paper, we propose and study scalable methods
     to perform regression with \emph{\acl{OVK}s}. To achieve this goal, we
     extend Random Fourier Features, an approximation technique originally
-    introduced for scalar-valued kernels, to \emph{\acl{OVK}s}. The idea is
-    to take advantage of an approximated operator-valued feature map in
-    order to come up with a linear model in a finite-dimensional space.
+    introduced for scalar-valued kernels, to \emph{\acl{OVK}s}, in the general context of Locally Compact Abelian groups. Coming up with an approximated operator-valued feature map converts the nonparametric kernel-based model into a linear model in a finite-dimensional space.
 \end{abstract}
 
 \begin{keywords}
@@ -3965,7 +3963,7 @@ problem with a second order batch gradient.
 \Cref{table:sarcos} shows that using the \acs{ORFF} approximation of an
 operator-valued kernel with a good prior on the data improves the performances
 \acs{wrt} the independent \acs{ORFF}. However the advantage seems to be less
-important the more data are available.
+important more data are available.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -3984,7 +3982,7 @@ this work we propose a methodology to tackle this difficulty.
 Enlightened by the literature on large-scale learning with
 \emph{scalar}-valued kernel, in particular the work of Rahimi and Recht
 \citep{Rahimi2007}, we propose to replace an \acs{OVK} by a random feature
-map that we called \acl{ORFF}. Our contribution start with the formal
+map that we called \acl{ORFF}. Our contribution starts with the formal
 mathematical construction of this feature from an \acs{OVK}. Then we show
 that it is also possible to obtain a kernel from an \acs{ORFF}. Eventually
 we analyse the regularization properties in terms of \acl{FT} of
@@ -4009,7 +4007,7 @@ suggest that the number of feature should be proportional to the \emph{square
 root} of the number of data. In a future work, we shall investigate this
 results and extend it to \acs{ORFF}.
 \paragraph{}
-Since the contruction of \acs{ORFF} is valid for infinite dimensional Hilbert
+Since the construction of \acs{ORFF} is valid for infinite dimensional Hilbert
 spaces such as function spaces, we would also like to investigate learning
 function valued functions in an efficient manner.
 
