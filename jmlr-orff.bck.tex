@@ -139,16 +139,16 @@
     Many problems in Machine Learning can be cast into
     vector-valued functions approximation. Operator-Valued Kernels
     \emph{\acl{OVK}s} and vector-valued Reproducing Kernel Hilbert Spaces
-    provide a theoretical and versatile framework to address that issue,
+    provide a theoretical and practical framework to address that issue,
     extending nicely the well-known setting of scalar-valued kernels.
     However large scale applications are usually not affordable with these
     tools that require an important computational power along with a large
-    memory capacity. In this paper, we aim at providing scalable methods
-that enable efficient regression with \emph{\acl{OVK}s}. To achieve this goal, we
+    memory capacity. In this paper, we propose and study scalable methods
+    to perform regression with \emph{\acl{OVK}s}. To achieve this goal, we
     extend Random Fourier Features, an approximation technique originally
-    introduced for translation-invariant scalar-valued kernels, to translation-invariant \emph{\acl{OVK}s}. We develop all the machinery in the general context of Locally Compact Abelian groups, allowing for coping with  \emph{\acl{OVK}s}. Eventually,  the provided approximated operator-valued feature map converts the nonparametric kernel-based model into a linear model in a finite-dimensional space. 
+    introduced for translation-invariant scalar-valued kernels, to \emph{\acl{OVK}s}, in the general context of Locally Compact Abelian groups. Coming up with an approximated operator-valued feature map converts the nonparametric kernel-based model into a linear model in a finite-dimensional space.
 \end{abstract}
-% il manque le résultat d'approximation
+
 \begin{keywords}
     Random Fourier Feature, Operator-Valued Kernel
 \end{keywords}
@@ -156,9 +156,9 @@ that enable efficient regression with \emph{\acl{OVK}s}. To achieve this goal, w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-Learning vector-valued functions is key to numerous tasks in Machine Learning such as multi-label classification, multi-task regression, vector field learning. 
-Among the different families of tools that currently allow to address multiple output prediction, Operator-Valued Kernel methods \citep{Micchelli2005,Carmeli2010,Kadri_aistat10,
-Brouard2011,Alvarez2012} benefit from a well founded theoretical background while being flexible enough to handle a large variety of problems. In a few words, Operator-Valued Kernels extend the classic scalar-valued kernels to functions
+Learning vector-valued functions is key to numerous tasks in Machine Learning such as multi-label Classification, multi-task regression, vector field learning. 
+Among the different families of tools that currently allow to address multiple outputs prediction, Operator-Valued Kernel methods \citep{Micchelli2005,Carmeli2010,Kadri_aistat10,
+Brouard2011,Alvarez2012} benefit from a well founded theoretical background while being flexible enough to handle a large variety of problems. Operator-Valued Kernels extend the classic scalar-valued kernels to functions
 with values in \emph{output} Hilbert spaces. As in the scalar case,
 \acfp{OVK} are used to build Reproducing Kernel Hilbert Spaces (\acs{RKHS}) in
 which representer theorems apply as for ridge regression or other appropriate
@@ -182,7 +182,7 @@ In this paper, we propose to keep the theoretical benefits of working with \acsp
 %learn vector-valued functions together with an efficient implementation of the
 %learning algorithms. 
 To achieve this goal, 
-we study feature map approximations $\widetilde{\Phi}$ of  \acsp{OVK} that allow for shallow architectures,
+we study feature map approximations of  \acsp{OVK} and the corresponding shallow architectures,
 namely the product of a (nonlinear) operator-valued feature
 $\widetilde{\Phi}(x)$ and a parameter vector $\theta$ such that
 $\widetilde{f}(x) = {\widetilde{\Phi}(x)}^* \theta$. 
