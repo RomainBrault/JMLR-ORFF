@@ -1,0 +1,55 @@
+\contentsline {theorem}{{Theorem}{1}{Bochner's theorem}}{3}{theorem.1}
+\contentsline {definition}{{Definition}{2}{\acl {vv-RKHS}~\citep {carmeli2006vector,Micchelli2005}}}{6}{theorem.2}
+\contentsline {definition}{{Definition}{3}{Positive-definite \acl {OVK}}}{7}{theorem.3}
+\contentsline {proposition}{{Proposition}{4}{\citep {carmeli2006vector}}}{7}{theorem.4}
+\contentsline {proposition}{{Proposition}{5}{\citep {carmeli2006vector}}}{7}{theorem.5}
+\contentsline {proposition}{{Proposition}{6}{Feature Operator~\citep {Carmeli2010}}}{8}{theorem.6}
+\contentsline {definition}{{Definition}{7}{$\mathcal {Y}$-Mercer kernel \citet {Carmeli2010}}}{8}{theorem.7}
+\contentsline {proposition}{{Proposition}{8}{Decomposable kernel \citep {Micheli2013}}}{8}{theorem.8}
+\contentsline {proposition}{{Proposition}{9}{Kernels and Regularizers~\citep {Alvarez2012}}}{9}{theorem.9}
+\contentsline {proposition}{{Proposition}{10}{Curl-free and Div-free kernel \citep {Macedo2008}}}{9}{theorem.10}
+\contentsline {definition}{{Definition}{11}{Shift-invariant \ac {OVK}}}{9}{theorem.11}
+\contentsline {proposition}{{Proposition}{12}{Kernel signature~\citep {Carmeli2010}}}{10}{theorem.12}
+\contentsline {proposition}{{Proposition}{13}{Operator-valued Bochner's theorem~\citep {Zhang2012, neeb1998operator}}}{11}{theorem.13}
+\contentsline {proposition}{{Proposition}{14}{\citet {Carmeli2010}}}{12}{theorem.14}
+\contentsline {proposition}{{Proposition}{15}{\citet {Carmeli2010}}}{13}{theorem.15}
+\contentsline {lemma}{{Lemma}{16}{}}{13}{theorem.16}
+\contentsline {proposition}{{Proposition}{17}{Shift-invariant $\mathcal {Y}$-Mercer kernel spectral decomposition}}{13}{theorem.17}
+\contentsline {proposition}{{Proposition}{18}{}}{17}{theorem.18}
+\contentsline {proposition}{{Proposition}{19}{}}{17}{theorem.19}
+\contentsline {remark}{{Remark}{20}{}}{18}{theorem.20}
+\contentsline {proposition}{{Proposition}{21}{Functional Fourier feature map}}{19}{theorem.21}
+\contentsline {proposition}{{Proposition}{22}{Operator Random Fourier Feature map}}{19}{theorem.22}
+\contentsline {proposition}{{Proposition}{23}{}}{20}{theorem.23}
+\contentsline {definition}{{Definition}{24}{Random Fourier feature operator}}{20}{theorem.24}
+\contentsline {proposition}{{Proposition}{25}{}}{21}{theorem.25}
+\contentsline {example}{{Example}{1}{Matrix-valued kernel on the additive group}}{21}{example.1}
+\contentsline {example}{{Example}{2}{Matrix-valued kernel on the skewed multiplicative group}}{22}{example.2}
+\contentsline {proposition}{{Proposition}{26}{}}{23}{theorem.26}
+\contentsline {theorem}{{Theorem}{27}{Uniform error bound for \ac {RFF},~\citet {Rahimi2007}}}{26}{theorem.27}
+\contentsline {corollary}{{Corollary}{28}{Uniform error bound for decomposable \acs {ORFF}}}{26}{theorem.28}
+\contentsline {definition}{{Definition}{29}{Orlicz norm~\citep {van1996weak}}}{27}{theorem.29}
+\contentsline {definition}{{Definition}{30}{}}{27}{theorem.30}
+\contentsline {corollary}{{Corollary}{31}{}}{27}{theorem.31}
+\contentsline {corollary}{{Corollary}{32}{}}{28}{theorem.32}
+\contentsline {proposition}{{Proposition}{33}{Bounding the \emph {variance} of $\tilde {K}_e$}}{29}{theorem.33}
+\contentsline {example}{{Example}{3}{Additive group}}{29}{example.3}
+\contentsline {example}{{Example}{4}{Skewed-multiplicative group}}{29}{example.4}
+\contentsline {theorem}{{Theorem}{34}{Representer theorem}}{32}{theorem.34}
+\contentsline {theorem}{{Theorem}{35}{Feature equivalence}}{33}{theorem.35}
+\contentsline {example}{{Example}{5}{Naive closed form for the squared error cost}}{35}{example.5}
+\contentsline {definition}{{Definition}{36}{\acf {LCA} group.}}{45}{theorem.36}
+\contentsline {definition}{{Definition}{37}{Even and odd operator-valued function on a \ac {LCA} group}}{46}{theorem.37}
+\contentsline {theorem}{{Theorem}{38}{Fourier inversion}}{47}{theorem.38}
+\contentsline {corollary}{{Corollary}{39}{\acl {FT} injectivity}}{47}{theorem.39}
+\contentsline {lemma}{{Lemma}{40}{}}{52}{theorem.40}
+\contentsline {lemma}{{Lemma}{41}{}}{52}{theorem.41}
+\contentsline {theorem}{{Theorem}{42}{Bounded non-commutative Bernstein with intrinsic dimension \citep {minsker2011some, tropp2015introduction}}}{53}{theorem.42}
+\contentsline {lemma}{{Lemma}{43}{}}{54}{theorem.43}
+\contentsline {lemma}{{Lemma}{44}{}}{54}{theorem.44}
+\contentsline {theorem}{{Theorem}{45}{Unbounded non-commutative Bernstein with intrinsic dimension}}{54}{theorem.45}
+\contentsline {proposition}{{Proposition}{46}{}}{56}{theorem.46}
+\contentsline {proposition}{{Proposition}{47}{}}{57}{theorem.47}
+\contentsline {corollary}{{Corollary}{48}{}}{58}{theorem.48}
+\contentsline {corollary}{{Corollary}{49}{}}{59}{theorem.49}
+\contentsline {lemma}{{Lemma}{50}{}}{61}{theorem.50}
