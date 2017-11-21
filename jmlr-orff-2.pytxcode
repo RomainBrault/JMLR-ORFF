@@ -1,0 +1,108 @@
+=>PYTHONTEX#py#not_mercer#default#0#code#####1917#
+sys.path.append('./src/')
+import not_mercer
+
+not_mercer.main()
+=>PYTHONTEX#py#default#default#0#c#####1924#
+print(r'\centering\resizebox{.85\textwidth}{!}{\input{./not_Mercer.pgf}}')
+=>PYTHONTEX#py#representer#default#0#code#####3049#
+sys.path.append('./src/')
+import representer
+
+err = representer.main()
+=>PYTHONTEX#py#default#default#1#c#####3078#
+print(r'\centering \resizebox {1.5\textwidth }{!}{\input {./representer.pgf}}')
+=>PYTHONTEX#py#efficient_linop#default#0#code#####3338#
+r"""Example of efficient implementation of Gaussian decomposable ORFF."""
+
+from time import time
+
+from numpy.linalg import svd
+from numpy.random import rand, seed
+from numpy import (dot, diag, sqrt, kron, zeros,
+                   logspace, log10, matrix, eye, int)
+from scipy.sparse.linalg import LinearOperator
+from sklearn.kernel_approximation import RBFSampler
+from matplotlib.pyplot import savefig, subplots
+=>PYTHONTEX#py#efficient_linop#default#1#block#####3430#
+def EfficientDecomposableGaussianORFF(X, A, gamma=1.,
+                                      D=100, eps=1e-5, random_state=0):
+    r"""Return the efficient ORFF map associated with the data X.
+
+    Parameters
+    ----------
+    X : {array-like}, shape = [n_samples, n_features]
+        Samples.
+    A : {array-like}, shape = [n_targets, n_targets]
+        Operator of the Decomposable kernel (positive semi-definite)
+    gamma : {float},
+        Gamma parameter of the RBF kernel.
+    D : {integer}
+        Number of random features.
+    eps : {float}
+        Cutoff threshold for the singular values of A.
+    random_state : {integer}
+        Seed of the generator.
+
+    Returns
+    -------
+    \tilde{\Phi}(X) : Linear Operator, callable
+    """
+    # Decompose A=BB^\transpose
+    u, s, v = svd(A, full_matrices=False, compute_uv=True)
+    B = dot(diag(sqrt(s[s > eps])), v[s > eps, :])
+
+    # Sample a RFF from the scalar Gaussian kernel
+    phi_s = RBFSampler(gamma=gamma, n_components=D, random_state=random_state)
+    phiX = phi_s.fit_transform(X)
+
+    # Create the ORFF linear operator
+    return LinearOperator((phiX.shape[0] * B.shape[1], D * B.shape[0]),
+                          matvec=lambda b: dot(phiX, dot(b.reshape((D, B.shape[0])), B)),
+                          rmatvec=lambda r: dot(phiX.T, dot(r.reshape((X.shape[0], B.shape[1])), B.T)))
+=>PYTHONTEX#py#efficient_linop#default#2#code#####3670#
+sys.path.append('./src/')
+import efficient_decomposable_gaussian
+
+efficient_decomposable_gaussian.main()
+=>PYTHONTEX#py#default#default#2#c#####3677#
+print(r'\centering\resizebox{\textwidth}{!}{\input{./efficient_decomposable_gaussian.pgf}}')
+=>PYTHONTEX#py#efficient_linop#default#3#code#####3697#
+sys.path.append('./src/')
+import efficient_curlfree_gaussian
+
+efficient_curlfree_gaussian.main()
+=>PYTHONTEX#py#default#default#3#c#####3704#
+print(r'\centering\resizebox{\textwidth}{!}{\input{./efficient_curlfree_gaussian.pgf}}')
+=>PYTHONTEX#py#efficient_linop#default#4#code#####3726#
+sys.path.append('./src/')
+import efficient_divfree_gaussian
+
+efficient_divfree_gaussian.main()
+=>PYTHONTEX#py#default#default#4#c#####3733#
+print(r'\centering\resizebox{\textwidth}{!}{\input{./efficient_divfree_gaussian.pgf}}')
+=>PYTHONTEX:SETTINGS#
+version=0.14
+outputdir=pythontex-files-jmlr-orff-2
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python|
+pygfamily=pylabcon|pycon|

@@ -20,7 +20,7 @@ set(LATEX_USE_SYNCTEX ${LATEX_USE_SYNCTEX}
 set(PYTHONTEX_COMPILER pythontex
     CACHE STRING "Pythontex compiler")
 
-include(${CMAKE_SOURCE_DIR}/CMakeLatex/UseLatex.cmake)
+include(${CMAKE_SOURCE_DIR}/CMakeLatex/UseLATEX.cmake)
 
 file(GLOB_RECURSE contents_files RELATIVE
      ${CMAKE_SOURCE_DIR}
