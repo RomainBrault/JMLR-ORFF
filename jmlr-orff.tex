@@ -206,10 +206,20 @@ proposed in \citet{drineas2005nystrom}. Moreover thanks to \acsp{RFF}, kernel
 methods have been proved to be competitive with deep architectures
 \citep{lu2014scale, dai2014scalable, yang2015deep}.
 
-\subsection{Outline and contributions}
+\subsection{Contributions}
+We introduce \aclp{ORFF} which generalize \aclp{RFF} in the same way that
+\acp{OVK} generalize scalar-valued kernel methods. This article is an extension
+of \citet{brault2016random} which proposed a construction of \acp{ORFF} in
+order to learn functions whose domain is the group $(\mathbb{R}, +)$ and image
+is the Hilbert space $\mathbb{R}^p$. In this work we present several original
+contributions to extend and gain a better (theoretical and experimental)
+understanding of \acp{ORFF}.
+
+\subsection{Outline}
 The paper is structured as follow. In \cref{sec:background} we recall briefly
 how to obtain \acp{RFF} for scalar-valued kernels and list the state of the
-art implementation of \acp{RFF} for large scale kernel learning. Then we define
+art implementation of \acp{RFF} for large scale kernel learning. Then we
+define
 properly \aclp{OVK}, give some important theorems and properties used
 throughout this paper before given a non exhaustive list of problem tackled
 with \acsp{OVK}.
@@ -986,23 +996,26 @@ completeness allows to consider sequences of functions $f_n \in\mathcal{H}$
 where the limit $f_n\to f$ is in $\mathcal{H}$. Moreover the existence of an
 inner product gives rise to a norm and also makes $\mathcal{H}$ a metric space.
 \paragraph{}
-Among all these functions $f\in\mathcal{H}$, we consider a subset of functions
-$f\in\mathcal{H}_K\subset\mathcal{H}$ such that the evaluation map
-$\text{ev}_x:f\mapsto f(x)$ is bounded for all $x$. \acs{ie} such
-that~$\norm{\text{ev}_x}_{K}\le C_x\in\mathbb{R}$ for all $x$, where
-$\norm{\cdot}_K^2=\inner{\cdot, \cdot}_K \colonequals \inner{\cdot,
-\cdot}_{\mathcal{H}_K}$. For scalar valued kernels the evaluation map is a
-linear functional. Thus by Riesz's representation theorem there is an
-isomorphism between evaluating a function at a point and an inner product:
-$f(x)=\text{ev}_x f = \inner{K_x, f}_K$. From this we deduce the reproducing
-property $K(x,z)=\inner{K_x, K_z}_K$ which is the cornerstone of many proofs in
-machine learning and functional analysis.  When dealing with vector-valued
-functions, the evaluation map $\text{ev}_x$ is no longer a linear functional,
-since it is vector-valued. However, inspired by the theory of scalar valued
-kernel, many authors showed that if the evaluation map of functions with values
-in a Hilbert space $\mathcal{Y}$ is bounded, a similar reproducing property can
-be obtained; namely $\inner{y', K(x,z)y}=\inner{K_x y', K_z y}_K$ for all $y$,
-$y'\in\mathcal{Y}$. This motivates the following definition of a \acf{vv-RKHS}.
+%Among all these functions $f\in\mathcal{H}$, we consider a subset of functions
+%$f\in\mathcal{H}_K\subset\mathcal{H}$
+The Hilbert space $\mathcal{H}$ is said to be proper if it contrains only
+function such that the evaluation map $\text{ev}_x:f\mapsto f(x)$ is bounded
+for all $x$. \acs{ie} such that~$\norm{\text{ev}_x}_{K}\le C_x\in\mathbb{R}$
+for all $x$, where $\norm{\cdot}_K^2=\inner{\cdot, \cdot}_K \colonequals
+\inner{\cdot, \cdot}_{\mathcal{H}_K}$. Hence for scalar valued kernels the
+evaluation map is a linear functional. By Riesz's representation theorem there
+is an isomorphism between the functionals evaluating a function at a point and
+an inner product: $f(x)=\text{ev}_x f = \inner{K_x, f}_K$. From this we deduce
+the reproducing property giving rise to reproducing kernels,
+$K(x,z)=\inner{K_x, K_z}_K=\text{ev}_x^\adjoint \text{ev}_z$ which is the
+cornerstone of many proofs in machine learning and functional analysis.  When
+dealing with vector-valued functions, the evaluation map $\text{ev}_x$ is no
+longer a linear functional, since it is vector-valued. However, inspired by the
+theory of scalar valued kernel, many authors showed that if the evaluation map
+of functions with values in a Hilbert space $\mathcal{Y}$ is bounded, a similar
+reproducing property can be obtained; namely $\inner{y', K(x,z)y}=\inner{K_x
+y', K_z y}_K$ for all $y$, $y'\in\mathcal{Y}$. This motivates the following
+definition of a \acf{vv-RKHS}.
 \begin{definition}[\acl{vv-RKHS}~\citep{carmeli2006vector,Micchelli2005}]
     Let $\mathcal{Y}$ be a (real or complex) Hilbert space. A \acl{vv-RKHS} on
     a locally compact second countable topological space $\mathcal{X}$ is a
@@ -1341,7 +1354,7 @@ Then, we prove the convergence of the kernel approximation
 $\tilde{K}(x,z)=\tildePhi{\omega}(x)^\adjoint \tildePhi{\omega}(z)$ with high
 probability on \emph{compact} subsets of the \acs{LCA} $\mathcal{X}$.
 Eventually we conclude with some numerical experiments.
-\subsection{Theoretical study}
+\subsection{Methodology to construct ORFFs}
 \label{sec:theoretical_study}
 The following proposition of~\citet{Zhang2012, neeb1998operator} extends
 Bochner's theorem to any shift-invariant $\mathcal{Y}$-Mercer kernel. We give a
