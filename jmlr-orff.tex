@@ -213,7 +213,33 @@ of \citet{brault2016random} which proposed a construction of \acp{ORFF} in
 order to learn functions whose domain is the group $(\mathbb{R}, +)$ and image
 is the Hilbert space $\mathbb{R}^p$. In this work we present several original
 contributions to extend and gain a better (theoretical and experimental)
-understanding of \acp{ORFF}.
+understanding of \acp{ORFF}. First we extend the construction methodology of
+\acs{ORFF} (from an \acs{OVK}), to learn functions whose domain is any arbitrary \acl{LCA} groups and
+whose image is any arbitrary Hilbert space (potentially infinite dimensional
+such as function spaces). Adapting the work of \citet{li2010random} we provide a new example of \acs{ORFF} on the
+multiplicative group $(\mathbb{R}^d, *)$. We also exhibit sufficient conditions
+to construct an \acs{ORFF} ex-nihilo such that it yields a valid \acs{OVK}. We
+take advantage of our framework to show the regularization properties of an
+\acs{OVK} by showing how the \acs{vv-RKHS} norm of a function relates to its
+Fourier frequencies, extending results existing for scalar-valued kernels to
+\acsp{OVK}.  Then we present two high probability error bounds on the (stochastic)
+\acs{ORFF} approximation of kernels. The first bound supposes that the
+\acs{ORFF} features are unbounded (sub-exponential) operator-valued random
+variable and the output space a finite dimensional Hilbert space, extending our
+work \citep{brault2016random} to any Locally compact abelian group. Moreover we
+improved the bound by considering the intrinsic dimension of the \acs{OVK},
+which is always smaller than its dimension. The second bound supposes that the
+\acs{ORFF} features are bounded operator-valued random variables but the output
+space can be any Hilbert space, which was not present in
+\citet{brault2016random} focusing on finite dimensional Hilbert spaces.
+Eventually we show how to deploy a simple learning algorithm for kernel Ridge
+regression with \acs{ORFF}. We show how to obtain an efficient implementation
+using the structure of the \acs{ORFF} map and provide short snippets of code
+showing how to implement them in Python\footnote{a more complete implementation
+is available at \url{https://github.com/operalib/operalib}}. Eventually we
+conclude with a numerical analysis on toy and real datasets. In particular we
+tried our method on a new dataset SARCOS which was not present in
+\citet{brault2016random}.
 
 \subsection{Outline}
 The paper is structured as follow. In \cref{sec:background} we recall briefly
@@ -981,7 +1007,7 @@ vector-valued functions. The fundations of the general theory of scalar kernels
 is mostly due to \citet{Aronszajn1950}  and provides a unifying point of view
 for the study of an important class of Hilbert spaces of real or complex valued
 functions. It has been first applied in the theory of partial differential
-equation. The theory of \acfp{OVK} which extends the scalar-valued kernel was
+equation. The theory of \acsp{OVK} which extends the scalar-valued kernel was
 first developped by \citet{Pedrick57} in his Ph.~D Thesis. Since then it has
 been successfully applied to machine learning by many authors. In particular we
 introduce the notion of \aclp{OVK} following the propositions of
@@ -1010,12 +1036,12 @@ the reproducing property giving rise to reproducing kernels,
 $K(x,z)=\inner{K_x, K_z}_K=\text{ev}_x^\adjoint \text{ev}_z$ which is the
 cornerstone of many proofs in machine learning and functional analysis.  When
 dealing with vector-valued functions, the evaluation map $\text{ev}_x$ is no
-longer a linear functional, since it is vector-valued. However, inspired by the
-theory of scalar valued kernel, many authors showed that if the evaluation map
-of functions with values in a Hilbert space $\mathcal{Y}$ is bounded, a similar
-reproducing property can be obtained; namely $\inner{y', K(x,z)y}=\inner{K_x
-y', K_z y}_K$ for all $y$, $y'\in\mathcal{Y}$. This motivates the following
-definition of a \acf{vv-RKHS}.
+longer a linear functional, but a linear operator, since it is vector-valued.
+However, inspired by the theory of scalar valued kernel, many authors showed
+that if the evaluation map of functions with values in a Hilbert space
+$\mathcal{Y}$ is bounded, a similar reproducing property can be obtained;
+namely $\inner{y', K(x,z)y}=\inner{K_x y', K_z y}_K$ for all $y$,
+$y'\in\mathcal{Y}$. This motivates the following definition of a \acs{vv-RKHS}.
 \begin{definition}[\acl{vv-RKHS}~\citep{carmeli2006vector,Micchelli2005}]
     Let $\mathcal{Y}$ be a (real or complex) Hilbert space. A \acl{vv-RKHS} on
     a locally compact second countable topological space $\mathcal{X}$ is a
@@ -1030,7 +1056,7 @@ definition of a \acf{vv-RKHS}.
     \end{enumerate}
 \end{definition}
 Throughout this section we show that a \ac{vv-RKHS} defines a unique
-po\-si\-ti\-ve-de\-fi\-ni\-te function called \acf{OVK} and conversely an
+po\-si\-ti\-ve-de\-fi\-ni\-te function called \acl{OVK} and conversely an
 \ac{OVK} uniquely defines a \ac{vv-RKHS}. The bijection between \acsp{OVK} and
 \acsp{vv-RKHS} has been first proved by~\citet{Senkene73} in 1973. In this
 introduction to \acsp{OVK} we follow the definitions and most recent proofs
@@ -1107,7 +1133,7 @@ Additionally given a positive-definite \acl{OVK}, it defines a unique
     unique \acl{vv-RKHS} $\mathcal{H}$ on $\mathcal{X}$ with reproducing kernel
     $K$.
 \end{proposition}
-Since an positive-definite \acl{OVK} defines a unique \acf{vv-RKHS} and
+Since an positive-definite \acl{OVK} defines a unique \acs{vv-RKHS} and
 conversely a \ac{vv-RKHS} defines a unique \acl{OVK}, we denote the Hilbert
 space $\mathcal{H}$ endowed with the scalar product $\inner{\cdot,\cdot}$
 respectively $\mathcal{H}_K$ and $\inner{\cdot,\cdot}_K$. From now we refer to
@@ -1153,7 +1179,7 @@ generalize Mercer kernels.
 \end{definition}
 \subsection{Examples of \aclp{OVK}}
 \label{subsec:ovk-ex}
-In this subsection we list some \acfp{OVK} that have been used successfully in
+In this subsection we list some \acsp{OVK} that have been used successfully in
 the litterature. We do not recall the proof that the following kernels are well
 defined are refer the interrested reader to the respective authors original
 work.
@@ -1339,12 +1365,12 @@ $\groupop$. This allows us to use the general context of Pontryagin duality for
 the celebrated Bochner's theorem for operator-valued measures, an
 operator-valued kernel is seen as the \emph{\acl{FT}} of an operator-valued
 positive measure. From that result, we extend the principle of \acs{RFF} for
-scalar-valued kernels and derive a general methodology to build \acf{ORFF} when
+scalar-valued kernels and derive a general methodology to build \acs{ORFF} when
 operator-valued kernels are shift-invariant according to the chosen group
 operation. Elements of this paper have been developped
 in~\citet{brault2016random}.
 \paragraph{}
-We present a construction of feature maps called \acf{ORFF}, such that $f:
+We present a construction of feature maps called \acs{ORFF}, such that $f:
 x\mapsto \tildePhi{\omega}(x)^\adjoint \theta$ is a continuous function that
 maps an arbitrary \acs{LCA} group $\mathcal{X}$ as input space to an arbitrary
 output Hilbert space $\mathcal{Y}$. First we define a functional \emph{Fourier
@@ -2413,7 +2439,7 @@ $(\mathbb{R}^d, +)$.
     \label{fig:approximation_error}
 \end{figure}
 \subsection{Random Fourier Features in the scalar case and decomposable OVK}
-\citet{Rahimi2007} proved the uniform convergence of \acf{RFF} approximation
+\citet{Rahimi2007} proved the uniform convergence of \acs{RFF} approximation
 for a scalar shift-invariant kernel on the \acs{LCA} group $\mathbb{R}^d$
 endowed with the group operation $\groupop=+$. In the case of the
 shift-invariant decomposable \acs{OVK}, an upper bound on the error can be
