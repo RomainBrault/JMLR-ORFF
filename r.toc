@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Inspiration}{2}{0}{1}
+\beamer@sectionintoc {2}{Du neurone formel au r\'eseau de neurones}{9}{0}{2}
+\beamer@sectionintoc {3}{R\'egularisation}{32}{0}{3}
+\beamer@sectionintoc {4}{Deep learning}{36}{0}{4}
+\beamer@sectionintoc {5}{Quelques r\'eseaux}{49}{0}{5}

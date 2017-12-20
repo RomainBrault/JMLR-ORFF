@@ -1,18 +1,18 @@
-=>PYTHONTEX#py#not_mercer#default#0#code#####1904#
+=>PYTHONTEX#py#not_mercer#default#0#code#####1977#
 sys.path.append('./src/')
 import not_mercer
 
 not_mercer.main()
-=>PYTHONTEX#py#default#default#0#c#####1911#
+=>PYTHONTEX#py#default#default#0#c#####1984#
 print(r'\centering\resizebox{.85\textwidth}{!}{\input{./not_Mercer.pgf}}')
-=>PYTHONTEX#py#representer#default#0#code#####3036#
+=>PYTHONTEX#py#representer#default#0#code#####3109#
 sys.path.append('./src/')
 import representer
 
 err = representer.main()
-=>PYTHONTEX#py#default#default#1#c#####3182#
+=>PYTHONTEX#py#default#default#1#c#####3138#
 print(r'\centering \resizebox {1.5\textwidth }{!}{\input {./representer.pgf}}')
-=>PYTHONTEX#py#efficient_linop#default#0#code#####3325#
+=>PYTHONTEX#py#efficient_linop#default#0#code#####3398#
 r"""Example of efficient implementation of Gaussian decomposable ORFF."""
 
 from time import time
@@ -24,7 +24,7 @@ from numpy import (dot, diag, sqrt, kron, zeros,
 from scipy.sparse.linalg import LinearOperator
 from sklearn.kernel_approximation import RBFSampler
 from matplotlib.pyplot import savefig, subplots
-=>PYTHONTEX#py#efficient_linop#default#1#block#####3417#
+=>PYTHONTEX#py#efficient_linop#default#1#block#####3490#
 def EfficientDecomposableGaussianORFF(X, A, gamma=1.,
                                       D=100, eps=1e-5, random_state=0):
     r"""Return the efficient ORFF map associated with the data X.
@@ -60,29 +60,29 @@ def EfficientDecomposableGaussianORFF(X, A, gamma=1.,
     return LinearOperator((phiX.shape[0] * B.shape[1], D * B.shape[0]),
                           matvec=lambda b: dot(phiX, dot(b.reshape((D, B.shape[0])), B)),
                           rmatvec=lambda r: dot(phiX.T, dot(r.reshape((X.shape[0], B.shape[1])), B.T)))
-=>PYTHONTEX#py#efficient_linop#default#2#code#####3657#
+=>PYTHONTEX#py#efficient_linop#default#2#code#####3730#
 sys.path.append('./src/')
 import efficient_decomposable_gaussian
 
 efficient_decomposable_gaussian.main()
-=>PYTHONTEX#py#default#default#2#c#####3664#
+=>PYTHONTEX#py#default#default#2#c#####3737#
 print(r'\centering\resizebox{\textwidth}{!}{\input{./efficient_decomposable_gaussian.pgf}}')
-=>PYTHONTEX#py#efficient_linop#default#3#code#####3684#
+=>PYTHONTEX#py#efficient_linop#default#3#code#####3757#
 sys.path.append('./src/')
 import efficient_curlfree_gaussian
 
 efficient_curlfree_gaussian.main()
-=>PYTHONTEX#py#default#default#3#c#####3691#
+=>PYTHONTEX#py#default#default#3#c#####3764#
 print(r'\centering\resizebox{\textwidth}{!}{\input{./efficient_curlfree_gaussian.pgf}}')
-=>PYTHONTEX#py#efficient_linop#default#4#code#####3713#
+=>PYTHONTEX#py#efficient_linop#default#4#code#####3786#
 sys.path.append('./src/')
 import efficient_divfree_gaussian
 
 efficient_divfree_gaussian.main()
-=>PYTHONTEX#py#default#default#4#c#####3720#
+=>PYTHONTEX#py#default#default#4#c#####3793#
 print(r'\centering\resizebox{\textwidth}{!}{\input{./efficient_divfree_gaussian.pgf}}')
 =>PYTHONTEX:SETTINGS#
-version=0.14
+version=0.16
 outputdir=pythontex-files-jmlr-orff
 workingdir=.
 workingdirset=false

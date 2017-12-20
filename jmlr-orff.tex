@@ -9,7 +9,9 @@
 % is archived at http://www.jmlr.org/format/natbib.pdf
 \usepackage[abbrvbib]{jmlr2e}
 \usepackage{pythontex}
+
 \usepackage{acro}
+
 \usepackage{ragged2e}
 \usepackage{cmap} % copy-paste pdf
 \usepackage{microtype}
@@ -68,6 +70,7 @@
 \newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
 \newcommand{\myfloatalign}{\centering} % To be used with each float for alignment
 \newcommand{\theHalgorithm}{\arabic{algorithm}}
+\newcommand{\bmL}{\mathcal{L}}
 \usepackage{caption}
 
 \crefname{algocfline}{Algorithm}{Algorithms}
@@ -115,7 +118,7 @@
 
 \begin{document}
 
-\title{Random Fourier Features for Operator-Valued Kernels}
+\title{Approximation of Operator-valued Kernels by Operator-valued Random Fourier Features}
 
 \author{\name{}Brault Romain
        \email~romain.brault@telecom-paristech.fr \\
@@ -136,8 +139,8 @@
 \maketitle
 
 \begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
-    Many problems in Machine Learning can be cast into vector-valued functions
-    approximation. Operator-Valued Kernels \emph{\aclp{OVK}} and vector-valued
+   A large number of Machine Learning tasks can be cast into vectorial output prediction.
+    Operator-Valued Kernels \emph{\aclp{OVK}} along with vector-valued
     Reproducing Kernel Hilbert Spaces provide a theoretical and versatile
     framework to address that issue, extending nicely the well-known setting of
     scalar-valued kernels.  However large scale applications are usually not
@@ -148,7 +151,7 @@
     technique originally introduced for translation-invariant scalar-valued
     kernels, to translation-invariant \emph{\aclp{OVK}}. We develop all the
     machinery in the general context of Locally Compact Abelian groups,
-    allowing for coping with  \emph{\aclp{OVK}}. Eventually,  the provided
+    allowing for coping various kinds of \emph{\aclp{OVK}}. The quality of approximation is also studied. Eventually,  the provided
     approximated operator-valued feature map converts the nonparametric
     kernel-based model into a linear model in a finite-dimensional space.
 \end{abstract}
@@ -162,7 +165,7 @@
 \section{Introduction}
 Learning vector-valued functions is key to numerous tasks in Machine Learning
 such as multi-label classification, multi-task regression, vector field
-learning.  Among the different families of tools that currently allow to
+learning.  Among the different families of tools \cite{Goodfellow} that currently allow to
 address multiple output prediction, Operator-Valued Kernel methods
 \citep{Micchelli2005,Carmeli2010,Kadri_aistat10, Brouard2011,Alvarez2012}
 benefit from a well founded theoretical background while being flexible enough
@@ -170,7 +173,7 @@ to handle a large variety of problems. In a few words, Operator-Valued Kernels
 extend the classic scalar-valued kernels to functions with values in
 \emph{output} Hilbert spaces. As in the scalar case, \acfp{OVK} are used to
 build Reproducing Kernel Hilbert Spaces (\acs{RKHS}) in which representer
-theorems apply as for ridge regression or other appropriate loss functional. In
+theorems apply as for ridge regression and other appropriate loss functional. In
 these cases, learning a model in the \acs{RKHS} boils down to learning a
 function of the form $f(x)=\sum_{i=1}^N K(x,x_i)\alpha_i$ where $x_1, \ldots,
 x_N$ are the training input data and each $\alpha_i, i=1, \ldots, N$ is a
@@ -207,42 +210,40 @@ methods have been proved to be competitive with deep architectures
 \citep{lu2014scale, dai2014scalable, yang2015deep}.
 
 \subsection{Contributions}
-We introduce \aclp{ORFF} which generalize \aclp{RFF} in the same way that
-\acp{OVK} generalize scalar-valued kernel methods. This article is an extension
-of \citet{brault2016random} which proposed a construction of \acp{ORFF} in
-order to learn functions whose domain is the group $(\mathbb{R}, +)$ and image
-is the Hilbert space $\mathbb{R}^p$. In this work we present several original
+In this paper, we present  several original
 contributions to extend and gain a better (theoretical and experimental)
-understanding of \acp{ORFF}. First we extend the construction methodology of
-\acs{ORFF} (from an \acs{OVK}), to learn functions whose domain is any arbitrary \acl{LCA} groups and
+understanding of \acp{ORFF}, originally proposed in  \citet{brault2016random} which described a construction of \acp{ORFF} in
+order to learn functions whose domain is the group $(\mathbb{R}, +)$ and image
+is the Hilbert space $\mathbb{R}^p$. Our first contribution is to extend the construction methodology of
+\acs{ORFF} given an \acs{OVK}) to learning functions whose domain is any arbitrary \acl{LCA} groups and
 whose image is any arbitrary Hilbert space (potentially infinite dimensional
 such as function spaces). Adapting the work of \citet{li2010random} we provide a new example of \acs{ORFF} on the
 multiplicative group $(\mathbb{R}^d, *)$. We also exhibit sufficient conditions
-to construct an \acs{ORFF} ex-nihilo such that it yields a valid \acs{OVK}. We
+to construct an \acs{ORFF} ex-nihilo such that it yields a valid \acs{OVK}. 
+In our second contribution we
 take advantage of our framework to show the regularization properties of an
 \acs{OVK} by showing how the \acs{vv-RKHS} norm of a function relates to its
 Fourier frequencies, extending results existing for scalar-valued kernels to
-\acsp{OVK}.  Then we present two high probability error bounds on the (stochastic)
+\acsp{OVK}.  In our third contribution we present two high probability error bounds on the (stochastic)
 \acs{ORFF} approximation of kernels. The first bound supposes that the
 \acs{ORFF} features are unbounded (sub-exponential) operator-valued random
 variable and the output space a finite dimensional Hilbert space, extending our
-work \citep{brault2016random} to any Locally compact abelian group. Moreover we
+previous work \citep{brault2016random} to any Locally Compact Abelian group. Moreover we
 improved the bound by considering the intrinsic dimension of the \acs{OVK},
 which is always smaller than its dimension. The second bound supposes that the
 \acs{ORFF} features are bounded operator-valued random variables but the output
 space can be any Hilbert space, which was not present in
 \citet{brault2016random} focusing on finite dimensional Hilbert spaces.
-Eventually we show how to deploy a simple learning algorithm for kernel Ridge
+
+Our fourth contribution deals with the deployment of a simple learning algorithm for kernel Ridge
 regression with \acs{ORFF}. We show how to obtain an efficient implementation
 using the structure of the \acs{ORFF} map and provide short snippets of code
 showing how to implement them in Python\footnote{a more complete implementation
 is available at \url{https://github.com/operalib/operalib}}. Eventually we
-conclude with a numerical analysis on toy and real datasets. In particular we
-tried our method on a new dataset SARCOS which was not present in
-\citet{brault2016random}.
+conclude with a numerical analysis on toy and real datasets including the dataset SARCOS.
 
 \subsection{Outline}
-The paper is structured as follow. In \cref{sec:background} we recall briefly
+The paper is structured as follows. In \cref{sec:background} we recall briefly
 how to obtain \acp{RFF} for scalar-valued kernels and list the state of the
 art implementation of \acp{RFF} for large scale kernel learning. Then we
 define
@@ -865,150 +866,20 @@ Notations used throughout this paper are summarized in
 %z + t) = k(x, z)$), it is possible to obtain a feature map called \acs{RFF}
 %that approximate the given kernel.
 %\subsubsection{Random Fourier Feature maps}
-\subsection{Random Fourier Feature maps}
-The \aclp{RFF} methodology introduced  by \citet{Rahimi2007} provides a way to
-scale up kernel methods when kernels are Mercer and
-\emph{translation-invariant}.  We view the input space $\mathcal{X}$ as the
-group $\mathbb{R}^d$ endowed with the addition law. Extensions to other group
-laws such as \citet{li2010random} are described in \cref{subsubsec:skewedchi2}
-within the general framework of operator-valued kernels.
-\paragraph{}
-Denote $k: \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ a positive
-definite kernel \citep{Aronszajn1950} on $\mathbb{R}^d$. A kernel $k$ is said
-to be \emph{shift-invariant} or \emph{translation-invariant} for the addition
-if for all $(x,z,t) \in \left(\mathbb{R}^d\right)^3$ we have $k(x+t,z+t) =
-k(x,z)$.  Then, we define $k_0: \mathbb{R}^d \to \mathbb{R}$ the function such
-that $k(x,z)= k_0(x-z)$. The function $k_0$ is called the \emph{signature} of
-kernel $k$. If $k_0$ is a continuous function we call the kernel \say{Mercer}.
-Then, Bochner's theorem \citep{folland1994course} is the theoretical result
-that leads to the Random Fourier Features.
-\begin{theorem}[Bochner's theorem]\label{th:bochner-scalar}
-    Any continuous positive-definite function (\acs{eg} a Mercer kernel) is the
-    \acl{FT} of a bounded non-negative Borel measure.
-\end{theorem}
-It implies that any positive-definite, continuous and shift-invariant kernel
-$k$, have a continuous and positive-definite signature $k_0$, which is the
-\acl{FT} $\mathcal{F}$ of a non-negative measure $\mu$. We therefore have the
-$k(x,z)=k_0(x-z) \hiderel{=} \int_{\mathbb{R}^d} \exp(-\iu \inner{\omega,x -
-z}) d\mu(\omega) \hiderel{=}\FT{k_0}(\omega)$.  Moreover $\mu = \IFT{k_0}$.
-Without loss of generality, we assume that $\mu$ is a probability measure,
-\acs{ie} $\int_{\mathbb{R}^d} d\mu(\omega)=1$ by renormalizing the kernel since
-$\int_{\mathbb{R}^d}d\mu(\omega)= \int_{\mathbb{R}^d}\exp(-\iu \inner{\omega,
-0})d\mu(\omega)\hiderel{=}k_0(0)$.  and we can write the kernel as an
-expectation over a probability measure $\mu$.  For all $x$, $z\in\mathbb{R}^d$
-\begin{dmath*}
-    k_0(x-z) = \expectation_{\omega\sim\mu}\left[\exp(-\iu \inner{\omega,x -
-    z})\right].
-\end{dmath*}
-Eventually, if $k$ is real valued we only write the real part, $k(x,z) =
-\expectation_{\omega\sim\mu}[\cos \inner{\omega,x - z}] \hiderel{=}
-\expectation_{\omega\sim\mu}[ \cos \inner{\omega,z} \cos \inner{\omega,x} +
-\sin \inner{\omega,z} \sin \inner{\omega,x}]$.  Let $\Vect_{j=1}^D x_j$ denote
-the $Dd$-length column vector obtained by stacking vectors $x_j \in
-\mathbb{R}^d$.  The feature map $\widetilde{\phi}: \mathbb{R}^d \rightarrow
-\mathbb{R}^{2D}$ defined as
-\begin{dmath}
-    \label{eq:rff}
-    \widetilde{\phi}(x)=\frac{1}{\sqrt{D}}\Vect_{j=1}^D
-    \begin{pmatrix}
-        \cos{\inner{x,\omega_j}} \\
-        \sin{\inner{x,\omega_j}}
-    \end{pmatrix}\condition{$\omega_j \hiderel{\sim} \IFT{k_0}$ \acs{iid}}
-\end{dmath}
-is called a \emph{Random Fourier Feature} (map). Each $\omega_{j}, j=1, \ldots,
-D$ is independently and identically sampled from the inverse Fourier transform
-$\mu$ of $k_0$. This Random Fourier Feature map provides the following
-Monte-Carlo estimator of the kernel: $\widetilde{k}(x, z) =
-\widetilde{\phi}(x)^* \widetilde{\phi}(z)$. Using trigonometric identities,
-\citet{Rahimi2007} showed that the same feature map can also be written
-\begin{dmath}
-    \label{eq:rff2}
-    \tilde{\phi}(x)=\sqrt{\frac{2}{D}}\Vect_{j=1}^D
-    \begin{pmatrix}
-        \cos(\inner{x,\omega_j} + b_j)
-    \end{pmatrix},
-\end{dmath}
-where $\omega_j \hiderel{\sim} \IFT{k_0}$, $b_j \sim \mathcal{U}(0, 2\pi)$
-\acs{iid}.  The feature map defined by \cref{eq:rff} and \cref{eq:rff2} have
-been compared in \citet{sutherland2015} where they give the condition under
-wich \cref{eq:rff} has lower variance than \cref{eq:rff2}. For instance for the
-Gaussian kernel, \cref{eq:rff} has always lower variance. In practice,
-\cref{eq:rff2} is easier to program. In this paper we focus on random Fourier
-feature of the form given in \cref{eq:rff}.
-\paragraph{}
-The dimension $D$ governs the precision of this approximation, whose uniform
-convergence towards the target kernel can be found in \citet{Rahimi2007} and in
-more recent papers with some refinements proposed in \citet{sutherland2015} and
-\citet{sriper2015}.  Finally, it is important to notice that Random Fourier
-Feature approach \emph{only} requires two steps before the application of a
-learning algorithm: (1) define the inverse Fourier transform of the given
-shift-invariant kernel, (2) compute the randomized feature map using the
-spectral distribution $\mu$.  \citet{Rahimi2007} show that for the Gaussian
-kernel $k_0(x-z) = \exp(-\gamma \norm{x - z}_2^2)$, the spectral distribution
-$\mu$ is a Gaussian distribution. For the Laplacian kernel $k_0(x-z) =
-\exp(-\gamma \norm{x - z}_1)$, the spectral distribution is a Cauchy
-distribution.
 
-\subsubsection{Extensions of the RFF method}
-\paragraph{}
-The seminal idea of \citet{Rahimi2007} has opened a large literature on random
-features. Nowadays, many classes of kernels other than translation invariant
-are now proved to have an efficient random feature representation.
-\citet{kar2012random} proposed random feature maps for dot product kernels
-(rotation invariant) and \citet{hamid2014compact} improved the rate of
-convergence of the approximation error for such kernels by noticing that
-feature maps for dot product kernels are usually low rank and may not utilize
-the capacity of the projected feature  space  efficiently. \Citet{pham2013fast}
-proposed fast random feature maps for polynomial kernels.
-\paragraph{}
-\Citet{li2010random} generalized the original \acs{RFF} of \citet{Rahimi2007}.
-Instead of computing feature maps for shift-in\-va\-riant kernels on the
-additive group $(\mathbb{R}^d, +)$, they used the generalized Fourier transform
-on any locally compact abelian group to derive random features on the
-multiplicative group $(\mathbb{R}^d, *)$. In the same spirit
-\citet{yang2014random} noticed that an theorem equivalent to Bochner's theorem
-exists on the semi-group $(\mathbb{R}_{>0}^d, +)$. From this they derived
-\say{Random Laplace} features and used them to approximate kernels adapted to
-learn on histograms.
-\paragraph{}
-To speed-up the convergence rate of the random features approximation,
-\citet{yang2014quasi} proposed to sample the random variable from a quasi
-Monte-Carlo sequence instead of \acs{iid}~random variables. \Citet{Le2013}
-proposed the \say{Fastfood} algorithm to reduce the complexity of computing a
-\acs{RFF} --using structured matrices and a fast Walsh-Hadarmard transform--
-from $O_t(Dd)$ to $O_t(D\log(d))$. More recently \citet{felix2016orthogonal}
-proposed also an algorithm \say{SORF} to compute Gaussian \acs{RFF} in
-$O_t(D\log(d))$ but with better convergence rates than \say{Fastfood}
-\citep{Le2013}.  \Citet{mukuta2016kernel} proposed a data dependent feature
-map (comparable to the Nystro\"m method) by estimating the distribution of the
-input data, and then finding the eigenfunction decomposition of Mercer's
-integral operator associated to the kernel.
-\paragraph{}
-In the context of large scale learning and deep learning, \citet{lu2014scale}
-showed that \acsp{RFF} can achieve performances comparable to deep-learning
-methods by combining multiple kernel learning and composition of kernels along
-with a scalable parallel implementation. \Citet{dai2014scalable} and
-\citet{xie2015scale} combined \acsp{RFF} and stochastic gradient descent to
-define an online learning algorithm called \say{Doubly stochastic gradient
-descent} adapted to large scale learning. \Citet{yang2015deep} proposed and
-studied the idea of replacing the last fully interconnected layer of a deep
-convolutional neural network \citep{lecun1995convolutional} by the
-\say{Fastfood} implementation of \acsp{RFF}.
-\paragraph{}
-Eventually \citet{Yang2015} introduced the algorithm \say{\`A la Carte}, based
-on \say{Fastfood} which is able to learn the spectral distribution
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{On Operator-Valued Kernels}
 \label{sec:background_on_operator-valued_kernels} We now introduce the theory
 of \acf{vv-RKHS} that provides a flexible framework to study and learn
-vector-valued functions. The fundations of the general theory of scalar kernels
-is mostly due to \citet{Aronszajn1950}  and provides a unifying point of view
+vector-valued functions. The general theory of Reproducing Kernel Hilbert Spaces  for scalar-valued functions
+originally introduced by \citet{Aronszajn1950}  provides a unifying point of view
 for the study of an important class of Hilbert spaces of real or complex valued
-functions. It has been first applied in the theory of partial differential
-equation. The theory of \acsp{OVK} which extends the scalar-valued kernel was
-first developped by \citet{Pedrick57} in his Ph.~D Thesis. Since then it has
+functions (see \citet{Berlinet}). 
+%Widely used in approximation theory \cite{Wahba} and in machine learning \cite{Scholpkoft} The theory of \acsp{OVK} which extends the scalar-valued kernel was
+%first developped by \citet{Pedrick57} in his Ph.~D Thesis.
+ Since then it has
 been successfully applied to machine learning by many authors. In particular we
 introduce the notion of \aclp{OVK} following the propositions of
 \citet{Micchelli2005,carmeli2006vector,Carmeli2010}.
@@ -1271,6 +1142,10 @@ field by taking the orthogonal of the curl-free field.
     , $\nabla\nabla^\transpose $ is the Hessian operator and $\Delta$ is the
     Laplacian operator.
 \end{proposition}
+
+%%%
+
+
 \subsection{Shift-Invariant \acs{OVK} on \acs{LCA} groups}
 The main subjects of interest of the present paper are shift-invariant
 \acl{OVK}. When referring to a shift-invariant \ac{OVK}
@@ -1313,7 +1188,7 @@ $\groupop$.
  to apply.  Note that if $K$ is a shift invariant $\mathcal{Y}$-Mercer kernel,
  then $\mathcal{H}_K$ contains continuous \emph{bounded} functions
  \citep{Carmeli2010}.
-\subsection{Some applications of Operator-valued kernels}
+\subsection{Some applications of Operator-Valued Kernels}
 We give here a non exhaustive list of works concerning \aclp{OVK}.  A good
 review of \aclp{OVK} has been conducted in \citet{Alvarez2012}. For a
 theoretical introduction to \acsp{OVK} the interested reader can refer to the
@@ -1352,12 +1227,149 @@ Recursive Least Square Algorithm in \citet{amblard2015operator}.
 \citet{sangnier2016joint} recently explored the minimization of a pinball loss
 under regularizing constraints induced by a well chosen decomposable kernel in
 order to handle joint quantile regression.
+\subsection{Random Fourier Features and extensions in the scalar case}
+\subsubsection{The RFF methodology}
+\paragraph{}
+Let us recall briefly the Random Fourier Features approach for the approximation of translation-invariant scalar-valued kernels.
+\citet{Rahimi2007} introduced the \aclp{RFF} to
+scale up kernel methods when kernels are Mercer and
+\emph{translation-invariant}.  We view the input space $\mathcal{X}$ as the
+group $\mathbb{R}^d$ endowed with the addition law. Extensions to other group
+laws such as \citet{li2010random} are described later in \cref{subsubsec:skewedchi2}.
+
+\paragraph{}
+Denote $k: \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ a positive
+definite kernel \citep{Aronszajn1950} on $\mathbb{R}^d$. A kernel $k$ is said
+to be \emph{shift-invariant} or \emph{translation-invariant} for the addition
+if for all $(x,z,t) \in \left(\mathbb{R}^d\right)^3$ we have $k(x+t,z+t) =
+k(x,z)$.  Then, we define $k_0: \mathbb{R}^d \to \mathbb{R}$ the function such
+that $k(x,z)= k_0(x-z)$. The function $k_0$ is called the \emph{signature} of
+kernel $k$. If $k_0$ is a continuous function we call the kernel \say{Mercer}.
+Then, Bochner's theorem \citep{folland1994course} is the theoretical result
+that leads to the Random Fourier Features.
+\begin{theorem}[Bochner's theorem]\label{th:bochner-scalar}
+    Any continuous positive-definite function (\acs{eg} a Mercer kernel) is the
+    \acl{FT} of a bounded non-negative Borel measure.
+\end{theorem}
+It implies that any positive-definite, continuous and shift-invariant kernel
+$k$, have a continuous and positive-definite signature $k_0$, which is the
+\acl{FT} $\mathcal{F}$ of a non-negative measure $\mu$. We therefore have the
+$k(x,z)=k_0(x-z) \hiderel{=} \int_{\mathbb{R}^d} \exp(-\iu \inner{\omega,x -
+z}) d\mu(\omega) \hiderel{=}\FT{k_0}(\omega)$.  Moreover $\mu = \IFT{k_0}$.
+Without loss of generality, we assume that $\mu$ is a probability measure,
+\acs{ie} $\int_{\mathbb{R}^d} d\mu(\omega)=1$ by renormalizing the kernel since
+$\int_{\mathbb{R}^d}d\mu(\omega)= \int_{\mathbb{R}^d}\exp(-\iu \inner{\omega,
+0})d\mu(\omega)\hiderel{=}k_0(0)$.  and we can write the kernel as an
+expectation over a probability measure $\mu$.  For all $x$, $z\in\mathbb{R}^d$
+\begin{dmath*}
+    k_0(x-z) = \expectation_{\omega\sim\mu}\left[\exp(-\iu \inner{\omega,x -
+    z})\right].
+\end{dmath*}
+Eventually, if $k$ is real valued we only write the real part, $k(x,z) =
+\expectation_{\omega\sim\mu}[\cos \inner{\omega,x - z}] \hiderel{=}
+\expectation_{\omega\sim\mu}[ \cos \inner{\omega,z} \cos \inner{\omega,x} +
+\sin \inner{\omega,z} \sin \inner{\omega,x}]$.  Let $\Vect_{j=1}^D x_j$ denote
+the $Dd$-length column vector obtained by stacking vectors $x_j \in
+\mathbb{R}^d$.  The feature map $\widetilde{\phi}: \mathbb{R}^d \rightarrow
+\mathbb{R}^{2D}$ defined as
+\begin{dmath}
+    \label{eq:rff}
+    \widetilde{\phi}(x)=\frac{1}{\sqrt{D}}\Vect_{j=1}^D
+    \begin{pmatrix}
+        \cos{\inner{x,\omega_j}} \\
+        \sin{\inner{x,\omega_j}}
+    \end{pmatrix}\condition{$\omega_j \hiderel{\sim} \IFT{k_0}$ \acs{iid}}
+\end{dmath}
+is called a \emph{Random Fourier Feature} (map). Each $\omega_{j}, j=1, \ldots,
+D$ is independently and identically sampled from the inverse Fourier transform
+$\mu$ of $k_0$. This Random Fourier Feature map provides the following
+Monte-Carlo estimator of the kernel: $\widetilde{k}(x, z) =
+\widetilde{\phi}(x)^* \widetilde{\phi}(z)$. Using trigonometric identities,
+\citet{Rahimi2007} showed that the same feature map can also be written
+\begin{dmath}
+    \label{eq:rff2}
+    \tilde{\phi}(x)=\sqrt{\frac{2}{D}}\Vect_{j=1}^D
+    \begin{pmatrix}
+        \cos(\inner{x,\omega_j} + b_j)
+    \end{pmatrix},
+\end{dmath}
+where $\omega_j \hiderel{\sim} \IFT{k_0}$, $b_j \sim \mathcal{U}(0, 2\pi)$
+\acs{iid}.  The feature map defined by \cref{eq:rff} and \cref{eq:rff2} have
+been compared in \citet{sutherland2015} where they give the condition under
+wich \cref{eq:rff} has lower variance than \cref{eq:rff2}. For instance for the
+Gaussian kernel, \cref{eq:rff} has always lower variance. In practice,
+\cref{eq:rff2} is easier to program. In this paper we focus on random Fourier
+feature of the form given in \cref{eq:rff}.
+\paragraph{}
+The dimension $D$ governs the precision of this approximation, whose uniform
+convergence towards the target kernel can be found in \citet{Rahimi2007} and in
+more recent papers with some refinements proposed in \citet{sutherland2015} and
+\citet{sriper2015}.  Finally, it is important to notice that Random Fourier
+Feature approach \emph{only} requires two steps before the application of a
+learning algorithm: (1) define the inverse Fourier transform of the given
+shift-invariant kernel, (2) compute the randomized feature map using the
+spectral distribution $\mu$.  \citet{Rahimi2007} show that for the Gaussian
+kernel $k_0(x-z) = \exp(-\gamma \norm{x - z}_2^2)$, the spectral distribution
+$\mu$ is a Gaussian distribution. For the Laplacian kernel $k_0(x-z) =
+\exp(-\gamma \norm{x - z}_1)$, the spectral distribution is a Cauchy
+distribution.
+
+\subsubsection{Further works on Random Fourier Features}
+The seminal idea of \citet{Rahimi2007} has opened a large literature on random
+features. Nowadays, many classes of kernels other than translation invariant
+are now proved to have an efficient random feature representation.
+\citet{kar2012random} proposed random feature maps for dot product kernels
+(rotation invariant) and \citet{hamid2014compact} improved the rate of
+convergence of the approximation error for such kernels by noticing that
+feature maps for dot product kernels are usually low rank and may not utilize
+the capacity of the projected feature  space  efficiently. \Citet{pham2013fast}
+proposed fast random feature maps for polynomial kernels.
+\paragraph{}
+\Citet{li2010random} generalized the original \acs{RFF} of \citet{Rahimi2007}.
+Instead of computing feature maps for shift-in\-va\-riant kernels on the
+additive group $(\mathbb{R}^d, +)$, they used the generalized Fourier transform
+on any locally compact abelian group to derive random features on the
+multiplicative group $(\mathbb{R}^d, *)$. In the same spirit
+\citet{yang2014random} noticed that an theorem equivalent to Bochner's theorem
+exists on the semi-group $(\mathbb{R}_{>0}^d, +)$. From this they derived
+\say{Random Laplace} features and used them to approximate kernels adapted to
+learn on histograms.
+\paragraph{}
+To speed-up the convergence rate of the random features approximation,
+\citet{yang2014quasi} proposed to sample the random variable from a quasi
+Monte-Carlo sequence instead of \acs{iid}~random variables. \Citet{Le2013}
+proposed the \say{Fastfood} algorithm to reduce the complexity of computing a
+\acs{RFF} --using structured matrices and a fast Walsh-Hadarmard transform--
+from $O_t(Dd)$ to $O_t(D\log(d))$. More recently \citet{felix2016orthogonal}
+proposed also an algorithm \say{SORF} to compute Gaussian \acs{RFF} in
+$O_t(D\log(d))$ but with better convergence rates than \say{Fastfood}
+\citep{Le2013}.  \Citet{mukuta2016kernel} proposed a data dependent feature
+map (comparable to the Nystro\"m method) by estimating the distribution of the
+input data, and then finding the eigenfunction decomposition of Mercer's
+integral operator associated to the kernel.
+\paragraph{}
+In the context of large scale learning and deep learning, \citet{lu2014scale}
+showed that \acsp{RFF} can achieve performances comparable to deep-learning
+methods by combining multiple kernel learning and composition of kernels along
+with a scalable parallel implementation. \Citet{dai2014scalable} and
+\citet{xie2015scale} combined \acsp{RFF} and stochastic gradient descent to
+define an online learning algorithm called \say{Doubly stochastic gradient
+descent} adapted to large scale learning. \Citet{yang2015deep} proposed and
+studied the idea of replacing the last fully interconnected layer of a deep
+convolutional neural network \citep{lecun1995convolutional} by the
+\say{Fastfood} implementation of \acsp{RFF}.
+\paragraph{}
+Eventually \citet{Yang2015} introduced the algorithm \say{\`A la Carte}, based
+on \say{Fastfood} which is able to learn the spectral distribution.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Main contribution: Operator Random Fourier Features}
+\section{Operator Random Fourier Features}
 \label{sec:ORFF_construction}
-We present in this section a construction methodology devoted to
+
+\subsection{Construction of Operator-valued Random Fourier Features}
+%%%%
+We now focus on
 shift-invariant $\mathcal{Y}$-Mercer operator-valued kernels defined on any
 \acf{LCA} group, noted $(\mathcal{X}, \groupop)$, for some operation noted
 $\groupop$. This allows us to use the general context of Pontryagin duality for
@@ -1367,13 +1379,16 @@ operator-valued kernel is seen as the \emph{\acl{FT}} of an operator-valued
 positive measure. From that result, we extend the principle of \acs{RFF} for
 scalar-valued kernels and derive a general methodology to build \acs{ORFF} when
 operator-valued kernels are shift-invariant according to the chosen group
-operation. Elements of this paper have been developped
-in~\citet{brault2016random}.
+operation. 
+%Elements of this paper have been developed
+%in~\citet{brault2016random}.
 \paragraph{}
-We present a construction of feature maps called \acs{ORFF}, such that $f:
-x\mapsto \tildePhi{\omega}(x)^\adjoint \theta$ is a continuous function that
-maps an arbitrary \acs{LCA} group $\mathcal{X}$ as input space to an arbitrary
-output Hilbert space $\mathcal{Y}$. First we define a functional \emph{Fourier
+We present a construction of Operator-valued Random Feature maps, called \acs{ORFF maps} and their associated images, the Operator-valued Ranfom Foufrer Features, called \asc{ORFFs} .
+%such that $f:
+%x\mapsto \tildePhi{\omega}(x)^\adjoint \theta$ is a continuous function that
+%maps an arbitrary \acs{LCA} group $\mathcal{X}$ as input space to an arbitrary
+%output Hilbert space $\mathcal{Y}$. 
+First we define a functional \emph{Fourier
 feature map}, and then propose a Monte-Carlo sampling from this feature map to
 construct an approximation of a shift-invariant $\mathcal{Y}$-Mercer kernel.
 Then, we prove the convergence of the kernel approximation
@@ -1384,7 +1399,7 @@ Eventually we conclude with some numerical experiments.
 \label{sec:theoretical_study}
 The following proposition of~\citet{Zhang2012, neeb1998operator} extends
 Bochner's theorem to any shift-invariant $\mathcal{Y}$-Mercer kernel. We give a
-short intoduction to \acs{LCA} groups and abstract harmonic analysis in
+short introduction to \acs{LCA} groups and abstract harmonic analysis in
 \cref{sec:abstract_harmonic}. For the sake of simplicity, the reader can take
 $\overline{\pairing{x,\omega}}=\overline{\exp(\iu\inner{x,
 \omega}_2})=\exp(-\iu\inner{x,\omega}_2)$, when $x\in\mathcal{X}=(\mathbb{R}^d,
@@ -1392,7 +1407,7 @@ $\overline{\pairing{x,\omega}}=\overline{\exp(\iu\inner{x,
 \begin{proposition}[Operator-valued Bochner's theorem~\citep{Zhang2012,
 neeb1998operator}]
     \label{pr:operator_valued_bochner}
-    If a function $K$ from $\mathcal{X} \times \mathcal{X}$ to $\mathcal{Y}$ is
+    If a function $K$ from $\mathcal{X} \times \mathcal{X}$ to $\bmL(Y)$ is
     a shift-invariant $\mathcal{Y}$-Mercer kernel on $\mathcal{X}$, then there
     exists a unique positive projection-valued measure $\dual{Q}:
     \mathcal{B}(\mathcal{X}) \to
@@ -1409,15 +1424,16 @@ neeb1998operator}]
     \cref{eq:bochner-gen}.
 \end{proposition}
 Although this theorem is central to the spectral decomposition of
-shift-invariant $\mathcal{Y}$-Mercer \acs{OVK}, the following results proved
-by~\citet{Carmeli2010} provides insights about this decomposition that are more
-relevant in practice. It first gives the necessary conditions to build
+shift-invariant $\mathcal{Y}$-Mercer \acs{OVK}, in practise we wish to deal with positive real-valued measure and are interested to decompose the term $\dual{Q}(\omega)$.
+
+The following result proved
+by~\citet{Carmeli2010} provides insights about this decomposition. It first gives the necessary conditions to build
 shift-invariant $\mathcal{Y}$-Mercer kernel with a pair $(A, \dual{\mu})$ where
 $A$ is an operator-valued function on $\dual{\mathcal{X}}$ and $\dual{\mu}$ is
 a real-valued positive measure on $\dual{\mathcal{X}}$. Note that obviously
-such a pair is not unique and the choice of this paper may have an impact on
+such a pair is not unique and the choice of the element sin the decomposition may have an impact on
 theoretical properties as well as practical computations.  Secondly it also
-states that any \acs{OVK} have such a spectral decomposition when $\mathcal{Y}$
+states that any shift-invariant $\mathcal{Y}$-Mercer \acs{OVK} has such a spectral decomposition when $\mathcal{Y}$
 is finite dimensional or $\mathcal{X}$.
 \begin{proposition}[\citet{Carmeli2010}]
     \label{pr:mercer_kernel_bochner}
@@ -1460,8 +1476,8 @@ $A(\omega)\succcurlyeq 0$ for $\dual{\mu}$-almost all $\omega$, give rise to an
 \acs{OVK}. Since $(A,\dual{\mu})$ determine a unique kernel we can write
 $\mathcal{H}_{(A,\dual{\mu})}{\scriptstyle\implies}\mathcal{H}_K$ where $K$ is
 defined as in \cref{eq:AK0}. However the converse is not true: Given a
-$\mathcal{Y}$-Mercer shift invariant \acl{OVK}, there exist infinitely many
-pairs $(A,\dual{\mu})$ that characterize an \acs{OVK}.
+$\mathcal{Y}$-Mercer shift invariant \acl{OVK}, there exists infinitely many
+pairs $(A,\dual{\mu})$ that characterize this \acs{OVK}.
 \paragraph{}
 The main difference between \cref{eq:bochner-gen} and
 \cref{eq:AK0} is that the first one characterizes an \acs{OVK}
@@ -2339,8 +2355,8 @@ feature map of an \acl{OVK} from its regularization properties in the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Main contribution: convergence with high probability of the
-\acpdfstring{ORFF} estimator}
+\section{Convergence with high probability of the
+\acpdfstring{ORFF} -based kernel estimator}
 \label{sec:consistency_of_the_ORFF_estimator}
 We are now interested in a non-asymptotic analysis of the \ac{ORFF}
 approximation of shift-invariant $\mathcal{Y}$-Mercer kernels on \acs{LCA}
