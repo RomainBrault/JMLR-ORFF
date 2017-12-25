@@ -118,7 +118,8 @@
 
 \begin{document}
 
-\title{Approximation of Operator-valued Kernels by Operator-valued Random Fourier Features}
+\title{Approximation of Operator-valued Kernels by Operator-valued Random
+Fourier Features}
 
 \author{\name{}Brault Romain
        \email~romain.brault@telecom-paristech.fr \\
@@ -139,21 +140,22 @@
 \maketitle
 
 \begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
-   A large number of Machine Learning tasks can be cast into vectorial output prediction.
-    Operator-Valued Kernels \emph{\aclp{OVK}} along with vector-valued
-    Reproducing Kernel Hilbert Spaces provide a theoretical and versatile
-    framework to address that issue, extending nicely the well-known setting of
-    scalar-valued kernels.  However large scale applications are usually not
-    affordable with these tools that require an important computational power
-    along with a large memory capacity. In this paper, we aim at providing
-    scalable methods that enable efficient regression with \emph{\aclp{OVK}}.
-    To achieve this goal, we extend Random Fourier Features, an approximation
-    technique originally introduced for translation-invariant scalar-valued
-    kernels, to translation-invariant \emph{\aclp{OVK}}. We develop all the
-    machinery in the general context of Locally Compact Abelian groups,
-    allowing for coping various kinds of \emph{\aclp{OVK}}. The quality of approximation is also studied. Eventually,  the provided
-    approximated operator-valued feature map converts the nonparametric
-    kernel-based model into a linear model in a finite-dimensional space.
+   A large number of Machine Learning tasks can be cast into vectorial output
+   prediction.  Operator-Valued Kernels \emph{\aclp{OVK}} along with
+   vector-valued Reproducing Kernel Hilbert Spaces provide a theoretical and
+   versatile framework to address that issue, extending nicely the well-known
+   setting of scalar-valued kernels.  However large scale applications are
+   usually not affordable with these tools that require an important
+   computational power along with a large memory capacity. In this paper, we
+   aim at providing scalable methods that enable efficient regression with
+   \emph{\aclp{OVK}}.  To achieve this goal, we extend Random Fourier Features,
+   an approximation technique originally introduced for translation-invariant
+   scalar-valued kernels, to translation-invariant \emph{\aclp{OVK}}. We
+   develop all the machinery in the general context of Locally Compact Abelian
+   groups, allowing for coping various kinds of \emph{\aclp{OVK}}. The quality
+   of approximation is also studied. Eventually,  the provided approximated
+   operator-valued feature map converts the nonparametric kernel-based model
+   into a linear model in a finite-dimensional space.
 \end{abstract}
 % il manque le résultat d'approximation
 \begin{keywords}
@@ -161,28 +163,28 @@
 \end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%
 \section{Introduction}
+%
 Learning vector-valued functions is key to numerous tasks in Machine Learning
 such as multi-label classification, multi-task regression, vector field
-learning.  Among the different families of tools \cite{Goodfellow} that currently allow to
-address multiple output prediction, Operator-Valued Kernel methods
-\citep{Micchelli2005,Carmeli2010,Kadri_aistat10, Brouard2011,Alvarez2012}
-benefit from a well founded theoretical background while being flexible enough
-to handle a large variety of problems. In a few words, Operator-Valued Kernels
-extend the classic scalar-valued kernels to functions with values in
-\emph{output} Hilbert spaces. As in the scalar case, \acfp{OVK} are used to
-build Reproducing Kernel Hilbert Spaces (\acs{RKHS}) in which representer
-theorems apply as for ridge regression and other appropriate loss functional. In
-these cases, learning a model in the \acs{RKHS} boils down to learning a
-function of the form $f(x)=\sum_{i=1}^N K(x,x_i)\alpha_i$ where $x_1, \ldots,
-x_N$ are the training input data and each $\alpha_i, i=1, \ldots, N$ is a
-vector of the output space $\mathcal{Y}$, and each $K(x,x_i)$ is an operator on
-$\mathcal{Y}$.  \paragraph{} However, \acsp{OVK} suffer from the same drawbacks
-as classic (sca\-lar-va\-lued) kernel machines: they scale poorly to large
-datasets because they are exceedingly demanding in terms of memory and
-computations.
-
+learning.  Among the different families of tools (\cite{Goodfellow}) that
+currently allow to address multiple output prediction, Operator-Valued Kernel
+methods \citep{Micchelli2005,Carmeli2010,Kadri_aistat10,
+Brouard2011,Alvarez2012} benefit from a well founded theoretical background
+while being flexible enough to handle a large variety of problems. In a few
+words, Operator-Valued Kernels extend the classic scalar-valued kernels to
+functions with values in \emph{output} Hilbert spaces. As in the scalar case,
+\acfp{OVK} are used to build Reproducing Kernel Hilbert Spaces (\acs{RKHS}) in
+which representer theorems apply as for ridge regression and other appropriate
+loss functional. In these cases, learning a model in the \acs{RKHS} boils down
+to learning a function of the form $f(x)=\sum_{i=1}^N K(x,x_i)\alpha_i$ where
+$x_1, \ldots, x_N$ are the training input data and each $\alpha_i, i=1, \ldots,
+N$ is a vector of the output space $\mathcal{Y}$, and each $K(x,x_i)$ is an
+operator on $\mathcal{Y}$.  \paragraph{} However, \acsp{OVK} suffer from the
+same drawbacks as classic (sca\-lar-va\-lued) kernel machines: they scale
+poorly to large datasets because they are exceedingly demanding in terms of
+memory and computations.
 \paragraph{}
 In this paper, we propose to keep the theoretical benefits of working with
 \acsp{OVK}s while providing efficient implementations of learning algorithms.
@@ -193,7 +195,6 @@ To achieve this goal, we study feature map approximations $\widetilde{\Phi}$ of
 \acsp{OVK} that allow for shallow architectures, namely the product of a
 (nonlinear) operator-valued feature $\widetilde{\Phi}(x)$ and a parameter
 vector $\theta$ such that $\widetilde{f}(x) = {\widetilde{\Phi}(x)}^* \theta$.
-
 \paragraph{}
 To approximate \acsp{OVK}, we extend the well-known methodology called
 \acfp{RFF} \citep{Rahimi2007, Le2013, Yang2015, sriper2015, Bach2015,
@@ -208,40 +209,42 @@ scale implementations of kernel methods, along with Nystr\"om approaches
 proposed in \citet{drineas2005nystrom}. Moreover thanks to \acsp{RFF}, kernel
 methods have been proved to be competitive with deep architectures
 \citep{lu2014scale, dai2014scalable, yang2015deep}.
-
+%
 \subsection{Contributions}
-In this paper, we present  several original
-contributions to extend and gain a better (theoretical and experimental)
-understanding of \acp{ORFF}, originally proposed in  \citet{brault2016random} which described a construction of \acp{ORFF} in
-order to learn functions whose domain is the group $(\mathbb{R}, +)$ and image
-is the Hilbert space $\mathbb{R}^p$. Our first contribution is to extend the construction methodology of
-\acs{ORFF} given an \acs{OVK}) to learning functions whose domain is any arbitrary \acl{LCA} groups and
-whose image is any arbitrary Hilbert space (potentially infinite dimensional
-such as function spaces). Adapting the work of \citet{li2010random} we provide a new example of \acs{ORFF} on the
-multiplicative group $(\mathbb{R}^d, *)$. We also exhibit sufficient conditions
-to construct an \acs{ORFF} ex-nihilo such that it yields a valid \acs{OVK}. 
-In our second contribution we
-take advantage of our framework to show the regularization properties of an
-\acs{OVK} by showing how the \acs{vv-RKHS} norm of a function relates to its
-Fourier frequencies, extending results existing for scalar-valued kernels to
-\acsp{OVK}.  In our third contribution we present two high probability error bounds on the (stochastic)
-\acs{ORFF} approximation of kernels. The first bound supposes that the
-\acs{ORFF} features are unbounded (sub-exponential) operator-valued random
+%
+In this paper, we present  several original contributions to extend and gain a
+better (theoretical and experimental) understanding of \acp{ORFF}, originally
+proposed in  \citet{brault2016random} which described a construction of
+\acp{ORFF} in order to learn functions whose domain is the group $(\mathbb{R},
++)$ and image is the Hilbert space $\mathbb{R}^p$. Our first contribution is to
+extend the construction methodology of \acs{ORFF} given an \acs{OVK}) to
+learning functions whose domain is any arbitrary \acl{LCA} groups and whose
+image is any arbitrary Hilbert space (potentially infinite dimensional such as
+function spaces). Adapting the work of \citet{li2010random} we provide a new
+example of \acs{ORFF} on the multiplicative group $(\mathbb{R}^d, *)$. We also
+exhibit sufficient conditions to construct an \acs{ORFF} ex-nihilo such that it
+yields a valid \acs{OVK}.  In our second contribution we take advantage of our
+framework to show the regularization properties of an \acs{OVK} by showing how
+the \acs{vv-RKHS} norm of a function relates to its Fourier frequencies,
+extending results existing for scalar-valued kernels to \acsp{OVK}.  In our
+third contribution we present two high probability error bounds on the
+(stochastic) \acs{ORFF} approximation of kernels. The first bound supposes that
+the \acs{ORFF} features are unbounded (sub-exponential) operator-valued random
 variable and the output space a finite dimensional Hilbert space, extending our
-previous work \citep{brault2016random} to any Locally Compact Abelian group. Moreover we
-improved the bound by considering the intrinsic dimension of the \acs{OVK},
-which is always smaller than its dimension. The second bound supposes that the
-\acs{ORFF} features are bounded operator-valued random variables but the output
-space can be any Hilbert space, which was not present in
-\citet{brault2016random} focusing on finite dimensional Hilbert spaces.
-
-Our fourth contribution deals with the deployment of a simple learning algorithm for kernel Ridge
-regression with \acs{ORFF}. We show how to obtain an efficient implementation
-using the structure of the \acs{ORFF} map and provide short snippets of code
-showing how to implement them in Python\footnote{a more complete implementation
-is available at \url{https://github.com/operalib/operalib}}. Eventually we
-conclude with a numerical analysis on toy and real datasets including the dataset SARCOS.
-
+previous work \citep{brault2016random} to any Locally Compact Abelian group.
+Moreover we improved the bound by considering the intrinsic dimension of the
+\acs{OVK}, which is always smaller than its dimension. The second bound
+supposes that the \acs{ORFF} features are bounded operator-valued random
+variables but the output space can be any Hilbert space, which was not present
+in \citet{brault2016random} focusing on finite dimensional Hilbert spaces.
+\paragraph{}
+Our fourth contribution deals with the deployment of a simple learning
+algorithm for kernel Ridge regression with \acs{ORFF}. We show how to obtain an
+efficient implementation using the structure of the \acs{ORFF} map and provide
+short snippets of code showing how to implement them in Python\footnote{a more
+complete implementation is available at
+\url{https://github.com/operalib/operalib}}. Eventually we conclude with a
+numerical analysis on toy and real datasets including the dataset SARCOS.
 \subsection{Outline}
 The paper is structured as follows. In \cref{sec:background} we recall briefly
 how to obtain \acp{RFF} for scalar-valued kernels and list the state of the
@@ -275,7 +278,6 @@ Eventually we end this paper by some numerical experiments in
 \cref{sec:num_exp} on toy and real datasets before giving a general conclusion
 in  \cref{sec:conclusion}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Background}
 \label{sec:background}
 %In this section we summarize briefly important notions used throughout this
@@ -866,32 +868,32 @@ Notations used throughout this paper are summarized in
 %z + t) = k(x, z)$), it is possible to obtain a feature map called \acs{RFF}
 %that approximate the given kernel.
 %\subsubsection{Random Fourier Feature maps}
-
-
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%
 \subsection{On Operator-Valued Kernels}
 \label{sec:background_on_operator-valued_kernels} We now introduce the theory
 of \acf{vv-RKHS} that provides a flexible framework to study and learn
-vector-valued functions. The general theory of Reproducing Kernel Hilbert Spaces  for scalar-valued functions
-originally introduced by \citet{Aronszajn1950}  provides a unifying point of view
-for the study of an important class of Hilbert spaces of real or complex valued
-functions (see \citet{Berlinet}). 
-%Widely used in approximation theory \cite{Wahba} and in machine learning \cite{Scholpkoft} The theory of \acsp{OVK} which extends the scalar-valued kernel was
-%first developped by \citet{Pedrick57} in his Ph.~D Thesis.
- Since then it has
-been successfully applied to machine learning by many authors. In particular we
-introduce the notion of \aclp{OVK} following the propositions of
-\citet{Micchelli2005,carmeli2006vector,Carmeli2010}.
-\subsection{Definitions and properties}
-\label{subsec:def_properties} In machine learning the goal is often to find a
-function $f$ belonging to a class of functions
-$\mathcal{F}(\mathcal{X};\mathcal{Y})$ that minimizes a criterion called the
-true risk. The class of functions we consider are functions living in a Hilbert
-space $\mathcal{H}\subset\mathcal{F}(\mathcal{X};\mathcal{Y})$. The
-completeness allows to consider sequences of functions $f_n \in\mathcal{H}$
-where the limit $f_n\to f$ is in $\mathcal{H}$. Moreover the existence of an
-inner product gives rise to a norm and also makes $\mathcal{H}$ a metric space.
+vector-valued functions. The general theory of Reproducing Kernel Hilbert
+Spaces  for scalar-valued functions originally introduced by
+\citet{Aronszajn1950}  provides a unifying point of view for the study of an
+important class of Hilbert spaces of real or complex valued functions (see
+\citet{Berlinet}).
+%Widely used in approximation theory \cite{Wahba} and in machine learning
+%\cite{Scholpkoft} The theory of \acsp{OVK} which extends the scalar-valued
+%kernel was first developped by \citet{Pedrick57} in his Ph.~D Thesis.
+Since then it has been successfully applied to machine learning by many
+authors. In particular we introduce the notion of \aclp{OVK} following the
+propositions of \citet{Pedrick57, Micchelli2005,carmeli2006vector,Carmeli2010}.
+\subsection{Definitions and properties} \label{subsec:def_properties} In
+machine learning the goal is often to find a function $f$ belonging to a class
+of functions $\mathcal{F}(\mathcal{X};\mathcal{Y})$ that minimizes a criterion
+called the true risk. The class of functions we consider are functions living
+in a Hilbert space $\mathcal{H}\subset\mathcal{F}(\mathcal{X};\mathcal{Y})$.
+The completeness allows to consider sequences of functions $f_n
+\in\mathcal{H}$ where the limit $f_n\to f$ is in $\mathcal{H}$. Moreover the
+existence of an inner product gives rise to a norm and also makes
+$\mathcal{H}$ a metric space.
 \paragraph{}
 %Among all these functions $f\in\mathcal{H}$, we consider a subset of functions
 %$f\in\mathcal{H}_K\subset\mathcal{H}$
@@ -1230,13 +1232,13 @@ order to handle joint quantile regression.
 \subsection{Random Fourier Features and extensions in the scalar case}
 \subsubsection{The RFF methodology}
 \paragraph{}
-Let us recall briefly the Random Fourier Features approach for the approximation of translation-invariant scalar-valued kernels.
-\citet{Rahimi2007} introduced the \aclp{RFF} to
-scale up kernel methods when kernels are Mercer and
+We recall briefly the Random Fourier Features approach for the approximation of
+translation-invariant scalar-valued kernels.  \citet{Rahimi2007} introduced the
+\aclp{RFF} to scale up kernel methods when kernels are Mercer and
 \emph{translation-invariant}.  We view the input space $\mathcal{X}$ as the
-group $\mathbb{R}^d$ endowed with the addition law. Extensions to other group
-laws such as \citet{li2010random} are described later in \cref{subsubsec:skewedchi2}.
-
+group $\mathbb{R}^d$ endowed with the addition law.  Extensions to other group
+laws such as \citet{li2010random} are described later in
+\cref{subsubsec:skewedchi2}.
 \paragraph{}
 Denote $k: \mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}$ a positive
 definite kernel \citep{Aronszajn1950} on $\mathbb{R}^d$. A kernel $k$ is said
@@ -1379,15 +1381,17 @@ operator-valued kernel is seen as the \emph{\acl{FT}} of an operator-valued
 positive measure. From that result, we extend the principle of \acs{RFF} for
 scalar-valued kernels and derive a general methodology to build \acs{ORFF} when
 operator-valued kernels are shift-invariant according to the chosen group
-operation. 
+operation.
 %Elements of this paper have been developed
 %in~\citet{brault2016random}.
 \paragraph{}
-We present a construction of Operator-valued Random Feature maps, called \acs{ORFF maps} and their associated images, the Operator-valued Ranfom Foufrer Features, called \asc{ORFFs} .
+We present a construction of Operator-valued Random Feature maps, called
+\acs{ORFF} maps and their associated images, the Operator-valued Ranfom Foufrer
+Features, called \asc{ORFFs} .
 %such that $f:
 %x\mapsto \tildePhi{\omega}(x)^\adjoint \theta$ is a continuous function that
 %maps an arbitrary \acs{LCA} group $\mathcal{X}$ as input space to an arbitrary
-%output Hilbert space $\mathcal{Y}$. 
+%output Hilbert space $\mathcal{Y}$.
 First we define a functional \emph{Fourier
 feature map}, and then propose a Monte-Carlo sampling from this feature map to
 construct an approximation of a shift-invariant $\mathcal{Y}$-Mercer kernel.
@@ -1424,17 +1428,20 @@ neeb1998operator}]
     \cref{eq:bochner-gen}.
 \end{proposition}
 Although this theorem is central to the spectral decomposition of
-shift-invariant $\mathcal{Y}$-Mercer \acs{OVK}, in practise we wish to deal with positive real-valued measure and are interested to decompose the term $\dual{Q}(\omega)$.
-
-The following result proved
-by~\citet{Carmeli2010} provides insights about this decomposition. It first gives the necessary conditions to build
-shift-invariant $\mathcal{Y}$-Mercer kernel with a pair $(A, \dual{\mu})$ where
-$A$ is an operator-valued function on $\dual{\mathcal{X}}$ and $\dual{\mu}$ is
-a real-valued positive measure on $\dual{\mathcal{X}}$. Note that obviously
-such a pair is not unique and the choice of the element sin the decomposition may have an impact on
-theoretical properties as well as practical computations.  Secondly it also
-states that any shift-invariant $\mathcal{Y}$-Mercer \acs{OVK} has such a spectral decomposition when $\mathcal{Y}$
-is finite dimensional or $\mathcal{X}$.
+shift-invariant $\mathcal{Y}$-Mercer \acs{OVK}, in practise we wish to deal
+with positive real-valued measure and are interested to decompose the term
+$\dual{Q}(\omega)$.
+%
+The following result proved by~\citet{Carmeli2010} provides insights about this
+decomposition. It first gives the necessary conditions to build shift-invariant
+$\mathcal{Y}$-Mercer kernel with a pair $(A, \dual{\mu})$ where $A$ is an
+operator-valued function on $\dual{\mathcal{X}}$ and $\dual{\mu}$ is a
+real-valued positive measure on $\dual{\mathcal{X}}$. Note that obviously such
+a pair is not unique and the choice of the element sin the decomposition may
+have an impact on theoretical properties as well as practical computations.
+Secondly it also states that any shift-invariant $\mathcal{Y}$-Mercer \acs{OVK}
+has such a spectral decomposition when $\mathcal{Y}$ is finite dimensional or
+$\mathcal{X}$ is compact.
 \begin{proposition}[\citet{Carmeli2010}]
     \label{pr:mercer_kernel_bochner}
     Let $\dual{\mu}$ be a positive measure on
