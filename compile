@@ -136,12 +136,12 @@ done
 echo ${GENERATE}
 
 # Update
-if [[ ${UPDATE} = true ]]; then
+if [ ${UPDATE} = true ]; then
     git pull github master
 fi
 
 # Remove temporary files
-if [[ ${FORCE} = true ]]; then
+if [ ${FORCE} = true ]; then
     rm -rf ${BUILD} || true
     rm -rf ${OUTPUT} || true
 fi
@@ -149,14 +149,14 @@ fi
 # Configure and Build
 mkdir -p ${BUILD}
 cd ${BUILD}
-if [[ ${FORCE} = true ]]; then
+if [ ${FORCE} = true ]; then
     cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=OFF \
           -DLATEX_OUTPUT_PATH=${OUTPUT} \
           -DPDFLATEX_COMPILER=${COMPILER} \
           -DLATEX_USE_SYNCTEX:BOOL=${SYNCTEX} \
           ..
 fi
-if [[ ${GENERATE} = false ]]; then
+if [ ${GENERATE} = false ]; then
     cp -r ../gfx/bck/* ../${OUTPUT} || true
 else
     pip install -r ../requirements.txt
@@ -176,10 +176,10 @@ cp -r ../${OUTPUT}/pythontex-files-jmlr-orff bck || true
 cd ..
 
 # Sign document with pgp
-if [[ ${SIGN} = true ]]; then
+if [ ${SIGN} = true ]; then
     gpg2 --armor --detach-sig ${OUTPUT}/acml17.pdf
 fi
-if [[ ${VERIFY} = true ]]; then
+if [ ${VERIFY} = true ]; then
     gpg --keyserver pgp.mit.edu \
         --recv-keys A276D73294A106E2544FFF9E3E5B5D0B181C5E04
     gpg2 --verify ${OUTPUT}/jmlr-orff.pdf.asc \

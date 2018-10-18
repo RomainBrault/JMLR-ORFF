@@ -99,7 +99,7 @@ def main():
         if k == 3:
             axis[k, 2].set_xlabel(
                 r'$|\theta^{\parallel}_j|$, \% of relative error')
-    plt.savefig('representer.pgf', bbox_inches='tight')
+    plt.savefig('representer.pdf', bbox_inches='tight')
 
     return err
 
